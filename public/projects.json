@@ -1,0 +1,53 @@
+[
+  {
+    "title": "Two to Foxtrot",
+    "description": "A Unity-based game where I served as the main programmer, responsible for gameplay mechanics and optimizing player experience.",
+    "tags": ["game", "programming"],
+    "image": "images/two_to_foxtrot.jpg",
+    "liveLink": "https://example.com/two_to_foxtrot",
+    "sourceCode": "https://github.com/example/two_to_foxtrot",
+    "details": {
+      "tools": "Unity, XBox controller",
+      "role": "Main Programmer",
+      "teamSize": 4
+    }
+  },
+  {
+    "title": "Little Match Girl MR Experience",
+    "description": "An MR experience on Meta Quest 3 along with live actors interaction design in passthrough mode.",
+    "tags": ["game", "sound design"],
+    "image": "images/lmg.jpg",
+    "liveLink": "https://example.com/two_to_foxtrot",
+    "sourceCode": "https://github.com/example/two_to_foxtrot",
+    "details": {
+      "tools": "Unity, FMOD, Audacity",
+      "role": "Sound Designer, Producer, Programmer",
+      "teamSize": 6
+    }
+  },
+  {
+    "title": "Minijava Compiler",
+    "description": "Developed a compiler for MiniJava, implementing lexical analysis, syntax parsing, semantic checks, and code generation.",
+    "tags": ["programming"],
+    "image": "images/minijava_compiler.jpg",
+    "liveLink": "",
+    "sourceCode": "https://github.com/example/minijava_compiler",
+    "details": {
+      "language": "Java",
+      "course": "Compiler Construction"
+    }
+  },
+  {
+    "title": "Python Pacman Pathfinding AI",
+    "description": "Implemented AI algorithms for pathfinding and decision-making in a Pacman environment.",
+    "tags": ["programming"],
+    "image": "images/pacman_ai.jpg",
+    "liveLink": "",
+    "sourceCode": "https://github.com/example/pacman_ai",
+    "details": {
+      "language": "Python",
+      "focus": "Pathfinding Algorithms",
+      "course": "AI Programming"
+    }
+  }
+]
