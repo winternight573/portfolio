@@ -6,14 +6,14 @@
  * This file handles the behavior of the portfolio website.
  * Main functionalities:
  * 1. Dynamically loading and displaying project data from a JSON file.
- * 2. Implementing a tags-based filtering system for projects.
- * 3. Smoothly navigating to sections of the page.
+ * 2. Filtering projects by category using tabs.
+ * 3. Resetting to "All" projects when a tab is clicked again.
  */
 "use strict";
 
 (function () {
-  let allProjects = []; // To store all project data for filtering
-  let activeTag = null; // To track the currently active tag for filtering
+  let allProjects = []; // To store all project data
+  let activeCategory = null; // Tracks the currently active category
 
   window.addEventListener("load", init);
 
@@ -21,22 +21,70 @@
    * Initializes the website by setting up event listeners and loading the project data.
    */
   function init() {
-    id("hero-button").addEventListener("click", scrollToProjects);
+    id("hero-button").addEventListener("click", () => {
+      id("projects").scrollIntoView({ behavior: "smooth" });
+    }); // Smooth scrolling to projects section
+    setupTabs();
     loadProjects();
   }
 
   /**
-   * Loads the project data from the JSON file and renders it dynamically on the page.
+   * Sets up the tab buttons for filtering projects by category.
+   */
+  function setupTabs() {
+    qs("#tabs").querySelectorAll("button").forEach(tab => {
+      tab.addEventListener("click", () => {
+        const category = tab.dataset.category;
+
+        if (activeCategory === category) {
+          // Reset to "All" if the same tab is clicked
+          activeCategory = null;
+          highlightTab(null); // Remove active highlight
+          renderProjects(allProjects); // Show all projects
+        } else {
+          // Filter by category
+          activeCategory = category;
+          highlightTab(tab); // Highlight the clicked tab
+          filterProjectsByCategory(category);
+        }
+      });
+    });
+  }
+
+  /**
+   * Highlights the currently selected tab and removes highlight from others.
+   * @param {HTMLElement|null} selectedTab - The tab to highlight, or null to clear highlights.
+   */
+  function highlightTab(selectedTab) {
+    qs("#tabs").querySelectorAll("button").forEach(tab => {
+      tab.classList.remove("active");
+    });
+    if (selectedTab) {
+      selectedTab.classList.add("active");
+    }
+  }
+
+  /**
+   * Filters projects based on the selected category.
+   * @param {string} category - The selected category to filter by.
+   */
+  function filterProjectsByCategory(category) {
+    const filteredProjects = allProjects.filter(project => project.category === category);
+    renderProjects(filteredProjects);
+  }
+
+  /**
+   * Loads the project data from the JSON file and renders all projects.
    */
   function loadProjects() {
     fetch("projects.json")
       .then(statusCheck)
-      .then((res) => res.json())
-      .then((projects) => {
+      .then(res => res.json())
+      .then(projects => {
         allProjects = projects;
-        renderProjects(projects);
+        renderProjects(projects); // Show all projects by default
       })
-      .catch(handleError);
+      .catch(err => console.error("Error occurred:", err));
   }
 
   /**
@@ -47,7 +95,7 @@
     const projectCards = id("project-cards");
     projectCards.innerHTML = ""; // Clear existing cards
 
-    projects.forEach((project) => {
+    projects.forEach(project => {
       const card = gen("div");
       card.classList.add("project-card");
 
@@ -63,127 +111,39 @@
 
       card.append(image, title, description);
 
-      // Add project-specific details, including Live Link and Source Code if available
-      if (project.details || project.liveLink || project.sourceCode) {
+      // Add project-specific details
+      if (project.details) {
         const detailsList = gen("ul");
         detailsList.classList.add("details-list");
-
-        // Render regular details
-        if (project.details) {
-          Object.entries(project.details).forEach(([key, value]) => {
-            const detailItem = gen("li");
-            detailItem.textContent = `${capitalize(key)}: ${value}`;
-            detailsList.appendChild(detailItem);
-          });
-        }
-
-        // Add Live Link to details if available
-        if (project.liveLink) {
-          const liveLinkItem = gen("li");
-          const liveLink = gen("a");
-          liveLink.href = project.liveLink;
-          liveLink.textContent = "View Live";
-          liveLink.target = "_blank";
-          liveLinkItem.appendChild(liveLink);
-          detailsList.appendChild(liveLinkItem);
-        }
-
-        // Add Source Code to details if available
-        if (project.sourceCode) {
-          const sourceCodeItem = gen("li");
-          const sourceCode = gen("a");
-          sourceCode.href = project.sourceCode;
-          sourceCode.textContent = "Source Code";
-          sourceCode.target = "_blank";
-          sourceCodeItem.appendChild(sourceCode);
-          detailsList.appendChild(sourceCodeItem);
-        }
+        Object.entries(project.details).forEach(([key, value]) => {
+          const detailItem = gen("li");
+          detailItem.textContent = `${key}: ${value}`;
+          detailsList.appendChild(detailItem);
+        });
 
         card.appendChild(detailsList);
       }
 
-      // Create tag buttons for the project
-      const tagContainer = gen("div");
-      tagContainer.classList.add("tag-container");
-      project.tags.forEach((tag) => {
-        const tagButton = gen("button");
-        tagButton.textContent = tag;
-        tagButton.classList.add("tag");
-        tagButton.dataset.tag = tag;
-        tagButton.addEventListener("click", () =>
-          toggleTagFilter(tag, tagButton)
-        );
-        tagContainer.appendChild(tagButton);
-      });
+      // Add Live Link if available
+      if (project.liveLink) {
+        const liveLink = gen("a");
+        liveLink.href = project.liveLink;
+        liveLink.textContent = "View Live";
+        liveLink.target = "_blank";
+        card.appendChild(liveLink);
+      }
 
-      card.appendChild(tagContainer);
+      // Add Source Code Link if available
+      if (project.sourceCode) {
+        const sourceCode = gen("a");
+        sourceCode.href = project.sourceCode;
+        sourceCode.textContent = "Source Code";
+        sourceCode.target = "_blank";
+        card.appendChild(sourceCode);
+      }
+
       projectCards.appendChild(card);
     });
-  }
-
-  /**
-   * Toggles the tag filter. If a tag is already active, it resets to show all projects.
-   * @param {string} tag - The selected tag for filtering.
-   * @param {HTMLElement} tagButton - The clicked tag button element.
-   */
-  function toggleTagFilter(tag, tagButton) {
-    if (activeTag === tag) {
-      activeTag = null;
-      renderProjects(allProjects);
-      resetTagStyles();
-    } else {
-      activeTag = tag;
-      const filteredProjects = allProjects.filter((project) =>
-        project.tags.includes(tag)
-      );
-      renderProjects(filteredProjects);
-      resetTagStyles();
-      tagButton.classList.add("active");
-    }
-  }
-
-  /**
-   * Resets the styles of all tag buttons to remove the active state.
-   */
-  function resetTagStyles() {
-    qsa(".tag").forEach((button) => {
-      button.classList.remove("active");
-    });
-  }
-
-  /**
-   * Smoothly scrolls to the projects section of the page.
-   */
-  function scrollToProjects() {
-    id("projects").scrollIntoView({ behavior: "smooth" });
-  }
-
-  /**
-   * Capitalizes the first letter of a string.
-   * @param {string} str - The string to capitalize.
-   * @returns {string} The capitalized string.
-   */
-  function capitalize(str) {
-    return str.charAt(0).toUpperCase() + str.slice(1);
-  }
-
-  /**
-   * Handles and displays errors when they occur.
-   * @param {Error} err - The error object to handle.
-   */
-  function handleError(err) {
-    console.error("Error occurred:", err);
-    displayError("Unable to load projects. Please try again later.");
-  }
-
-  /**
-   * Displays an error message in the main content area.
-   * @param {string} message - The error message to display.
-   */
-  function displayError(message) {
-    const errorContainer = id("error-container");
-    errorContainer.textContent = message;
-    errorContainer.classList.remove("hidden");
   }
 
   /**
@@ -194,7 +154,7 @@
    */
   function statusCheck(response) {
     if (!response.ok) {
-      return response.text().then((errorText) => {
+      return response.text().then(errorText => {
         throw new Error(errorText);
       });
     }
@@ -211,9 +171,18 @@
   }
 
   /**
-   * Returns the array of elements that match the given CSS selector.
-   * @param {string} selector - CSS query selector
-   * @returns {object[]} array of DOM objects matching the query.
+   * Returns the first element that matches the given CSS selector.
+   * @param {string} selector - CSS query selector.
+   * @returns {object} The first DOM object matching the query.
+   */
+  function qs(selector) {
+    return document.querySelector(selector);
+  }
+
+  /**
+   * Returns an array of elements that match the given CSS selector.
+   * @param {string} selector - CSS query selector.
+   * @returns {object[]} Array of DOM objects matching the query.
    */
   function qsa(selector) {
     return document.querySelectorAll(selector);

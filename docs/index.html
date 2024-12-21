@@ -5,6 +5,8 @@
     <link rel="stylesheet" href="styles.css" />
     <script src="index.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;700&family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+
     <title>Portfolio</title>
   </head>
 
@@ -13,7 +15,10 @@
 
     <!-- Hero Section -->
     <section id="hero">
-      <img src="images/your-photo.jpg" alt="Your Photo" id="hero-photo" />
+      <div id="photo-overlay">
+        <img id="hero-photo" src="assets/winnie.png" alt="Winnie's Photo">
+      </div>
+      
       <h1>Hello~ I'm Winnie Tsai</h1>
       <p>Tools programmer and Audio Engineer</p>
       <button id="hero-button">See My Projects</button>
@@ -28,7 +33,10 @@
     <!-- Projects Section -->
     <section id="projects">
       <h2>Projects</h2>
-      <p>Click on tags to filter</p>
+      <div id="tabs">
+        <button data-category="Game and Tool Programming">Game and Tool Programming</button>
+        <button data-category="Audio and Interactive Experience">Audio and Interactive Experience</button>
+      </div>
       <div id="project-cards"></div>
       <div id="error-container" class="hidden"></div>
     </section>
