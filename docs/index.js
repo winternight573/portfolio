@@ -93,9 +93,10 @@
    */
   function renderProjects(projects) {
     const projectCards = id("project-cards");
-    projectCards.innerHTML = ""; // Clear existing cards
+    projectCards.innerHTML = "";
 
     projects.forEach(project => {
+      // Collapsed Project Card
       const card = gen("div");
       card.classList.add("project-card");
 
@@ -103,46 +104,55 @@
       image.src = project.image;
       image.alt = project.title;
 
-      const title = gen("h3");
-      title.textContent = project.title;
+      const titleOverlay = gen("div");
+      titleOverlay.classList.add("project-title");
+      titleOverlay.textContent = project.title;
+
+      card.append(image, titleOverlay);
+      projectCards.appendChild(card);
+
+      // Expanded Project Details
+      const details = gen("div");
+      details.classList.add("project-details");
+
+      const detailsTitle = gen("h3");
+      detailsTitle.textContent = project.title;
+
+      const role = gen("p");
+      role.innerHTML = `<strong>Role:</strong> ${project.details.role}`;
+
+      const teamSize = gen("p");
+      teamSize.innerHTML = `<strong>Team Size:</strong> ${project.details.teamSize}`;
 
       const description = gen("p");
       description.textContent = project.description;
 
-      card.append(image, title, description);
+      const links = gen("div");
+      links.classList.add("project-links");
 
-      // Add project-specific details
-      if (project.details) {
-        const detailsList = gen("ul");
-        detailsList.classList.add("details-list");
-        Object.entries(project.details).forEach(([key, value]) => {
-          const detailItem = gen("li");
-          detailItem.textContent = `${key}: ${value}`;
-          detailsList.appendChild(detailItem);
-        });
-
-        card.appendChild(detailsList);
-      }
-
-      // Add Live Link if available
       if (project.liveLink) {
         const liveLink = gen("a");
         liveLink.href = project.liveLink;
-        liveLink.textContent = "View Live";
+        liveLink.textContent = "Live Demo";
         liveLink.target = "_blank";
-        card.appendChild(liveLink);
+        links.appendChild(liveLink);
       }
 
-      // Add Source Code Link if available
       if (project.sourceCode) {
         const sourceCode = gen("a");
         sourceCode.href = project.sourceCode;
         sourceCode.textContent = "Source Code";
         sourceCode.target = "_blank";
-        card.appendChild(sourceCode);
+        links.appendChild(sourceCode);
       }
 
-      projectCards.appendChild(card);
+      details.append(detailsTitle, role, teamSize, description, links);
+      projectCards.appendChild(details);
+
+      // Toggle expansion
+      card.addEventListener("click", () => {
+        details.classList.toggle("expanded");
+      });
     });
   }
 

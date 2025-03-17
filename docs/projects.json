@@ -2,7 +2,7 @@
   {
     "title": "Two to Foxtrot",
     "description": "A Unity-based game where I served as the main programmer, responsible for gameplay mechanics and optimizing player experience.",
-    "category": "Game and Tool Programming",
+    "category": "Playful Tech",
     "image": "images/two_to_foxtrot.jpg",
     "liveLink": "https://example.com/two_to_foxtrot",
     "sourceCode": "https://github.com/example/two_to_foxtrot",
@@ -15,7 +15,7 @@
   {
     "title": "Little Match Girl MR Experience",
     "description": "An MR experience on Meta Quest 3 along with live actors interaction design in passthrough mode.",
-    "category": "Audio and Interactive Experience",
+    "category": "Playful Tech",
     "image": "images/lmg.jpg",
     "liveLink": "https://example.com/lmg",
     "sourceCode": "https://github.com/example/lmg",
@@ -26,9 +26,22 @@
     }
   },
   {
+    "title": "Breathe Deep",
+    "description": "A submission for the Global Game Jam Pittsburgh, won Jammer's Award.",
+    "category": "Playful Tech",
+    "image": "images/lmg.jpg",
+    "liveLink": "https://example.com/lmg",
+    "sourceCode": "https://github.com/example/lmg",
+    "details": {
+      "tools": "Unity, FMOD, Audacity",
+      "role": "Sound Designer, Programmer",
+      "teamSize": 6
+    }
+  },
+  {
     "title": "Minijava Compiler",
     "description": "Developed a compiler for MiniJava, implementing lexical analysis, syntax parsing, semantic checks, and code generation.",
-    "category": "Game and Tool Programming",
+    "category": "CS and Code",
     "image": "images/minijava_compiler.jpg",
     "liveLink": "",
     "sourceCode": "https://github.com/example/minijava_compiler",
@@ -40,7 +53,7 @@
   {
     "title": "Python Pacman Pathfinding AI",
     "description": "Implemented AI algorithms for pathfinding and decision-making in a Pacman environment.",
-    "category": "Game and Tool Programming",
+    "category": "CS and Code",
     "image": "images/pacman_ai.jpg",
     "liveLink": "",
     "sourceCode": "https://github.com/example/pacman_ai",

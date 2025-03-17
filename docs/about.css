@@ -1,0 +1,48 @@
+/* About Page */
+.about-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    max-width: 900px;
+    margin: 50px auto;
+    padding: 3rem;
+    background: rgba(255, 255, 255, 0.85);
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+  }
+  
+  /* About Photo */
+  .about-photo {
+    width: 220px;
+    height: 220px;
+    border-radius: 15px;
+    object-fit: cover;
+    box-shadow: 0 4px 10px rgba(90, 141, 157, 0.5);
+    border: 5px solid rgba(255, 255, 255, 0.7);
+  }
+  
+  /* Resume Button */
+  .resume-btn {
+    display: inline-block;
+    background: #3b6978;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 8px;
+    text-decoration: none;
+    margin-top: 20px;
+    transition: all 0.3s ease;
+  }
+  
+  .resume-btn:hover {
+    background: #204e5a;
+  }
+  
+  @media (max-width: 768px) {
+    .about-container {
+      flex-direction: column;
+      text-align: center;
+    }
+  }
+  

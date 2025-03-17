@@ -6,39 +6,47 @@
     <script src="index.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;700&family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 
     <title>Portfolio</title>
   </head>
 
   <body>
-    <header></header>
+    <header>
+      <nav>
+        <a href="index.html" class="active">Home</a>
+        <a href="about.html">About</a>
+        <a href="path-to-resume.pdf" target="_blank">Resume</a>
+      </nav>
+    </header>
 
     <!-- Hero Section -->
     <section id="hero">
-      <div id="photo-overlay">
-        <img id="hero-photo" src="assets/winnie.png" alt="Winnie's Photo">
+      <div id="hero-content">
+        <div id="photo-overlay">
+          <img id="hero-photo" src="assets/winnie.png" alt="Winnie Tsai">
+        </div>
+    
+        <h1>Hello~ I'm Winnie Tsai</h1>
+        <p>Programming Languages | Adaptive Audio | User Research</p>
+        <button id="hero-button">See My Projects</button>
       </div>
-      
-      <h1>Hello~ I'm Winnie Tsai</h1>
-      <p>Tools programmer and Audio Engineer</p>
-      <button id="hero-button">See My Projects</button>
     </section>
+    
 
-    <!-- About Page -->
-    <section id="about">
-      <h2>About Me</h2>
-      <p>Write something about yourself here...</p>
-    </section>
-
-    <!-- Projects Section -->
     <section id="projects">
       <h2>Projects</h2>
       <div id="tabs">
-        <button data-category="Game and Tool Programming">Game and Tool Programming</button>
-        <button data-category="Audio and Interactive Experience">Audio and Interactive Experience</button>
+        <button data-category="CS and Code">CS and Code</button>
+        <button data-category="Playful Tech">Playful Tech</button>
+        <button data-category="People and Research">People and Research</button>
       </div>
       <div id="project-cards"></div>
-      <div id="error-container" class="hidden"></div>
+    </section>
+
+    <!-- Internship Section -->
+    <section id="internships">
+      <h2>Internship</h2>
     </section>
 
     <!-- Links Section -->
