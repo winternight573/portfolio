@@ -2,7 +2,7 @@
   {
     "title": "Two to Foxtrot",
     "description": "A Unity-based game where I served as the main programmer, responsible for gameplay mechanics and optimizing player experience.",
-    "category": "Playful Tech",
+    "category": "Audio and Games",
     "image": "images/two_to_foxtrot.jpg",
     "liveLink": "https://example.com/two_to_foxtrot",
     "sourceCode": "https://github.com/example/two_to_foxtrot",
@@ -15,7 +15,7 @@
   {
     "title": "Little Match Girl MR Experience",
     "description": "An MR experience on Meta Quest 3 along with live actors interaction design in passthrough mode.",
-    "category": "Playful Tech",
+    "category": "Audio and Games",
     "image": "images/lmg.jpg",
     "liveLink": "https://example.com/lmg",
     "sourceCode": "https://github.com/example/lmg",
@@ -28,7 +28,7 @@
   {
     "title": "Breathe Deep",
     "description": "A submission for the Global Game Jam Pittsburgh, won Jammer's Award.",
-    "category": "Playful Tech",
+    "category": "Audio and Games",
     "image": "images/lmg.jpg",
     "liveLink": "https://example.com/lmg",
     "sourceCode": "https://github.com/example/lmg",
