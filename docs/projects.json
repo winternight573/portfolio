@@ -3,7 +3,7 @@
     "title": "Two to Foxtrot",
     "description": "A Unity-based game where I served as the main programmer, responsible for gameplay mechanics and optimizing player experience.",
     "category": "Audio and Games",
-    "image": "images/two_to_foxtrot.jpg",
+    "image": "assets/two-to-foxtrot.png",
     "liveLink": "https://example.com/two_to_foxtrot",
     "sourceCode": "https://github.com/example/two_to_foxtrot",
     "details": {
@@ -16,7 +16,7 @@
     "title": "Little Match Girl MR Experience",
     "description": "An MR experience on Meta Quest 3 along with live actors interaction design in passthrough mode.",
     "category": "Audio and Games",
-    "image": "images/lmg.jpg",
+    "image": "assets/lmg-mr.png",
     "liveLink": "https://example.com/lmg",
     "sourceCode": "https://github.com/example/lmg",
     "details": {
@@ -29,9 +29,9 @@
     "title": "Breathe Deep",
     "description": "A submission for the Global Game Jam Pittsburgh, won Jammer's Award.",
     "category": "Audio and Games",
-    "image": "images/lmg.jpg",
-    "liveLink": "https://example.com/lmg",
-    "sourceCode": "https://github.com/example/lmg",
+    "image": "assets/breathe-deep.jpeg",
+    "liveLink": "https://yuqianleashi.itch.io/breathe-deep",
+    "sourceCode": "https://globalgamejam.org/games/2025/ditto-test-7",
     "details": {
       "tools": "Unity, FMOD, Audacity",
       "role": "Sound Designer, Programmer",
@@ -42,7 +42,7 @@
     "title": "Minijava Compiler",
     "description": "Developed a compiler for MiniJava, implementing lexical analysis, syntax parsing, semantic checks, and code generation.",
     "category": "CS and Code",
-    "image": "images/minijava_compiler.jpg",
+    "image": "assets/minijava.png",
     "liveLink": "",
     "sourceCode": "https://github.com/example/minijava_compiler",
     "details": {
@@ -54,7 +54,7 @@
     "title": "Python Pacman Pathfinding AI",
     "description": "Implemented AI algorithms for pathfinding and decision-making in a Pacman environment.",
     "category": "CS and Code",
-    "image": "images/pacman_ai.jpg",
+    "image": "assets/pacman.png",
     "liveLink": "",
     "sourceCode": "https://github.com/example/pacman_ai",
     "details": {
