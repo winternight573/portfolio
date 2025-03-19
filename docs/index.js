@@ -133,7 +133,7 @@
       if (project.liveLink) {
         const liveLink = gen("a");
         liveLink.href = project.liveLink;
-        liveLink.textContent = "Live Demo";
+        liveLink.textContent = "Demo";
         liveLink.target = "_blank";
         links.appendChild(liveLink);
       }

@@ -1,58 +1,57 @@
 [
   {
     "title": "Two to Foxtrot",
-    "description": "A Unity-based game where I served as the main programmer, responsible for gameplay mechanics and optimizing player experience.",
+    "description": "Creating a 2 player co-op platformer puzzle game using Unity and XBox controllers. The unique part of this game is that the two players each see different details of the game world, and communication is encouraged to solve the puzzles. I was the main programmer, working on the player system, input integration, and puzzle mechanics, along with another programmer working on UI and game manager, and a 3D artist and a 2D artist/sound designer within 2.5 week.",
     "category": "Audio and Games",
     "image": "assets/two-to-foxtrot.png",
-    "liveLink": "https://example.com/two_to_foxtrot",
-    "sourceCode": "https://github.com/example/two_to_foxtrot",
+    "liveLink": "https://youtu.be/q1OiPwjL8uk?feature=shared",
     "details": {
       "tools": "Unity, XBox controller",
-      "role": "Main Programmer",
+      "role": "Unity Programmer",
       "teamSize": 4
     }
   },
   {
     "title": "Little Match Girl MR Experience",
-    "description": "An MR experience on Meta Quest 3 along with live actors interaction design in passthrough mode.",
+    "description": "A visual storytelling experience where players traverse through the real and virtual worlds through interacting with live actors in passthrough mode and having a sense of freedom in the virtual world. I was in charge of audio design, and integrated FMOD which I self-learned in 2 days.",
     "category": "Audio and Games",
     "image": "assets/lmg-mr.png",
-    "liveLink": "https://example.com/lmg",
-    "sourceCode": "https://github.com/example/lmg",
+    "liveLink": "https://youtu.be/J50hsXcdTbA?feature=shared",
     "details": {
       "tools": "Unity, FMOD, Audacity",
-      "role": "Sound Designer, Producer, Programmer",
+      "role": "Sound Designer, Producer, Audio Programmer",
       "teamSize": 6
     }
   },
   {
     "title": "Breathe Deep",
-    "description": "A submission for the Global Game Jam Pittsburgh, won Jammer's Award.",
+    "description": "A submission for the Global Game Jam Pittsburgh, themed Bubble, and won Jammer's Award. I worked on the bubble mechanics as well as FMOD integration and some audio design. I worked closely with 2 other programmers, 2 artists, and a sound designer.",
     "category": "Audio and Games",
     "image": "assets/breathe-deep.jpeg",
     "liveLink": "https://yuqianleashi.itch.io/breathe-deep",
     "sourceCode": "https://globalgamejam.org/games/2025/ditto-test-7",
     "details": {
       "tools": "Unity, FMOD, Audacity",
-      "role": "Sound Designer, Programmer",
+      "role": "Unity Programmer, Audio Programmer",
       "teamSize": 6
     }
   },
   {
     "title": "Minijava Compiler",
-    "description": "Developed a compiler for MiniJava, implementing lexical analysis, syntax parsing, semantic checks, and code generation.",
+    "description": "Developed a compiler for MiniJava, a subset of Java, using Java. Implemented lexical analysis using Jflex, syntax parsing using CUP tools, and Abstract Syntax Tree traversial for type checking, and code generation in x86 assembly language.",
     "category": "CS and Code",
     "image": "assets/minijava.png",
     "liveLink": "",
     "sourceCode": "https://github.com/example/minijava_compiler",
     "details": {
       "language": "Java",
-      "course": "Compiler Construction"
+      "course": "Compiler Construction",
+      "teamSize": "Individual"
     }
   },
   {
     "title": "Python Pacman Pathfinding AI",
-    "description": "Implemented AI algorithms for pathfinding and decision-making in a Pacman environment.",
+    "description": "Implemented AI algorithms such as BFS, DFS, A* for pathfinding and decision-making in a Pacman environment.",
     "category": "CS and Code",
     "image": "assets/pacman.png",
     "liveLink": "",
@@ -60,7 +59,22 @@
     "details": {
       "language": "Python",
       "focus": "Pathfinding Algorithms",
-      "course": "AI Programming"
+      "course": "AI Programming",
+      "teamSize": "Individual"
+    }
+  },
+  {
+    "title": "Spelunx - CAVERN Toolkit",
+    "description": "Implemented AI algorithms such as BFS, DFS, A* for pathfinding and decision-making in a Pacman environment.",
+    "category": "CS and Code, People and Research",
+    "image": "assets/pacman.png",
+    "liveLink": "",
+    "sourceCode": "https://github.com/example/pacman_ai",
+    "details": {
+      "language": "Python",
+      "focus": "Pathfinding Algorithms",
+      "course": "AI Programming",
+      "teamSize": "Individual"
     }
   }
 ]
