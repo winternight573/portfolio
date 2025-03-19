@@ -4,8 +4,6 @@
     "description": "A Unity-based game where I served as the main programmer, responsible for gameplay mechanics and optimizing player experience.",
     "category": "Audio and Games",
     "image": "assets/two-to-foxtrot.png",
-    "liveLink": "https://example.com/two_to_foxtrot",
-    "sourceCode": "https://github.com/example/two_to_foxtrot",
     "details": {
       "tools": "Unity, XBox controller",
       "role": "Main Programmer",
