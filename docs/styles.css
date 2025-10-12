@@ -12,7 +12,7 @@
   --accent: #E24E8A;           /* Wildflower Glow */
   --accent-hover: #D6457E;
   --accent-secondary: #B8C3CC; /* Glacier Gray */
-  --accent-tertiary: #BEEA74;  /* Fresh Leaf — Seattle spring green */
+  --accent-tertiary: #BEEA74;  /* Fresh Leaf – Seattle spring green */
   --accent-tertiary-hover: #AEDD7B;
 
   /* Highlights & Surfaces */
@@ -134,8 +134,10 @@ a:hover {
    ============================================ */
 
 header {
-  position: sticky;
+  position: fixed;
   top: 0;
+  left: 0;
+  right: 0;
   z-index: 1000;
   background-color: rgba(255, 255, 255, 0.95);
   backdrop-filter: blur(10px);
@@ -260,47 +262,6 @@ section h2 {
 }
 
 /* ============================================
-   CONTACT SECTION
-   ============================================ */
-
-#contact {
-  background-color: var(--background-alt);
-  text-align: center;
-}
-
-#contact-links {
-  display: flex;
-  justify-content: center;
-  gap: var(--spacing-md);
-  flex-wrap: wrap;
-  margin-top: var(--spacing-lg);
-}
-
-#contact-links a {
-  display: flex;
-  align-items: center;
-  gap: var(--spacing-xs);
-  padding: var(--spacing-sm) var(--spacing-md);
-  background-color: var(--background);
-  border: 2px solid var(--border);
-  border-radius: var(--border-radius);
-  color: var(--text-primary);
-  font-weight: 600;
-  transition: var(--transition);
-}
-
-#contact-links a:hover {
-  background-color: var(--accent);
-  color: white;
-  border-color: var(--accent);
-  transform: translateY(-2px);
-}
-
-#contact-links i {
-  font-size: 1.25rem;
-}
-
-/* ============================================
    FOOTER
    ============================================ */
 
@@ -308,13 +269,65 @@ footer {
   background-color: var(--secondary);
   color: white;
   text-align: center;
-  padding: var(--spacing-md);
+  padding: var(--spacing-xxl) var(--spacing-md) var(--spacing-md);
   margin-top: var(--spacing-xl);
 }
 
-footer p {
-  color: rgba(255, 255, 255, 0.8);
-  margin: 0;
+.footer-content {
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+
+footer h2 {
+  color: white;
+  margin-bottom: var(--spacing-sm);
+}
+
+.footer-tagline {
+  color: rgba(255, 255, 255, 0.85);
+  font-size: 1.125rem;
+  margin-bottom: var(--spacing-lg);
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.footer-links {
+  display: flex;
+  justify-content: center;
+  gap: var(--spacing-md);
+  flex-wrap: wrap;
+  margin-bottom: var(--spacing-lg);
+}
+
+.footer-links a {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-xs);
+  padding: var(--spacing-sm) var(--spacing-md);
+  background-color: rgba(255, 255, 255, 0.1);
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  border-radius: var(--border-radius);
+  color: white;
+  font-weight: 600;
+  transition: var(--transition);
+}
+
+.footer-links a:hover {
+  background-color: var(--accent-tertiary);
+  color: var(--text-primary);
+  border-color: var(--accent-tertiary);
+  transform: translateY(-2px);
+}
+
+.footer-links i {
+  font-size: 1.25rem;
+}
+
+.footer-copyright {
+  color: rgba(255, 255, 255, 0.6);
+  margin-top: var(--spacing-lg);
+  font-size: 0.9375rem;
 }
 
 /* ============================================
@@ -337,12 +350,12 @@ footer p {
     padding: var(--spacing-xs);
   }
   
-  #contact-links {
+  .footer-links {
     flex-direction: column;
     align-items: center;
   }
   
-  #contact-links a {
+  .footer-links a {
     width: 100%;
     max-width: 300px;
     justify-content: center;

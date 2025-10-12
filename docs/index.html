@@ -4,11 +4,11 @@
     <meta charset="utf-8" />
     <link rel="stylesheet" href="styles.css" />
     <link rel="stylesheet" href="index.css" />
-    <script src="index.js"></script>
+    <script src="index.js" defer></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;700&family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-    <title>Winnie Tsai - Experience Designer & Creative Technologist</title>
+    <title>Winnie Tsai - Technical Experience Designer</title>
   </head>
 
   <body>
@@ -25,8 +25,8 @@
       <div id="hero-content">
         <div class="hero-text">
           <h1>Winnie Tsai</h1>
-          <p>Experience Designer & Creative Technologist</p>
-          <p class="hero-subtext">I bring research rigor to emotionally resonant interactive experiences</p>
+          <p>Technical Experience Designer & Creative Technologist</p>
+          <p class="hero-subtext">I research emerging platforms and build the tools and experiences that bring them to life</p>
           <button id="hero-button">Explore My Work</button>
         </div>
         <div class="hero-visual">
@@ -38,7 +38,7 @@
     <!-- Featured Projects Section -->
     <section id="featured">
       <h2>Featured Work</h2>
-      <p class="section-intro">Selected projects showcasing research, technical implementation, and creative exploration</p>
+      <p class="section-intro">Research-driven projects exploring novel platforms, gameplay systems, and emotionally resonant interactive experiences</p>
       <div id="featured-cards"></div>
     </section>
 
@@ -47,34 +47,49 @@
       <h2>Additional Projects</h2>
       <div id="tabs">
         <button data-category="all" class="active">All</button>
-        <button data-category="Interactive Experiences">Interactive Experiences</button>
-        <button data-category="Research & Tools">Research & Tools</button>
-        <button data-category="Design & UX">Design & UX</button>
+        <button data-category="Creative Technology & Research">Creative Technology & Research</button>
+        <button data-category="Experience Design & Development">Experience Design & Development</button>
+        <button data-category="Technical Foundations">Technical Foundations</button>
       </div>
       <div id="project-cards"></div>
     </section>
 
-    <!-- Contact Section -->
-    <section id="contact">
-      <h2>Let's Connect</h2>
-      <div id="contact-links">
-        <a href="mailto:your.email@example.com" target="_blank">
-          <i class="fas fa-envelope"></i> Email
-        </a>
-        <a href="https://www.linkedin.com/in/winnietsai573/" target="_blank">
-          <i class="fab fa-linkedin"></i> LinkedIn
-        </a>
-        <a href="https://github.com/winternight573" target="_blank">
-          <i class="fab fa-github"></i> GitHub
-        </a>
-        <a href="https://docs.google.com/document/d/1dzg11A2fp36GvrsqNqF1Hu42beqVZLsG8ya_EU-TJYM/edit?usp=sharing" target="_blank">
-          <i class="fas fa-file-alt"></i> Resume
-        </a>
+    <!-- Project Modal -->
+    <div id="project-modal" class="project-modal">
+      <div class="modal-content">
+        <button class="modal-close" aria-label="Close">&times;</button>
+        <img id="modal-image" class="modal-image" src="" alt="">
+        <div class="modal-body">
+          <span id="modal-category" class="modal-category"></span>
+          <h3 id="modal-title"></h3>
+          <p id="modal-description"></p>
+          <div id="modal-tags" class="modal-tags"></div>
+          <div id="modal-links" class="modal-links"></div>
+        </div>
       </div>
-    </section>
+    </div>
 
+    <!-- Footer -->
     <footer>
-      <p>© 2025 Winnie Tsai</p>
+      <div class="footer-content">
+        <h2>Let's Work Together</h2>
+        <p class="footer-tagline">I'm currently seeking opportunities in creative technology, platform R&D, and technical experience design roles.</p>
+        <div class="footer-links">
+          <a href="mailto:your.email@example.com" target="_blank">
+            <i class="fas fa-envelope"></i> Email
+          </a>
+          <a href="https://www.linkedin.com/in/winnietsai573/" target="_blank">
+            <i class="fab fa-linkedin"></i> LinkedIn
+          </a>
+          <a href="https://github.com/winternight573" target="_blank">
+            <i class="fab fa-github"></i> GitHub
+          </a>
+          <a href="resume.html">
+            <i class="fas fa-file-alt"></i> Resume
+          </a>
+        </div>
+        <p class="footer-copyright">&copy; 2025 Winnie Tsai</p>
+      </div>
     </footer>
   </body>
 </html>

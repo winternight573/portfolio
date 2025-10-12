@@ -1,66 +1,103 @@
 [
   {
-    "title": "Two to Foxtrot",
-    "description": "Creating a 2 player co-op platformer puzzle game using Unity and XBox controllers. The unique part of this game is that the two players each see different details of the game world, and communication is encouraged to solve the puzzles. I was the main programmer, working on the player system, input integration, and puzzle mechanics, along with another programmer working on UI and game manager, and a 3D artist and a 2D artist/sound designer within 2.5 week.",
-    "category": "Audio and Games",
-    "image": "assets/two-to-foxtrot.png",
-    "liveLink": "https://youtu.be/q1OiPwjL8uk?feature=shared",
+    "title": "LLM Tools for UX Researchers",
+    "description": "Explored how large language models can help UX researchers understand hard-to-reach user populations through synthetic data generation and analysis. Conducted UX research on designing tools and workflows for researchers working with AI-generated insights to complement traditional methods.",
+    "category": "Creative Technology & Research",
+    "image": "assets/llm-ux.png",
+    "tags": ["UX Research", "LLMs", "Python", "Research Methods"],
     "details": {
-      "tools": "Unity, XBox controller",
-      "role": "Unity Programmer",
-      "teamSize": 4
+      "role": "UX Researcher",
+      "focus": "AI-assisted research methodologies",
+      "tools": "Python, LLMs, Mixed Methods Research"
     }
   },
   {
     "title": "Little Match Girl MR Experience",
-    "description": "A visual storytelling experience where players traverse through the real and virtual worlds through interacting with live actors in passthrough mode and having a sense of freedom in the virtual world. I was in charge of audio design, and integrated FMOD which I self-learned in 2 days.",
-    "category": "Audio and Games",
+    "description": "Visual storytelling experience where players traverse between real and virtual worlds through interaction with live actors in passthrough mode. Responsible for audio design and integrated FMOD (self-learned in 2 days), creating adaptive soundscapes that responded to player transitions between realities.",
+    "category": "Creative Technology & Research",
     "image": "assets/lmg-mr.png",
     "liveLink": "https://youtu.be/J50hsXcdTbA?feature=shared",
+    "tags": ["Unity", "FMOD", "Mixed Reality", "Audio Design", "Meta Quest"],
     "details": {
-      "tools": "Unity, FMOD, Audacity",
-      "role": "Sound Designer, Producer, Audio Programmer",
-      "teamSize": 6
+      "role": "Audio Designer, Audio Programmer, Producer",
+      "focus": "Adaptive audio, MR passthrough design",
+      "teamSize": 6,
+      "tools": "Unity, FMOD, Audacity"
     }
   },
   {
     "title": "Breathe Deep",
-    "description": "A submission for the Global Game Jam Pittsburgh, themed Bubble, and won Jammer's Award. I worked on the bubble mechanics as well as FMOD integration and some audio design. I worked closely with 2 other programmers, 2 artists, and a sound designer.",
-    "category": "Audio and Games",
+    "description": "Global Game Jam Pittsburgh submission that won Jammer's Award. Worked as programmer and technical sound designer, implementing bubble mechanics and integrating FMOD for adaptive audio. Collaborated with 2 programmers, 2 artists, and a sound designer in 48-hour sprint.",
+    "category": "Experience Design & Development",
     "image": "assets/breathe-deep.jpeg",
     "liveLink": "https://yuqianleashi.itch.io/breathe-deep",
     "sourceCode": "https://globalgamejam.org/games/2025/ditto-test-7",
+    "tags": ["Unity", "FMOD", "Game Jam Winner", "Technical Audio"],
     "details": {
-      "tools": "Unity, FMOD, Audacity",
-      "role": "Unity Programmer, Audio Programmer",
-      "teamSize": 6
+      "role": "Programmer, Technical Sound Designer",
+      "focus": "Bubble mechanics, FMOD integration",
+      "teamSize": 6,
+      "timeline": "48 hours"
     }
   },
   {
-    "title": "Minijava Compiler",
-    "description": "Developed a compiler for MiniJava, a subset of Java, using Java. Implemented lexical analysis using Jflex, syntax parsing using CUP tools, and Abstract Syntax Tree traversial for type checking, and code generation in x86 assembly language.",
-    "category": "CS and Code",
+    "title": "Mental Health Dashboard",
+    "description": "Designed biweekly workplace dashboard to alleviate mental health stigma through normalized check-ins and accessible resources. Conducted user research to understand employee needs, created information architecture, and developed high-fidelity prototypes focused on reducing barriers to support.",
+    "category": "Experience Design & Development",
+    "image": "assets/mental-health-dashboard.png",
+    "tags": ["UX Design", "Figma", "User Research", "Mental Health"],
+    "details": {
+      "role": "UX Designer, Researcher",
+      "focus": "Mental health stigma reduction, workplace wellbeing",
+      "tools": "Figma, User Research Methods"
+    }
+  },
+  {
+    "title": "Husky Hangout",
+    "description": "Mobile app designed to help international students at University of Washington find community through shared interests. Conducted user interviews, created user flows, and designed interface focused on reducing social friction for new students navigating unfamiliar campus culture.",
+    "category": "Experience Design & Development",
+    "image": "assets/husky-hangout.png",
+    "tags": ["UX Design", "Mobile App", "User Research", "Figma"],
+    "details": {
+      "role": "UX Designer, Researcher",
+      "focus": "International student experience, community building",
+      "tools": "Figma, User Research, Prototyping"
+    }
+  },
+  {
+    "title": "MiniJava Compiler",
+    "description": "Developed full compiler for MiniJava (Java subset) using Java. Implemented lexical analysis with JFlex, syntax parsing with CUP tools, Abstract Syntax Tree traversal for type checking, and code generation targeting x86 assembly language. Demonstrates understanding of language design and compiler architecture.",
+    "category": "Technical Foundations",
     "image": "assets/minijava.png",
-    "liveLink": "",
-    "sourceCode": "https://github.com/example/minijava_compiler",
+    "tags": ["Java", "Compiler Design", "JFlex", "CUP", "x86 Assembly"],
     "details": {
-      "language": "Java",
-      "course": "Compiler Construction",
-      "teamSize": "Individual"
+      "role": "Individual Project",
+      "focus": "Compiler construction, code generation",
+      "course": "Compiler Construction"
     }
   },
   {
-    "title": "Python Pacman Pathfinding AI",
-    "description": "Implemented AI algorithms such as BFS, DFS, A* for pathfinding and decision-making in a Pacman environment.",
-    "category": "CS and Code",
-    "image": "assets/pacman.png",
-    "liveLink": "",
-    "sourceCode": "https://github.com/example/pacman_ai",
+    "title": "Programming Language Interpreter",
+    "description": "Built custom programming language interpreter in Racket, demonstrating language design principles and functional programming concepts. Implemented lexical scoping, first-class functions, and core language features through recursive evaluation.",
+    "category": "Technical Foundations",
+    "image": "assets/interpreter.png",
+    "tags": ["Racket", "Functional Programming", "Language Design", "Interpreters"],
     "details": {
-      "language": "Python",
-      "focus": "Pathfinding Algorithms",
-      "course": "AI Programming",
-      "teamSize": "Individual"
+      "role": "Individual Project",
+      "focus": "Language implementation, functional programming",
+      "course": "Programming Languages"
+    }
+  },
+  {
+    "title": "Pacman AI Agent",
+    "description": "Implemented AI algorithms including BFS, DFS, and A* for pathfinding and decision-making in Pacman environment. Developed heuristics for optimal ghost avoidance and pellet collection strategies.",
+    "category": "Technical Foundations",
+    "image": "assets/pacman.png",
+    "tags": ["Python", "AI", "Pathfinding", "Algorithms", "A*"],
+    "details": {
+      "role": "Individual Project",
+      "focus": "Search algorithms, AI decision-making",
+      "course": "Artificial Intelligence"
     }
   }
 ]
