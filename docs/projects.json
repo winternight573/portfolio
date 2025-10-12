@@ -62,19 +62,5 @@
       "course": "AI Programming",
       "teamSize": "Individual"
     }
-  },
-  {
-    "title": "Spelunx - CAVERN Toolkit",
-    "description": "Implemented AI algorithms such as BFS, DFS, A* for pathfinding and decision-making in a Pacman environment.",
-    "category": "CS and Code, People and Research",
-    "image": "assets/pacman.png",
-    "liveLink": "",
-    "sourceCode": "https://github.com/example/pacman_ai",
-    "details": {
-      "language": "Python",
-      "focus": "Pathfinding Algorithms",
-      "course": "AI Programming",
-      "teamSize": "Individual"
-    }
   }
 ]

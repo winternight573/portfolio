@@ -3,18 +3,18 @@
   <head>
     <meta charset="utf-8" />
     <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="index.css" />
     <script src="index.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;700&family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-
-    <title>Portfolio</title>
+    <title>Winnie Tsai - Experience Designer & Creative Technologist</title>
   </head>
 
   <body>
     <header>
       <nav>
-        <a href="index.html" class="active">Home</a>
+        <a href="index.html" class="active">Work</a>
         <a href="about.html">About</a>
         <a href="resume.html">Resume</a>
       </nav>
@@ -23,46 +23,58 @@
     <!-- Hero Section -->
     <section id="hero">
       <div id="hero-content">
-        <div id="photo-overlay">
-          <img id="hero-photo" src="assets/winnie.png" alt="Winnie Tsai">
+        <div class="hero-text">
+          <h1>Winnie Tsai</h1>
+          <p>Experience Designer & Creative Technologist</p>
+          <p class="hero-subtext">I bring research rigor to emotionally resonant interactive experiences</p>
+          <button id="hero-button">Explore My Work</button>
         </div>
-    
-        <h1>Hello~ I'm Winnie Tsai</h1>
-        <p>Programming Languages | Adaptive Audio | User Research</p>
-        <button id="hero-button">See My Projects</button>
+        <div class="hero-visual">
+          <img src="assets/winnie.png" alt="Winnie Tsai">
+        </div>
       </div>
     </section>
-    
 
+    <!-- Featured Projects Section -->
+    <section id="featured">
+      <h2>Featured Work</h2>
+      <p class="section-intro">Selected projects showcasing research, technical implementation, and creative exploration</p>
+      <div id="featured-cards"></div>
+    </section>
+
+    <!-- All Projects Section -->
     <section id="projects">
-      <h2>Projects</h2>
+      <h2>Additional Projects</h2>
       <div id="tabs">
-        <button data-category="CS and Code">CS and Code</button>
-        <button data-category="Audio and Games">Audio and Games</button>
-        <button data-category="People and Research">People and Research</button>
+        <button data-category="all" class="active">All</button>
+        <button data-category="Interactive Experiences">Interactive Experiences</button>
+        <button data-category="Research & Tools">Research & Tools</button>
+        <button data-category="Design & UX">Design & UX</button>
       </div>
       <div id="project-cards"></div>
     </section>
 
-    <!-- Internship Section -->
-    <section id="internships">
-      <h2>Internship</h2>
+    <!-- Contact Section -->
+    <section id="contact">
+      <h2>Let's Connect</h2>
+      <div id="contact-links">
+        <a href="mailto:your.email@example.com" target="_blank">
+          <i class="fas fa-envelope"></i> Email
+        </a>
+        <a href="https://www.linkedin.com/in/winnietsai573/" target="_blank">
+          <i class="fab fa-linkedin"></i> LinkedIn
+        </a>
+        <a href="https://github.com/winternight573" target="_blank">
+          <i class="fab fa-github"></i> GitHub
+        </a>
+        <a href="https://docs.google.com/document/d/1dzg11A2fp36GvrsqNqF1Hu42beqVZLsG8ya_EU-TJYM/edit?usp=sharing" target="_blank">
+          <i class="fas fa-file-alt"></i> Resume
+        </a>
+      </div>
     </section>
 
-    <!-- Links Section -->
-    <section id="links">
-      <h2>Find Me</h2>
-      <a href="https://github.com/winternight573" target="_blank">GitHub</a>
-      <a
-        href="https://docs.google.com/document/d/1dzg11A2fp36GvrsqNqF1Hu42beqVZLsG8ya_EU-TJYM/edit?usp=sharing"
-        target="_blank"
-        >Resume</a
-      >
-      <a href="https://www.linkedin.com/in/winnietsai573/" target="_blank"
-        >LinkedIn</a
-      >
-    </section>
-
-    <footer></footer>
+    <footer>
+      <p>© 2025 Winnie Tsai</p>
+    </footer>
   </body>
 </html>
