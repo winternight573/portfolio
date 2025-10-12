@@ -9,7 +9,7 @@
 
 #about-hero {
   padding: var(--spacing-xxl) var(--spacing-md) var(--spacing-xl);
-  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  background: linear-gradient(135deg, #f5f8fa 0%, #e8eff4 100%);
   position: relative;
   overflow: hidden;
 }
@@ -17,18 +17,12 @@
 .about-hero-background {
   position: absolute;
   inset: 0;
-  background-image: url('assets/pnw-mountains.jpg'); /* Use one of your nature images */
+  background-image: url('assets/pnw-mountains.jpg');
   background-size: cover;
   background-position: center;
-  filter: blur(3px) brightness(0.4);
+  filter: blur(2px) brightness(1.1);
+  opacity: 0.15;
   z-index: 0;
-}
-
-.about-hero-background::after {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(135deg, rgba(52, 73, 94, 0.85) 0%, rgba(44, 62, 80, 0.9) 100%);
 }
 
 .about-container {
@@ -37,7 +31,7 @@
   display: grid;
   grid-template-columns: 300px 1fr;
   gap: var(--spacing-xl);
-  align-items: center;
+  align-items: start;
   position: relative;
   z-index: 10;
 }
@@ -64,16 +58,17 @@
 }
 
 .about-intro p {
-  color: white;
-  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  color: var(--text-secondary);
+  font-size: 1.0625rem;
+  line-height: 1.8;
+  margin-bottom: var(--spacing-md);
 }
 
 .about-intro p.lead {
   font-size: 1.25rem;
   line-height: 1.8;
-  margin-bottom: 0;
-  color: white;
-  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  margin-bottom: var(--spacing-md);
+  color: var(--text-secondary);
 }
 
 .about-intro strong {
@@ -82,10 +77,10 @@
 }
 
 /* ============================================
-   ABOUT STORY SECTION
+   WHAT DRIVES ME SECTION
    ============================================ */
 
-#about-story {
+#what-drives-me {
   padding: var(--spacing-xxl) var(--spacing-md);
   background-color: var(--background);
 }
@@ -95,31 +90,87 @@
   margin: 0 auto;
 }
 
-#about-story h2 {
+#what-drives-me h2 {
   font-size: clamp(1.75rem, 3vw, 2.5rem);
-  text-align: left;
-  margin-top: var(--spacing-xl);
-  margin-bottom: var(--spacing-md);
+  text-align: center;
+  margin-bottom: var(--spacing-lg);
   color: var(--text-primary);
-  padding-bottom: var(--spacing-xs);
-  border-bottom: 3px solid var(--accent);
-  display: inline-block;
 }
 
-#about-story h2:first-of-type {
-  margin-top: 0;
-}
-
-#about-story p {
+#what-drives-me p {
   font-size: 1.0625rem;
   line-height: 1.8;
   margin-bottom: var(--spacing-md);
   color: var(--text-secondary);
 }
 
-#about-story strong {
+#what-drives-me strong {
   color: var(--text-primary);
   font-weight: 600;
+}
+
+/* ============================================
+   BEYOND WORK SECTION
+   ============================================ */
+
+.beyond-compact {
+  max-width: 700px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+}
+
+.compact-item {
+  display: flex;
+  align-items: start;
+  gap: var(--spacing-md);
+  padding: var(--spacing-md);
+  background: var(--background);
+  border-radius: var(--border-radius);
+  border: 1px solid var(--border);
+  transition: var(--transition);
+}
+
+.compact-item:hover {
+  border-color: var(--accent-tertiary);
+  box-shadow: 0 4px 12px var(--shadow);
+  transform: translateX(8px);
+}
+
+.compact-icon {
+  font-size: 2.5rem;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 60px;
+  height: 60px;
+  background: var(--highlight);
+  border-radius: var(--border-radius);
+}
+
+.compact-content h3 {
+  font-size: 1.25rem;
+  color: var(--text-primary);
+  margin: 0 0 var(--spacing-xs) 0;
+}
+
+.compact-content p {
+  font-size: 1rem;
+  color: var(--text-secondary);
+  margin: 0;
+  line-height: 1.6;
+}
+
+.compact-content a {
+  color: var(--accent);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.compact-content a:hover {
+  color: var(--accent-hover);
 }
 
 /* ============================================
@@ -128,7 +179,7 @@
 
 #skills {
   padding: var(--spacing-xxl) var(--spacing-md);
-  background-color: var(--background-alt);
+  background-color: var(--background);
 }
 
 #skills h2 {
@@ -202,7 +253,7 @@
 
 #cta {
   padding: var(--spacing-xxl) var(--spacing-md);
-  background-color: var(--background);
+  background-color: var(--background-alt);
   text-align: center;
 }
 
@@ -284,6 +335,10 @@
     max-width: 280px;
     margin: 0 auto;
   }
+  
+  .interests-grid {
+    grid-template-columns: 1fr;
+  }
 }
 
 @media (max-width: 768px) {
@@ -295,14 +350,11 @@
     font-size: 1.125rem;
   }
   
-  #about-story,
+  #what-drives-me,
+  #beyond-work,
   #skills,
   #cta {
     padding: var(--spacing-lg) var(--spacing-md);
-  }
-  
-  #about-story h2 {
-    margin-top: var(--spacing-lg);
   }
   
   .skills-grid {
@@ -329,5 +381,9 @@
   
   .skill-category {
     padding: var(--spacing-md);
+  }
+  
+  .interest-image {
+    height: 160px;
   }
 }
