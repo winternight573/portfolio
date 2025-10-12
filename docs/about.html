@@ -3,127 +3,80 @@
 <head>
   <meta charset="utf-8">
   <link rel="stylesheet" href="styles.css">
-  <link rel="stylesheet" href="about.css">
+  <script src="index.js" defer></script>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;700&family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 
-  <title>About - Winnie Tsai</title>
+  <title>About Me - Winnie Tsai</title>
 </head>
 
 <body>
   <header>
     <nav>
-      <a href="index.html">Work</a>
+      <a href="index.html">Home</a>
       <a href="about.html" class="active">About</a>
       <a href="resume.html">Resume</a>
     </nav>
   </header>
 
-  <section id="about-hero">
+  <section id="about">
     <div class="about-container">
       <img src="assets/winnie.png" alt="Winnie Tsai" class="about-photo">
-      
-      <div class="about-intro">
-        <h1>Hi, I'm Winnie</h1>
-        <p class="lead">I like to describe myself as <strong>interdisciplinary</strong>—someone who bridges the analytical and the emotional, the technical and the creative.</p>
+      <div class="about-text">
+        <h2>About Me</h2>
+        <p>Hi, I'm <span class="highlight">Winnie Tsai</span>, a Master's student in **Entertainment Technology** at **Carnegie Mellon University**. 
+           I started in theoretical computer science & math but now lead **interactive projects** that blend **software development, user research, and design.**</p>
+
+        <p>My greatest strength is being a <span class="highlight">fast learner</span>. Thanks to my **technical background**, I adapt to tools quickly, bridging the gap between **developers and designers**.
+           I've been described as an <span class="highlight">excellent leader</span> because I communicate effectively across disciplines while staying hands-on in development.</p>
+
+        <p>As a <span class="highlight">generalist</span> who favors **technical depth**, I bring structure, creativity, and user-centered thinking to every project.</p>
+
+        <a href="path-to-resume.pdf" class="resume-btn" target="_blank">Download Resume</a>
       </div>
-    </div>
-  </section>
-
-  <section id="about-story">
-    <div class="content-width">
-      <h2>My Background</h2>
-      
-      <p>I hold a <strong>BS in Applied and Computational Math Sciences</strong> (Discrete Math and Algorithms) and a <strong>minor in Dance</strong> from the University of Washington. This unusual combination reflects my belief that rigorous investigation and visceral emotional expression aren't opposites—they're complementary ways of understanding the world.</p>
-
-      <p>My perspective is also shaped by <strong>UX research and marketing</strong>, through both academic projects and internships. These experiences taught me to balance user needs with business constraints, and to communicate complex ideas clearly across disciplines.</p>
-
-      <p>Currently, I'm a graduate student at <strong>Carnegie Mellon University's Entertainment Technology Center</strong>, where I'm becoming a technically fluent interactive experience designer—someone who can both envision creative possibilities and bring them to life through code, research, and collaboration.</p>
-
-      <h2>What Drives Me</h2>
-      
-      <p>I'm especially drawn to <strong>creative R&D projects</strong> that push boundaries: adaptive sound design that responds to player emotion, immersive experiences that blur the line between physical and digital, and tools that empower creators to tell better stories.</p>
-
-      <p>What excites me most is the <strong>research phase</strong>—digging into hard problems, prototyping rapidly, playtesting relentlessly, and iterating until something clicks. I bring open-minded synthesis and collaborative communication to every team, helping bridge the gap between technical implementation and creative vision.</p>
-
-      <h2>Beyond Work</h2>
-      
-      <p>When I'm not designing experiences or writing code, you might find me exploring movement and choreography, getting lost in interactive art installations, or thinking about how sound shapes emotional narrative.</p>
     </div>
   </section>
 
   <section id="skills">
-    <div class="content-width">
-      <h2>Skills & Tools</h2>
-      
-      <div class="skills-grid">
-        <div class="skill-category">
-          <div class="skill-icon">🔬</div>
-          <h3>Research & UX</h3>
-          <ul>
-            <li>Mixed Methods Research</li>
-            <li>Usability Testing & Playtesting</li>
-            <li>User Flow Analysis</li>
-            <li>Contextual Inquiry</li>
-            <li>Quantitative & Qualitative Analysis</li>
-            <li>Prototyping (Figma, Paper)</li>
-          </ul>
-        </div>
-
-        <div class="skill-category">
-          <div class="skill-icon">💻</div>
-          <h3>Development</h3>
-          <ul>
-            <li>Unity (VR/AR, 3D, 2D)</li>
-            <li>C# / Java / C++</li>
-            <li>Python (NumPy, Matplotlib, Pandas)</li>
-            <li>JavaScript / HTML / CSS</li>
-            <li>Git & Perforce</li>
-            <li>Design Patterns & OOP</li>
-          </ul>
-        </div>
-
-        <div class="skill-category">
-          <div class="skill-icon">🎵</div>
-          <h3>Creative Tech</h3>
-          <ul>
-            <li>FMOD (Adaptive Audio)</li>
-            <li>Technical Sound Design</li>
-            <li>SDK & Toolkit Development</li>
-            <li>Immersive Experience Design</li>
-            <li>Haptics Integration</li>
-          </ul>
-        </div>
-
-        <div class="skill-category">
-          <div class="skill-icon">🎯</div>
-          <h3>Process & Leadership</h3>
-          <ul>
-            <li>Agile & Scrum</li>
-            <li>Production & Project Management</li>
-            <li>Cross-Disciplinary Communication</li>
-            <li>Rapid Prototyping</li>
-            <li>Playtesting Strategy</li>
-          </ul>
-        </div>
+    <h2>Skills</h2>
+    <div class="skills-container">
+      <div class="skill-card">
+        <h3>💡 UX & Research</h3>
+        <ul>
+          <li><i class="fas fa-user-friends"></i> User Flow Analysis</li>
+          <li><i class="fas fa-vial"></i> Usability Testing</li>
+          <li><i class="fas fa-cogs"></i> Modeling</li>
+          <li><i class="fas fa-comments"></i> Contextual Inquiry</li>
+          <li><i class="fas fa-pencil-ruler"></i> Prototyping (Figma)</li>
+        </ul>
       </div>
-    </div>
-  </section>
 
-  <section id="cta">
-    <div class="content-width">
-      <h2>Let's Work Together</h2>
-      <p>I'm currently seeking opportunities in interactive experience design, creative R&D, and technical design roles where I can combine research rigor with hands-on development.</p>
-      <div class="cta-buttons">
-        <a href="mailto:your.email@example.com" class="btn-primary">Get in Touch</a>
-        <a href="resume.html" class="btn-secondary">View Resume</a>
+      <div class="skill-card">
+        <h3>💻 Programming</h3>
+        <ul>
+          <li><i class="fab fa-java"></i> Java</li>
+          <li><i class="fas fa-code"></i> C / C++</li>
+          <li><i class="fab fa-python"></i> Python (NumPy, Matplotlib)</li>
+          <li><i class="fas fa-database"></i> SQL & Tableau</li>
+          <li><i class="fab fa-html5"></i> HTML / CSS / JavaScript</li>
+        </ul>
+      </div>
+
+      <div class="skill-card">
+        <h3>🎮 Game Dev & Tools</h3>
+        <ul>
+          <li><i class="fas fa-gamepad"></i> Unity</li>
+          <li><i class="fas fa-code-branch"></i> Perforce & Git</li>
+          <li><i class="fas fa-tools"></i> SDK Development</li>
+          <li><i class="fas fa-music"></i> FMOD (Audio Integration)</li>
+        </ul>
       </div>
     </div>
   </section>
 
   <footer>
-    <p>&copy; 2025 Winnie Tsai</p>
+    <p>&copy; 2024 Winnie Tsai. All Rights Reserved.</p>
   </footer>
 </body>
 </html>
