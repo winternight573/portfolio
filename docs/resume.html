@@ -4,7 +4,6 @@
   <meta charset="utf-8">
   <link rel="stylesheet" href="styles.css">
   <link rel="stylesheet" href="resume.css">
-  <script src="index.js" defer></script>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;700&family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
@@ -15,38 +14,184 @@
 <body>
   <header>
     <nav>
-      <a href="index.html">Home</a>
+      <a href="index.html">Work</a>
       <a href="about.html">About</a>
       <a href="resume.html" class="active">Resume</a>
     </nav>
   </header>
 
-  <!-- Resumes -->
-   <!-- Resume Section -->
-  <section id="resume">
-    <h1>My Resume</h1>
-    <p>Select a resume tailored to different roles:</p>
+  <section id="resume-header">
+    <div class="content-width">
+      <h1>Winnie Tsai</h1>
+      <p class="resume-tagline">Experience Designer & Creative Technologist</p>
+      <div class="resume-contact">
+        <a href="mailto:your.email@example.com"><i class="fas fa-envelope"></i> your.email@example.com</a>
+        <a href="https://www.linkedin.com/in/winnietsai573/" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
+        <a href="https://github.com/winternight573" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+        <a href="https://docs.google.com/document/d/1dzg11A2fp36GvrsqNqF1Hu42beqVZLsG8ya_EU-TJYM/edit?usp=sharing" target="_blank" class="btn-download"><i class="fas fa-download"></i> Download PDF</a>
+      </div>
+    </div>
+  </section>
 
-    <div class="resume-links">
-      <a href="https://docs.google.com/document/d/1dzg11A2fp36GvrsqNqF1Hu42beqVZLsG8ya_EU-TJYM/edit?usp=sharing" 
-         target="_blank" class="resume-btn">
-        <i class="fas fa-code"></i> Software Engineer Resume
-      </a>
+  <section id="resume-content">
+    <div class="content-width">
       
-      <a href="https://docs.google.com/document/d/1QPoMu9CgSIVKH0xibRVe7mbNNiGmEo6VS4eUyG42sw4/edit?usp=sharing" 
-         target="_blank" class="resume-btn">
-        <i class="fas fa-user"></i> UX Research Resume
-      </a>
+      <!-- Education -->
+      <div class="resume-section">
+        <h2>Education</h2>
+        
+        <div class="resume-item">
+          <div class="resume-item-header">
+            <div>
+              <h3>Master of Entertainment Technology</h3>
+              <p class="institution">Carnegie Mellon University</p>
+            </div>
+            <p class="date">Expected 2026</p>
+          </div>
+          <ul>
+            <li>Focus: Interactive Experience Design, UX Research, Immersive Technologies</li>
+            <li><strong>Selected Coursework:</strong> UX Research Methods, Transformational Game Design, Immersive Platform Development</li>
+            <li><strong>Projects:</strong> LLM tools for UX researchers, Metacognition learning game, VR haptics research</li>
+          </ul>
+        </div>
 
-      <a href="https://docs.google.com/document/d/1yH7WFQE7aEgWSzd0lH3yHCRcCUDNq4jDvCT-qofkS7w/edit?usp=sharing" 
-         target="_blank" class="resume-btn">
-        <i class="fas fa-tasks"></i> Project Manager Resume
-      </a>
+        <div class="resume-item">
+          <div class="resume-item-header">
+            <div>
+              <h3>BS in Applied & Computational Math Sciences</h3>
+              <p class="institution">University of Washington</p>
+            </div>
+            <p class="date">2023</p>
+          </div>
+          <ul>
+            <li>Option: Discrete Math and Algorithms | Minor: Dance</li>
+            <li><strong>Selected Coursework:</strong> Data Structures & Algorithms, Programming Languages, Mathematical Modeling, HCI</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Experience -->
+      <div class="resume-section">
+        <h2>Experience</h2>
+        
+        <div class="resume-item">
+          <div class="resume-item-header">
+            <div>
+              <h3>Graduate Researcher & Developer</h3>
+              <p class="institution">Carnegie Mellon University - Entertainment Technology Center</p>
+            </div>
+            <p class="date">2024 – Present</p>
+          </div>
+          <ul>
+            <li><strong>Immersive Platform Toolkit:</strong> Led UX research on developer and player experience for novel immersive platforms; conducted audio design research; developed gameplay samples demonstrating design best practices</li>
+            <li><strong>VR Haptics R&D:</strong> Produced research project investigating haptic feedback for emotional resonance in VR; designed playtesting strategy; contributed to prototype development</li>
+            <li>Conducted mixed-methods research including usability testing, contextual inquiry, and quantitative analysis</li>
+          </ul>
+        </div>
+
+        <div class="resume-item">
+          <div class="resume-item-header">
+            <div>
+              <h3>UX Research & Design Projects</h3>
+              <p class="institution">University of Washington</p>
+            </div>
+            <p class="date">2021 – 2023</p>
+          </div>
+          <ul>
+            <li><strong>Mental Health Dashboard:</strong> Designed biweekly workplace dashboard to alleviate mental health stigma through normalized check-ins and accessible resources</li>
+            <li><strong>Husky Hangout:</strong> Created mobile app for international students to find community through shared interests; conducted user research and iterative prototyping</li>
+            <li>Applied HCI principles and design thinking methodology across multiple user-centered projects</li>
+          </ul>
+        </div>
+
+        <!-- Add your internships here if you have them -->
+        <div class="resume-item">
+          <div class="resume-item-header">
+            <div>
+              <h3>Marketing & UX Intern</h3>
+              <p class="institution">[Company Name]</p>
+            </div>
+            <p class="date">[Dates]</p>
+          </div>
+          <ul>
+            <li>[Brief description of responsibilities and achievements]</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Selected Projects -->
+      <div class="resume-section">
+        <h2>Selected Projects</h2>
+        
+        <div class="resume-item compact">
+          <div class="resume-item-header">
+            <div>
+              <h3>Game Jam Winner - Technical Sound Design</h3>
+              <p class="tech-stack">Unity, C#, FMOD</p>
+            </div>
+            <p class="date">2024</p>
+          </div>
+          <p>Won Jammers Award; implemented adaptive audio system using FMOD; served as programmer and technical sound designer</p>
+        </div>
+
+        <div class="resume-item compact">
+          <div class="resume-item-header">
+            <div>
+              <h3>LLM Tools for UX Researchers</h3>
+              <p class="tech-stack">Python, LLMs, Mixed Methods Research</p>
+            </div>
+            <p class="date">2024</p>
+          </div>
+          <p>Explored use of large language models to help UX researchers understand hard-to-reach user populations through synthetic data generation and analysis</p>
+        </div>
+
+        <div class="resume-item compact">
+          <div class="resume-item-header">
+            <div>
+              <h3>Programming Language Interpreter</h3>
+              <p class="tech-stack">Racket, Functional Programming</p>
+            </div>
+            <p class="date">2022</p>
+          </div>
+          <p>Built custom programming language interpreter demonstrating language design and implementation principles</p>
+        </div>
+
+        <div class="resume-item compact">
+          <div class="resume-item-header">
+            <div>
+              <h3>Java Compiler</h3>
+              <p class="tech-stack">Java, Compiler Design</p>
+            </div>
+            <p class="date">2022</p>
+          </div>
+          <p>Developed full compiler for Java-like language including lexical analysis, parsing, and code generation</p>
+        </div>
+      </div>
+
+      <!-- Skills -->
+      <div class="resume-section">
+        <h2>Technical Skills</h2>
+        <div class="skills-list">
+          <div class="skill-group">
+            <strong>Development:</strong> Unity (VR/AR), C#, Java, C++, Python, JavaScript/HTML/CSS, Git, Perforce
+          </div>
+          <div class="skill-group">
+            <strong>Research & Design:</strong> Mixed Methods Research, Usability Testing, User Flow Analysis, Figma, Prototyping
+          </div>
+          <div class="skill-group">
+            <strong>Creative Tech:</strong> FMOD, Adaptive Audio, SDK Development, Technical Sound Design, Haptics Integration
+          </div>
+          <div class="skill-group">
+            <strong>Process:</strong> Agile/Scrum, Playtesting Strategy, Cross-Disciplinary Communication, Production Management
+          </div>
+        </div>
+      </div>
+
     </div>
   </section>
 
   <footer>
-    <p>&copy; 2024 Winnie Tsai. All Rights Reserved.</p>
+    <p>&copy; 2025 Winnie Tsai</p>
   </footer>
 </body>
 </html>
