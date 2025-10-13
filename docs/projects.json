@@ -5,7 +5,7 @@
     "role": "Unity Programmer",
     "category": "Games and Experiences",
     "image": "assets/prison-escape.png",
-    "tags": ["Unity", "VR", "Game Design"],
+    "tags": ["Unity", "VR", "Gameplay Programming", "Naive Guest playtesting"],
     "moreLinks": {
       "Gameplay video": "https://www.youtube.com/watch?v=FoZPNRG6GFE"
     },
@@ -38,7 +38,7 @@
     "category": "Games and Experiences",
     "image": "assets/breathe-deep.jpeg",
     "link": "https://yuqianleashi.itch.io/breathe-deep",
-    "tags": ["Unity", "FMOD", "Game Jam Winner", "Technical Audio"],
+    "tags": ["Unity", "FMOD", "Game Jam Winner", "Gameplay Programming", "Technical Audio"],
     "moreLinks": {
       "Game Jam Page": "https://globalgamejam.org/games/2025/ditto-test-7"
     },
@@ -121,13 +121,13 @@
   },
   {
     "title": "TACIT - R&D for VR Haptics in Emotional Storytelling",
-    "description": "Produced research project investigating haptic feedback for emotional resonance in VR. Led playtesting strategy and facilitated cross-disciplinary collaboration. Developed prototyping artifacts for rapid user testing. Documented findings and development process on project website.",
+    "description": "Produced R&D project on haptic feedback for emotional resonance in VR. Led playtesting strategy and facilitated cross-disciplinary collaboration. Developed prototyping artifacts for rapid user testing. Documented findings and development process on project website.",
     "role": "Producer, Programmer, UX Researcher",
     "category": "Creative Tech R&D",
     "image": "assets/TACIT.jpg",
     "link": "https://projects.etc.cmu.edu/tacit/",
     "featured": true,
-    "tags": ["VR", "Haptics", "R&D", "Production", "Unity 6", "Meta SDK", "bHaptics TactGlove", "Trello"],
+    "tags": ["VR", "Haptics", "R&D", "Agile Production", "Unity 6", "Meta SDK", "bHaptics TactGlove", "Trello"],
     "moreLinks": {
       "Halves Presentation": "https://youtu.be/GAxx3sOczOU?si=TgsChj_zyjh2fIKP&t=3655"
     },
@@ -144,10 +144,10 @@
     "image": "assets/two-to-foxtrot.png",
     "link": "https://youtu.be/q1OiPwjL8uk?feature=shared",
     "featured": true,
-    "tags": ["Unity", "C#", "Gameplay Programming", "Co-op Mechanics", "Perforce"],
+    "tags": ["Unity", "Gameplay Programming", "Co-op Mechanics", "Perforce"],
     "details": {
       "focus": "Gameplay programming",
-      "tools": "Unity, Perforce"
+      "tools": "Unity, C#, Perforce"
     }
   },
   {
@@ -175,7 +175,7 @@
     "image": "assets/voice-in-the-void.png",
     "link": "https://itch.io/jam/tgcxcoreblazer/rate/3628855",
     "featured": true,
-    "tags": ["Unity", "C#", "Gameplay Programming", "OpenAI API", "Building system"],
+    "tags": ["Unity", "Gameplay Programming", "Game jam", "OpenAI API", "Building system"],
     "moreLinks": {
       "Itch.io Page": "https://yenchun.itch.io/voice-in-the-void"
     },

@@ -27,7 +27,7 @@
     "image": "assets/TACIT.jpg",
     "link": "https://projects.etc.cmu.edu/tacit/",
     "featured": true,
-    "tags": ["VR", "Haptics", "R&D", "Production", "Unity 6", "Meta SDK", "bHaptics TactGlove", "Trello"],
+    "tags": ["VR", "Haptics", "R&D", "Agile Production", "Unity 6", "Meta SDK", "bHaptics TactGlove", "Trello"],
     "moreLinks": {
       "Halves Presentation": "https://youtu.be/GAxx3sOczOU?si=TgsChj_zyjh2fIKP&t=3655"
     },
@@ -44,10 +44,10 @@
     "image": "assets/two-to-foxtrot.png",
     "link": "https://youtu.be/q1OiPwjL8uk?feature=shared",
     "featured": true,
-    "tags": ["Unity", "C#", "Gameplay Programming", "Co-op Mechanics", "Perforce"],
+    "tags": ["Unity", "Gameplay Programming", "Co-op Mechanics", "Perforce"],
     "details": {
       "focus": "Gameplay programming",
-      "tools": "Unity, Perforce"
+      "tools": "Unity, C#, Perforce"
     }
   },
   {
