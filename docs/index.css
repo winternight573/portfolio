@@ -162,12 +162,16 @@
 }
 
 /* Color-coded featured card hover borders */
-.featured-card[data-category="Creative Technology & Research"]:hover {
+.featured-card[data-category="Creative Tech R&D"]:hover {
   border-color: #7C8DD9;
 }
 
-.featured-card[data-category="Experience Design & Development"]:hover {
+.featured-card[data-category="Games and Experiences"]:hover {
   border-color: #E24E8A;
+}
+
+.featured-card[data-category="UX Research"]:hover {
+  border-color: #B8C3CC;
 }
 
 .featured-card[data-category="Technical Foundations"]:hover {
@@ -195,6 +199,18 @@
   line-height: 1.3;
 }
 
+.project-role,
+.modal-role {
+  font-size: 0.875rem;
+  color: var(--accent-tertiary);
+  font-weight: 600;
+  font-style: italic;
+  margin-bottom: var(--spacing-sm);
+  padding-bottom: 0.25rem;
+  border-bottom: 2px solid #B8C3CC;
+  display: inline-block;
+}
+
 .category-tag {
   font-size: 0.75rem;
   font-weight: 600;
@@ -205,12 +221,16 @@
 }
 
 /* Color-coded category tags */
-.category-tag[data-category="Creative Technology & Research"] {
+.category-tag[data-category="Creative Tech R&D"] {
   color: #7C8DD9;
 }
 
-.category-tag[data-category="Experience Design & Development"] {
+.category-tag[data-category="Games and Experiences"] {
   color: #E24E8A;
+}
+
+.category-tag[data-category="UX Research"] {
+  color: #B8C3CC;
 }
 
 .category-tag[data-category="Technical Foundations"] {
@@ -223,10 +243,27 @@
   line-height: 1.6;
   margin-bottom: var(--spacing-sm);
   flex-grow: 1;
+}
+
+.featured-card .description-text {
   display: -webkit-box;
-  -webkit-line-clamp: 3;
+  -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
   overflow: hidden;
+}
+
+.read-more {
+  color: var(--accent);
+  font-weight: 600;
+  cursor: pointer;
+  transition: var(--transition);
+  display: inline;
+  font-size: 0.9375rem;
+}
+
+.read-more:hover {
+  color: var(--accent-hover);
+  text-decoration: underline;
 }
 
 .tags {
@@ -329,28 +366,40 @@
 }
 
 /* Color-coded tabs */
-#tabs button[data-category="Creative Technology & Research"] {
+#tabs button[data-category="Creative Tech R&D"] {
   border-color: #7C8DD9;
 }
 
-#tabs button[data-category="Creative Technology & Research"]:hover,
-#tabs button[data-category="Creative Technology & Research"].active,
-#tabs button[data-category="Creative Technology & Research"].highlight {
+#tabs button[data-category="Creative Tech R&D"]:hover,
+#tabs button[data-category="Creative Tech R&D"].active,
+#tabs button[data-category="Creative Tech R&D"].highlight {
   border-color: #7C8DD9;
   background-color: #7C8DD9;
   color: white;
 }
 
-#tabs button[data-category="Experience Design & Development"] {
+#tabs button[data-category="Games and Experiences"] {
   border-color: #E24E8A;
 }
 
-#tabs button[data-category="Experience Design & Development"]:hover,
-#tabs button[data-category="Experience Design & Development"].active,
-#tabs button[data-category="Experience Design & Development"].highlight {
+#tabs button[data-category="Games and Experiences"]:hover,
+#tabs button[data-category="Games and Experiences"].active,
+#tabs button[data-category="Games and Experiences"].highlight {
   border-color: #E24E8A;
   background-color: #E24E8A;
   color: white;
+}
+
+#tabs button[data-category="UX Research"] {
+  border-color: #B8C3CC;
+}
+
+#tabs button[data-category="UX Research"]:hover,
+#tabs button[data-category="UX Research"].active,
+#tabs button[data-category="UX Research"].highlight {
+  border-color: #B8C3CC;
+  background-color: #B8C3CC;
+  color: var(--text-primary);
 }
 
 #tabs button[data-category="Technical Foundations"] {
@@ -399,12 +448,16 @@
 }
 
 /* Category-specific hover colors */
-.project-card[data-category="Creative Technology & Research"]:hover {
+.project-card[data-category="Creative Tech R&D"]:hover {
   border-color: #7C8DD9;
 }
 
-.project-card[data-category="Experience Design & Development"]:hover {
+.project-card[data-category="Games and Experiences"]:hover {
   border-color: #E24E8A;
+}
+
+.project-card[data-category="UX Research"]:hover {
+  border-color: #B8C3CC;
 }
 
 .project-card[data-category="Technical Foundations"]:hover {
@@ -550,12 +603,16 @@
 }
 
 /* Color-coded modal category tags */
-.modal-category[data-category="Creative Technology & Research"] {
+.modal-category[data-category="Creative Tech R&D"] {
   color: #7C8DD9;
 }
 
-.modal-category[data-category="Experience Design & Development"] {
+.modal-category[data-category="Games and Experiences"] {
   color: #E24E8A;
+}
+
+.modal-category[data-category="UX Research"] {
+  color: #B8C3CC;
 }
 
 .modal-category[data-category="Technical Foundations"] {

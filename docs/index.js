@@ -84,6 +84,21 @@
     modalCategory.setAttribute("data-category", project.category);
     
     id("modal-title").textContent = project.title;
+    
+    // Role
+    const modalBody = qs(".modal-body");
+    let roleElement = modalBody.querySelector(".modal-role");
+    if (project.role) {
+      if (!roleElement) {
+        roleElement = gen("p");
+        roleElement.classList.add("modal-role");
+        modalBody.insertBefore(roleElement, id("modal-description"));
+      }
+      roleElement.textContent = project.role;
+    } else if (roleElement) {
+      roleElement.remove();
+    }
+    
     id("modal-description").textContent = project.description;
     
     // Tags
@@ -103,32 +118,24 @@
     linksContainer.innerHTML = "";
     
     if (project.link) {
-      const detailsLink = gen("a");
-      detailsLink.href = project.link;
-      detailsLink.textContent = "View Project";
-      detailsLink.classList.add("btn-primary");
-      if (project.link.startsWith("http")) {
-        detailsLink.target = "_blank";
-      }
-      linksContainer.appendChild(detailsLink);
+      const mainLink = gen("a");
+      mainLink.href = project.link;
+      mainLink.textContent = "View Project";
+      mainLink.classList.add("btn-primary");
+      mainLink.target = "_blank";
+      linksContainer.appendChild(mainLink);
     }
     
-    if (project.liveLink) {
-      const liveLink = gen("a");
-      liveLink.href = project.liveLink;
-      liveLink.textContent = "Live Demo";
-      liveLink.classList.add("btn-secondary");
-      liveLink.target = "_blank";
-      linksContainer.appendChild(liveLink);
-    }
-    
-    if (project.sourceCode) {
-      const sourceLink = gen("a");
-      sourceLink.href = project.sourceCode;
-      sourceLink.innerHTML = '<i class="fab fa-github"></i> Code';
-      sourceLink.classList.add("btn-secondary");
-      sourceLink.target = "_blank";
-      linksContainer.appendChild(sourceLink);
+    // More links from moreLinks object
+    if (project.moreLinks) {
+      Object.entries(project.moreLinks).forEach(([label, url]) => {
+        const link = gen("a");
+        link.href = url;
+        link.textContent = label;
+        link.classList.add("btn-secondary");
+        link.target = "_blank";
+        linksContainer.appendChild(link);
+      });
     }
     
     // Show modal
@@ -220,15 +227,19 @@
         card.setAttribute("data-category", project.category);
         
         const imageLink = gen("a");
-        imageLink.href = project.link || project.liveLink || "#";
-        if ((project.link || project.liveLink) && (project.link || project.liveLink).startsWith("http")) {
-          imageLink.target = "_blank";
-        }
+        imageLink.href = "javascript:void(0)";
+        imageLink.style.cursor = "pointer";
         
         const image = gen("img");
         image.src = project.image;
         image.alt = project.title;
         imageLink.appendChild(image);
+        
+        // Click image to open modal
+        imageLink.addEventListener("click", (e) => {
+          e.preventDefault();
+          openModal(project);
+        });
 
         const content = gen("div");
         content.classList.add("featured-card-content");
@@ -241,8 +252,20 @@
         const title = gen("h3");
         title.textContent = project.title;
 
+        content.appendChild(category);
+        content.appendChild(title);
+
+        // Role display
+        if (project.role) {
+          const role = gen("p");
+          role.classList.add("project-role");
+          role.textContent = project.role;
+          content.appendChild(role);
+        }
+
         const description = gen("p");
         description.textContent = project.description;
+        content.appendChild(description);
 
         // Tags
         const tagsContainer = gen("div");
@@ -255,41 +278,36 @@
             tagsContainer.appendChild(tag);
           });
         }
+        content.appendChild(tagsContainer);
 
-        // Links
+        // Links - these still work as direct links
         const links = gen("div");
         links.classList.add("card-links");
 
         if (project.link) {
-          const detailsLink = gen("a");
-          detailsLink.href = project.link;
-          detailsLink.textContent = "View Project";
-          detailsLink.classList.add("btn-primary");
+          const mainLink = gen("a");
+          mainLink.href = project.link;
+          mainLink.textContent = "View Project";
+          mainLink.classList.add("btn-primary");
           if (project.link.startsWith("http")) {
-            detailsLink.target = "_blank";
+            mainLink.target = "_blank";
           }
-          links.appendChild(detailsLink);
+          links.appendChild(mainLink);
         }
 
-        if (project.liveLink) {
-          const liveLink = gen("a");
-          liveLink.href = project.liveLink;
-          liveLink.textContent = "Live Demo";
-          liveLink.classList.add("btn-secondary");
-          liveLink.target = "_blank";
-          links.appendChild(liveLink);
+        // More links from moreLinks object
+        if (project.moreLinks) {
+          Object.entries(project.moreLinks).forEach(([label, url]) => {
+            const link = gen("a");
+            link.href = url;
+            link.textContent = label;
+            link.classList.add("btn-secondary");
+            link.target = "_blank";
+            links.appendChild(link);
+          });
         }
 
-        if (project.sourceCode) {
-          const sourceLink = gen("a");
-          sourceLink.href = project.sourceCode;
-          sourceLink.innerHTML = '<i class="fab fa-github"></i> Code';
-          sourceLink.classList.add("btn-secondary");
-          sourceLink.target = "_blank";
-          links.appendChild(sourceLink);
-        }
-
-        content.append(category, title, description, tagsContainer, links);
+        content.appendChild(links);
         card.append(imageLink, content);
 
       } else {

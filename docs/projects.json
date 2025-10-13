@@ -1,103 +1,170 @@
 [
   {
-    "title": "LLM Tools for UX Researchers",
-    "description": "Explored how large language models can help UX researchers understand hard-to-reach user populations through synthetic data generation and analysis. Conducted UX research on designing tools and workflows for researchers working with AI-generated insights to complement traditional methods.",
-    "category": "Creative Technology & Research",
-    "image": "assets/llm-ux.png",
-    "tags": ["UX Research", "LLMs", "Python", "Research Methods"],
+    "title": "Prison Escape",
+    "description": "Roomscale VR Escape room designed for naive guests. Worked as Unity programmer in 5 person team, rapidly creating experiences in 2 weeks, from concept inception to playtesting and iteration.",
+    "role": "Unity Programmer",
+    "category": "Games and Experiences",
+    "image": "assets/prison-escape.png",
+    "tags": ["Unity", "VR", "Game Design"],
+    "moreLinks": {
+      "Gameplay video": "https://www.youtube.com/watch?v=FoZPNRG6GFE"
+    },
     "details": {
-      "role": "UX Researcher",
-      "focus": "AI-assisted research methodologies",
-      "tools": "Python, LLMs, Mixed Methods Research"
+      "focus": "VR design, naive guest experience, playtesting, rapid development",
+      "tools": "Unity, C#, Meta all-in-one-SDKs"
     }
   },
   {
     "title": "Little Match Girl MR Experience",
-    "description": "Visual storytelling experience where players traverse between real and virtual worlds through interaction with live actors in passthrough mode. Responsible for audio design and integrated FMOD (self-learned in 2 days), creating adaptive soundscapes that responded to player transitions between realities.",
-    "category": "Creative Technology & Research",
+    "description": "Visual storytelling experience where players traverse between real and virtual worlds. Responsible for audio design and integrated FMOD, creating adaptive soundscapes.",
+    "role": "Audio Designer, Audio Programmer, Producer",
+    "category": "Games and Experiences",
     "image": "assets/lmg-mr.png",
-    "liveLink": "https://youtu.be/J50hsXcdTbA?feature=shared",
-    "tags": ["Unity", "FMOD", "Mixed Reality", "Audio Design", "Meta Quest"],
+    "link": "https://youtu.be/J50hsXcdTbA?feature=shared",
+    "tags": ["Unity", "FMOD", "Mixed Reality", "Audio Design"],
+    "moreLinks": {
+      "Trailer": "https://youtu.be/J50hsXcdTbA?feature=shared"
+    },
     "details": {
-      "role": "Audio Designer, Audio Programmer, Producer",
-      "focus": "Adaptive audio, MR passthrough design",
+      "focus": "Adaptive audio, Production",
       "teamSize": 6,
       "tools": "Unity, FMOD, Audacity"
     }
   },
   {
     "title": "Breathe Deep",
-    "description": "Global Game Jam Pittsburgh submission that won Jammer's Award. Worked as programmer and technical sound designer, implementing bubble mechanics and integrating FMOD for adaptive audio. Collaborated with 2 programmers, 2 artists, and a sound designer in 48-hour sprint.",
-    "category": "Experience Design & Development",
+    "description": "Global Game Jam Pittsburgh submission that won Jammer's Award. Worked as programmer and technical sound designer, implementing bubble mechanics and FMOD integration.",
+    "role": "Programmer, Technical Sound Designer",
+    "category": "Games and Experiences",
     "image": "assets/breathe-deep.jpeg",
-    "liveLink": "https://yuqianleashi.itch.io/breathe-deep",
-    "sourceCode": "https://globalgamejam.org/games/2025/ditto-test-7",
+    "link": "https://yuqianleashi.itch.io/breathe-deep",
     "tags": ["Unity", "FMOD", "Game Jam Winner", "Technical Audio"],
+    "moreLinks": {
+      "Game Jam Page": "https://globalgamejam.org/games/2025/ditto-test-7"
+    },
     "details": {
-      "role": "Programmer, Technical Sound Designer",
-      "focus": "Bubble mechanics, FMOD integration",
+      "focus": "Gameplay programming, FMOD integration",
       "teamSize": 6,
-      "timeline": "48 hours"
-    }
-  },
-  {
-    "title": "Mental Health Dashboard",
-    "description": "Designed biweekly workplace dashboard to alleviate mental health stigma through normalized check-ins and accessible resources. Conducted user research to understand employee needs, created information architecture, and developed high-fidelity prototypes focused on reducing barriers to support.",
-    "category": "Experience Design & Development",
-    "image": "assets/mental-health-dashboard.png",
-    "tags": ["UX Design", "Figma", "User Research", "Mental Health"],
-    "details": {
-      "role": "UX Designer, Researcher",
-      "focus": "Mental health stigma reduction, workplace wellbeing",
-      "tools": "Figma, User Research Methods"
+      "tools": "Unity, FMOD, C#"
     }
   },
   {
     "title": "Husky Hangout",
-    "description": "Mobile app designed to help international students at University of Washington find community through shared interests. Conducted user interviews, created user flows, and designed interface focused on reducing social friction for new students navigating unfamiliar campus culture.",
-    "category": "Experience Design & Development",
+    "description": "Mobile app designed to help international students at University of Washington find community through shared interests.",
+    "role": "UX Researcher",
+    "category": "UX Research",
     "image": "assets/husky-hangout.png",
-    "tags": ["UX Design", "Mobile App", "User Research", "Figma"],
+    "link": "https://docs.google.com/presentation/d/1z1Bb4e5_knClH7R0cBfoK-pLmEIwHIS_a9FR7MVjzTA/edit?usp=sharing",
+    "tags": ["UX Research", "User testing", "Design", "Figma"],
     "details": {
-      "role": "UX Designer, Researcher",
       "focus": "International student experience, community building",
       "tools": "Figma, User Research, Prototyping"
+    },
+    "moreLinks": {
+      "Interactive prototype": "https://www.figma.com/proto/nWXraRhWYmIbSpZbI1tuQ1/Husky-Hangout?node-id=122-1070&starting-point-node-id=122%3A1086&mode=design&t=xzID59lKBtqgGEXI-1"
     }
   },
   {
     "title": "MiniJava Compiler",
-    "description": "Developed full compiler for MiniJava (Java subset) using Java. Implemented lexical analysis with JFlex, syntax parsing with CUP tools, Abstract Syntax Tree traversal for type checking, and code generation targeting x86 assembly language. Demonstrates understanding of language design and compiler architecture.",
+    "description": "Developed full compiler for MiniJava (Java subset). Implemented lexical analysis, syntax parsing, AST traversal for type checking, and code generation.",
+    "role": "Software engineer",
     "category": "Technical Foundations",
     "image": "assets/minijava.png",
-    "tags": ["Java", "Compiler Design", "JFlex", "CUP", "x86 Assembly"],
+    "tags": ["Java", "Compiler Construction"],
     "details": {
-      "role": "Individual Project",
       "focus": "Compiler construction, code generation",
       "course": "Compiler Construction"
     }
   },
   {
-    "title": "Programming Language Interpreter",
-    "description": "Built custom programming language interpreter in Racket, demonstrating language design principles and functional programming concepts. Implemented lexical scoping, first-class functions, and core language features through recursive evaluation.",
+    "title": "MUPL Interpreter",
+    "description": "Built Made-Up-Programming_Language(MUPL) interpreter in Racket, implementing functional programming language concepts such as first-class functions, lexical scoping, and macros.",
+    "role": "Software engineer",
     "category": "Technical Foundations",
     "image": "assets/interpreter.png",
-    "tags": ["Racket", "Functional Programming", "Language Design", "Interpreters"],
+    "tags": ["Racket", "Functional Programming", "Programming Languages Implementation"],
     "details": {
-      "role": "Individual Project",
-      "focus": "Language implementation, functional programming",
-      "course": "Programming Languages"
+      "focus": "functional programming",
+      "course": "Programming Languages Implementation"
     }
   },
   {
     "title": "Pacman AI Agent",
-    "description": "Implemented AI algorithms including BFS, DFS, and A* for pathfinding and decision-making in Pacman environment. Developed heuristics for optimal ghost avoidance and pellet collection strategies.",
+    "description": "Implemented pathfinding algorithms including BFS, DFS, and A*, as well as adversarial agent decision-making and pruning optimizationfor Pacman environment.",
+    "role": "Software engineer",
     "category": "Technical Foundations",
     "image": "assets/pacman.png",
-    "tags": ["Python", "AI", "Pathfinding", "Algorithms", "A*"],
+    "tags": ["Python", "Intro to Artificial Intelligence"],
     "details": {
-      "role": "Individual Project",
-      "focus": "Search algorithms, AI decision-making",
-      "course": "Artificial Intelligence"
+      "course": "Intro to Artificial Intelligence"
+    }
+  },
+  {
+    "title": "spelunx - CAVERN Toolkit",
+    "description": "Developed beginner-friendly toolkit including Unity SDK, documentation and tutorials, and sample experiences to empower creators to focus on designing for this proprietary novel immersive platform. Worked as gameplay programmer for the sample scenes, user researcher for developer experience, documentation lead for tutorials and development process on project website, and audio designer for surround audio research.",
+    "role": "Gameplay Programmer, User Researcher, Documentation Lead, Audio Designer",
+    "category": "Creative Tech R&D",
+    "image": "assets/spelunx.jpg",
+    "link": "https://projects.etc.cmu.edu/spelunx/",
+    "featured": true,
+    "tags": ["Developer experience", "Surround sound design", "Sample scene gameplay programming", "Unity 6", "GitHub", "Perforce"],
+    "moreLinks": {
+      "Documentation": "https://docs.google.com/document/d/1QsmDlrw0ctSM0vhB-qM79fx0NRbXh79U3FtuWtl2vYs/edit?usp=sharing",
+      "GitHub": "https://github.com/spelunx/UnityCavernSDK",
+      "Project video": "https://youtu.be/n2HfecLku_k?si=FXkhfWgnbBdWShL0",
+      "Extended Abstract": "https://drive.google.com/file/d/14OwoJNOLCKZrQ6xVwTslQ4LYttwvZau9/view?usp=sharing"
+    },
+    "details": {
+      "focus": "Developer experience research, playtesting, surround sound design, sample scene development",
+      "tools": "Unity 6, GitHub, Perforce"
+    }
+  },
+  {
+    "title": "TACIT - R&D for VR Haptics in Emotional Storytelling",
+    "description": "Produced research project investigating haptic feedback for emotional resonance in VR. Led playtesting strategy and facilitated cross-disciplinary collaboration. Developed prototyping artifacts for rapid user testing. Documented findings and development process on project website.",
+    "role": "Producer, Programmer, UX Researcher",
+    "category": "Creative Tech R&D",
+    "image": "assets/TACIT.jpg",
+    "link": "https://projects.etc.cmu.edu/tacit/",
+    "featured": true,
+    "tags": ["VR", "Haptics", "R&D", "Production", "Unity 6", "Meta SDK", "bHaptics TactGlove", "Trello"],
+    "moreLinks": {
+      "Halves Presentation": "https://youtu.be/GAxx3sOczOU?si=TgsChj_zyjh2fIKP&t=3655"
+    },
+    "details": {
+      "focus": "Innovative haptic R&D, playtesting, prototype development,cross-disciplinary collaboration",
+      "tools": "Unity 6, Meta SDK, bHaptics TactGlove, Trello"
+    }
+  },
+  {
+    "title": "Two to Foxtrot",
+    "description": "Created 2-player co-op platformer where players see different aspects of the world. Served as main programmer implementing player systems and puzzle mechanics.",
+    "role": "Main Programmer, Producer",
+    "category": "Games and Experiences",
+    "image": "assets/two-to-foxtrot.png",
+    "link": "https://youtu.be/q1OiPwjL8uk?feature=shared",
+    "featured": true,
+    "tags": ["Unity", "C#", "Gameplay Programming", "Co-op Mechanics", "Perforce"],
+    "details": {
+      "focus": "Gameplay programming",
+      "tools": "Unity, Perforce"
+    }
+  },
+  {
+    "title": "EiAi - UX Research for using LLMs to aid UX Designers to understand hard-to-reach users",
+    "description": "Explored how large language models can help UX researchers understand hard-to-reach user populations through synthetic data generation and analysis.",
+    "role": "UX Researcher",
+    "category": "UX Research",
+    "link": "assets/EiAi.png",
+    "featured": true,
+    "image": "assets/EiAi.png",
+    "tags": ["UX Research", "LLMs", "Mixed Methods Research"],
+    "moreLinks": {
+      "Project retrospective": "https://medium.com/@yt73/ux-research-methods-interdisciplinary-toolkit-1bda71d3de65"
+    },
+    "details": {
+      "focus": "AI-assisted research methodologies", 
+      "tools": "Python, LLMs, Mixed Methods Research"
     }
   }
 ]

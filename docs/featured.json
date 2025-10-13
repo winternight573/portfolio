@@ -1,56 +1,70 @@
 [
   {
-    "title": "spelunx - Immersive Platform Toolkit",
-    "description": "Led comprehensive UX research on developer and player experience for a novel immersive platform. Conducted audio design research to establish best practices, then developed gameplay samples demonstrating design principles. Created documentation and tools to help teams build intuitive experiences on emerging technology.",
-    "category": "Creative Technology & Research",
-    "image": "assets/platform-toolkit.png",
+    "title": "spelunx - CAVERN Toolkit",
+    "description": "Developed beginner-friendly toolkit including Unity SDK, documentation and tutorials, and sample experiences to empower creators to focus on designing for this proprietary novel immersive platform. Worked as gameplay programmer for the sample scenes, user researcher for developer experience, documentation lead for tutorials and development process on project website, and audio designer for surround audio research.",
+    "role": "Gameplay Programmer, User Researcher, Documentation Lead, Audio Designer",
+    "category": "Creative Tech R&D",
+    "image": "assets/spelunx.jpg",
+    "link": "https://projects.etc.cmu.edu/spelunx/",
     "featured": true,
-    "tags": ["UX Research", "Unity", "Audio Design", "Developer Tools", "Documentation"],
+    "tags": ["Developer experience", "Surround sound design", "Sample scene gameplay programming", "Unity 6", "GitHub", "Perforce"],
+    "moreLinks": {
+      "Documentation": "https://docs.google.com/document/d/1QsmDlrw0ctSM0vhB-qM79fx0NRbXh79U3FtuWtl2vYs/edit?usp=sharing",
+      "GitHub": "https://github.com/spelunx/UnityCavernSDK",
+      "Project video": "https://youtu.be/n2HfecLku_k?si=FXkhfWgnbBdWShL0",
+      "Extended Abstract": "https://drive.google.com/file/d/14OwoJNOLCKZrQ6xVwTslQ4LYttwvZau9/view?usp=sharing"
+    },
     "details": {
-      "role": "UX Researcher, Audio Designer, Gameplay Programmer",
-      "focus": "Platform research, design principles, sample experiences",
-      "tools": "Unity, Mixed Methods Research, FMOD"
+      "focus": "Developer experience research, playtesting, surround sound design, sample scene development",
+      "tools": "Unity 6, GitHub, Perforce"
     }
   },
   {
-    "title": "TACIT - VR Haptics for Emotional Storytelling",
-    "description": "Produced research project investigating how haptic feedback creates emotional resonance in VR experiences. Led playtesting strategy design and facilitated cross-disciplinary collaboration between researchers, designers, and engineers. Contributed to prototype development exploring the intersection of tactile sensation and narrative.",
-    "category": "Creative Technology & Research",
-    "image": "assets/vr-haptics.png",
+    "title": "TACIT - R&D for VR Haptics in Emotional Storytelling",
+    "description": "Produced research project investigating haptic feedback for emotional resonance in VR. Led playtesting strategy and facilitated cross-disciplinary collaboration. Developed prototyping artifacts for rapid user testing. Documented findings and development process on project website.",
+    "role": "Producer, Programmer, UX Researcher",
+    "category": "Creative Tech R&D",
+    "image": "assets/TACIT.jpg",
+    "link": "https://projects.etc.cmu.edu/tacit/",
     "featured": true,
-    "tags": ["VR", "Haptics", "Research", "Production", "Emotional Design"],
+    "tags": ["VR", "Haptics", "R&D", "Production", "Unity 6", "Meta SDK", "bHaptics TactGlove", "Trello"],
+    "moreLinks": {
+      "Halves Presentation": "https://youtu.be/GAxx3sOczOU?si=TgsChj_zyjh2fIKP&t=3655"
+    },
     "details": {
-      "role": "Producer, Researcher, Programmer",
-      "focus": "Emotional experience, playtesting strategy, prototyping",
-      "tools": "Unity VR, Mixed Methods Research, Haptic Integration"
-    }
-  },
-  {
-    "title": "Metacognition Learning Game",
-    "description": "Designed transformational game teaching metacognitive strategies through gameplay. Applied game design principles to create engaging learning experiences that help players develop self-awareness about their thinking processes. Independent study project exploring educational game design.",
-    "category": "Experience Design & Development",
-    "image": "assets/metacognition-game.png",
-    "featured": true,
-    "tags": ["Game Design", "Educational Games", "Transformational Design", "Unity"],
-    "details": {
-      "role": "Game Designer, Developer",
-      "focus": "Transformational game design, learning through play",
-      "tools": "Unity, Game Design Frameworks"
+      "focus": "Innovative haptic R&D, playtesting, prototype development,cross-disciplinary collaboration",
+      "tools": "Unity 6, Meta SDK, bHaptics TactGlove, Trello"
     }
   },
   {
     "title": "Two to Foxtrot",
-    "description": "Created 2-player co-op platformer puzzle game where players see different aspects of the world, requiring communication to solve puzzles. Served as main programmer, implementing player systems, Xbox controller integration, and core puzzle mechanics. Completed with team of 4 in 2.5 weeks.",
-    "category": "Experience Design & Development",
+    "description": "Created 2-player co-op platformer where players see different aspects of the world. Served as main programmer implementing player systems and puzzle mechanics.",
+    "role": "Main Programmer, Producer",
+    "category": "Games and Experiences",
     "image": "assets/two-to-foxtrot.png",
-    "liveLink": "https://youtu.be/q1OiPwjL8uk?feature=shared",
+    "link": "https://youtu.be/q1OiPwjL8uk?feature=shared",
     "featured": true,
-    "tags": ["Unity", "C#", "Gameplay Programming", "Co-op Mechanics"],
+    "tags": ["Unity", "C#", "Gameplay Programming", "Co-op Mechanics", "Perforce"],
     "details": {
-      "role": "Main Programmer",
-      "focus": "Player systems, input integration, puzzle mechanics",
-      "teamSize": 4,
-      "timeline": "2.5 weeks"
+      "focus": "Gameplay programming",
+      "tools": "Unity, Perforce"
+    }
+  },
+  {
+    "title": "EiAi - UX Research for using LLMs to aid UX Designers to understand hard-to-reach users",
+    "description": "Explored how large language models can help UX researchers understand hard-to-reach user populations through synthetic data generation and analysis.",
+    "role": "UX Researcher",
+    "category": "UX Research",
+    "link": "assets/EiAi.png",
+    "featured": true,
+    "image": "assets/EiAi.png",
+    "tags": ["UX Research", "LLMs", "Mixed Methods Research"],
+    "moreLinks": {
+      "Project retrospective": "https://medium.com/@yt73/ux-research-methods-interdisciplinary-toolkit-1bda71d3de65"
+    },
+    "details": {
+      "focus": "AI-assisted research methodologies", 
+      "tools": "Python, LLMs, Mixed Methods Research"
     }
   }
 ]
