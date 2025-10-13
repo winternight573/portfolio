@@ -151,8 +151,8 @@
     }
   },
   {
-    "title": "EiAi - UX Research for using LLMs to aid UX Designers to understand hard-to-reach users",
-    "description": "Explored how large language models can help UX researchers understand hard-to-reach user populations through synthetic data generation and analysis.",
+    "title": "EiAi - UX Research on LLMs usage in UX Designers",
+    "description": "Explored how UX designers utilize LLM tools to understand hard-to-reach user populations through mixed methods research including contextual inquiry, usability testing, artifact assumptions, and speed dating.",
     "role": "UX Researcher",
     "category": "UX Research",
     "link": "assets/EiAi.png",

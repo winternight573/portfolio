@@ -37,22 +37,8 @@
     }
   },
   {
-    "title": "Two to Foxtrot",
-    "description": "Created 2-player co-op platformer where players see different aspects of the world. Served as main programmer implementing player systems and puzzle mechanics.",
-    "role": "Main Programmer, Producer",
-    "category": "Games and Experiences",
-    "image": "assets/two-to-foxtrot.png",
-    "link": "https://youtu.be/q1OiPwjL8uk?feature=shared",
-    "featured": true,
-    "tags": ["Unity", "Gameplay Programming", "Co-op Mechanics", "Perforce"],
-    "details": {
-      "focus": "Gameplay programming",
-      "tools": "Unity, C#, Perforce"
-    }
-  },
-  {
-    "title": "EiAi - UX Research for using LLMs to aid UX Designers to understand hard-to-reach users",
-    "description": "Explored how large language models can help UX researchers understand hard-to-reach user populations through synthetic data generation and analysis.",
+    "title": "EiAi - UX Research on LLMs usage in UX Designers",
+    "description": "Explored how UX designers utilize LLM tools to understand hard-to-reach user populations through mixed methods research including contextual inquiry, usability testing, artifact assumptions, and speed dating.",
     "role": "UX Researcher",
     "category": "UX Research",
     "link": "assets/EiAi.png",
@@ -65,6 +51,20 @@
     "details": {
       "focus": "AI-assisted research methodologies", 
       "tools": "Python, LLMs, Mixed Methods Research"
+    }
+  },
+  {
+    "title": "Two to Foxtrot",
+    "description": "Created 2-player co-op platformer where players see different aspects of the world. Served as main programmer implementing player systems and puzzle mechanics.",
+    "role": "Main Programmer, Producer",
+    "category": "Games and Experiences",
+    "image": "assets/two-to-foxtrot.png",
+    "link": "https://youtu.be/q1OiPwjL8uk?feature=shared",
+    "featured": true,
+    "tags": ["Unity", "Gameplay Programming", "Co-op Mechanics", "Perforce"],
+    "details": {
+      "focus": "Gameplay programming",
+      "tools": "Unity, C#, Perforce"
     }
   }
 ]
