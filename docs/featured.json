@@ -7,7 +7,7 @@
     "image": "assets/spelunx.jpg",
     "link": "https://projects.etc.cmu.edu/spelunx/",
     "featured": true,
-    "tags": ["Developer experience", "Surround sound design", "Sample scene gameplay programming", "Unity 6", "GitHub", "Perforce"],
+    "tags": ["Developer tool research", "Sample scene programming", "Surround sound design", "Unity 6", "GitHub", "Perforce"],
     "moreLinks": {
       "Documentation": "https://docs.google.com/document/d/1QsmDlrw0ctSM0vhB-qM79fx0NRbXh79U3FtuWtl2vYs/edit?usp=sharing",
       "GitHub": "https://github.com/spelunx/UnityCavernSDK",
