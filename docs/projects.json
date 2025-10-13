@@ -166,5 +166,22 @@
       "focus": "AI-assisted research methodologies", 
       "tools": "Python, LLMs, Mixed Methods Research"
     }
+  },
+  {
+    "title": "Voice in the Void",
+    "description": "Game jam submission for That Game Company X Coreblazer Jam. A relaxation building game where players connect with AI aliens' encrypted messages with a generous heart.",
+    "role": "Unity Developer, Game Designer",
+    "category": "Games and Experiences",
+    "image": "assets/voice-in-the-void.png",
+    "link": "https://itch.io/jam/tgcxcoreblazer/rate/3628855",
+    "featured": true,
+    "tags": ["Unity", "C#", "Gameplay Programming", "OpenAI API", "Building system"],
+    "moreLinks": {
+      "Itch.io Page": "https://yenchun.itch.io/voice-in-the-void"
+    },
+    "details": {
+      "focus": "Gameplay programming, narrative design",
+      "tools": "Unity, C#"
+    }
   }
 ]
