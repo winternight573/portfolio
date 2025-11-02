@@ -1,8 +1,8 @@
 [
   {
     "title": "Prison Escape",
-    "description": "Roomscale VR Escape room designed for naive guests. Worked as Unity programmer in 5 person team, rapidly creating experiences in 2 weeks, from concept inception to playtesting and iteration.",
-    "role": "Unity Programmer",
+    "description": "Roomscale VR Escape room designed for naive guests. Fleshed out player experience and puzzles after concept inception. Worked as Unity programmer in 5 person team, rapidly creating experiences in 2 weeks, from concept inception to playtesting and iteration.",
+    "role": "Game Designer, Unity Programmer",
     "category": "Games and Experiences",
     "image": "assets/prison-escape.png",
     "tags": ["Unity", "VR", "Gameplay Programming", "Naive Guest playtesting"],
@@ -16,7 +16,7 @@
   },
   {
     "title": "Little Match Girl MR Experience",
-    "description": "Visual storytelling experience where players traverse between real and virtual worlds. Responsible for audio design and integrated FMOD, creating adaptive soundscapes.",
+    "description": "Visual storytelling experience where players traverse between real and virtual worlds. Defined soundscapes for transitioning between physical/passthrough mode and VR virtual space, and integrated adaptive audio using FMOD.",
     "role": "Audio Designer, Audio Programmer, Producer",
     "category": "Games and Experiences",
     "image": "assets/lmg-mr.png",
@@ -33,8 +33,8 @@
   },
   {
     "title": "Breathe Deep",
-    "description": "Global Game Jam Pittsburgh submission that won Jammer's Award. Worked as programmer and technical sound designer, implementing bubble mechanics and FMOD integration.",
-    "role": "Programmer, Technical Sound Designer",
+    "description": "Global Game Jam Pittsburgh submission that won Jammer's Award. 2-player game where players posed as pirates dodging sea creatures and competing for bubbles for air underwater. Worked as programmer and technical sound designer, implementing bubble mechanics and FMOD integration.",
+    "role": "Game Designer, Programmer, Technical Sound Designer",
     "category": "Games and Experiences",
     "image": "assets/breathe-deep.jpeg",
     "link": "https://yuqianleashi.itch.io/breathe-deep",
@@ -50,8 +50,8 @@
   },
   {
     "title": "Husky Hangout",
-    "description": "Mobile app designed to help international students at University of Washington find community through shared interests.",
-    "role": "UX Researcher",
+    "description": "Mobile app designed to help international students at University of Washington find community through shared interests. In charge of user research and interview + survey design, as well as user testing for the Figma interactive prototype on usertesting.com.",
+    "role": "UX Researcher, UX Designer",
     "category": "UX Research",
     "image": "assets/husky-hangout.png",
     "link": "https://docs.google.com/presentation/d/1z1Bb4e5_knClH7R0cBfoK-pLmEIwHIS_a9FR7MVjzTA/edit?usp=sharing",
@@ -66,7 +66,7 @@
   },
   {
     "title": "MiniJava Compiler",
-    "description": "Developed full compiler for MiniJava (Java subset). Implemented lexical analysis, syntax parsing, AST traversal for type checking, and code generation.",
+    "description": "Developed basic compiler for MiniJava (Java subset). Implemented scanning + parsing using jFlex CUP tools after defining programming language grammar according to specs. Created abstract syntax tree AST traversal using visitor pattern for type checking and code generation in Assembly language.",
     "role": "Software engineer",
     "category": "Technical Foundations",
     "image": "assets/minijava.png",
@@ -90,7 +90,7 @@
   },
   {
     "title": "Pacman AI Agent",
-    "description": "Implemented pathfinding algorithms including BFS, DFS, and A*, as well as adversarial agent decision-making and pruning optimizationfor Pacman environment.",
+    "description": "Implemented pathfinding algorithms including BFS, DFS, and A*, as well as adversarial agent decision-making and pruning optimizationfor Pacman environment. Also experimented with Q-learning for reinforcement learning agent.",
     "role": "Software engineer",
     "category": "Technical Foundations",
     "image": "assets/pacman.png",
@@ -121,8 +121,8 @@
   },
   {
     "title": "TACIT - R&D for VR Haptics in Emotional Storytelling",
-    "description": "Produced R&D project investigating haptic glove feedback for emotional storytelling in VR. Led playtesting strategy and facilitated cross-disciplinary collaboration. Developed prototyping artifacts for rapid user testing using Unity 6 and Meta all-in-one SDK. Engineered final experience along with 2 other programmers. Documented research notes and design insights findings and development process on project website.",
-    "role": "Producer, Programmer, UX Researcher",
+    "description": "Produced R&D project investigating haptic glove feedback for emotional storytelling in VR narrative game. Led playtesting strategy and facilitated cross-disciplinary collaboration. Developed prototyping artifacts for rapid user testing using Unity 6 and Meta all-in-one SDK. Engineered final experience along with 2 other programmers. Documented research notes and design insights findings and development process on project website.",
+    "role": "Experience Design, Producer, Programmer, UX Researcher",
     "category": "Creative Tech R&D",
     "image": "assets/TACIT.jpg",
     "link": "https://projects.etc.cmu.edu/tacit/",
@@ -138,13 +138,13 @@
   },
   {
     "title": "Two to Foxtrot",
-    "description": "Created 2-player co-op platformer where players see different aspects of the world. Served as main programmer implementing player systems and puzzle mechanics.",
-    "role": "Main Programmer, Producer",
+    "description": "Designed 2-player co-op platformer where players see different aspects of the world. Designed the interactive puzzles including 2 phases of resource collection, as well as a final boss encounter for escape the forest. Served as main programmer implementing player systems and puzzle mechanics.",
+    "role": "Game Designer, Main Programmer, Producer",
     "category": "Games and Experiences",
     "image": "assets/two-to-foxtrot.png",
     "link": "https://youtu.be/q1OiPwjL8uk?feature=shared",
     "featured": true,
-    "tags": ["Unity", "Gameplay Programming", "Co-op Mechanics", "Perforce"],
+    "tags": ["Experience Design","Unity", "Gameplay Programming", "Co-op Mechanics", "Perforce"],
     "details": {
       "focus": "Gameplay programming",
       "tools": "Unity, C#, Perforce"
@@ -152,7 +152,7 @@
   },
   {
     "title": "EiAi - UX Research on LLMs usage in UX Designers",
-    "description": "Explored how UX designers utilize LLM tools to understand hard-to-reach user populations through mixed methods research including contextual inquiry, usability testing, artifact assumptions, and speed dating.",
+    "description": "Explored how UX designers utilize LLM tools to understand hard-to-reach user populations through mixed methods research including contextual inquiry, usability testing, assumption artifacts, and speed dating.",
     "role": "UX Researcher",
     "category": "UX Research",
     "link": "assets/EiAi.png",
@@ -169,13 +169,13 @@
   },
   {
     "title": "Voice in the Void",
-    "description": "Game jam submission for That Game Company X Coreblazer Jam. A relaxation building game where players connect with AI aliens' encrypted messages with a generous heart.",
-    "role": "Unity Developer, Game Designer",
+    "description": "Game jam submission for That Game Company X Coreblazer Jam. A relaxation building game where players connect with AI aliens' encrypted messages with a generous heart. Implemented resource collection and building mechanics.",
+    "role": "Game Designer, Unity Developer",
     "category": "Games and Experiences",
     "image": "assets/voice-in-the-void.png",
     "link": "https://itch.io/jam/tgcxcoreblazer/rate/3628855",
     "featured": true,
-    "tags": ["Unity", "Gameplay Programming", "Game jam", "OpenAI API", "Building system"],
+    "tags": ["Game Design", "Unity", "Gameplay Programming", "Game jam", "OpenAI API"],
     "moreLinks": {
       "Itch.io Page": "https://yenchun.itch.io/voice-in-the-void"
     },

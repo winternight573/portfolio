@@ -21,8 +21,8 @@
   },
   {
     "title": "TACIT - R&D for VR Haptics in Emotional Storytelling",
-    "description": "Produced R&D project investigating haptic glove feedback for emotional storytelling in VR. Led playtesting strategy and facilitated cross-disciplinary collaboration. Developed prototyping artifacts for rapid user testing using Unity 6 and Meta all-in-one SDK. Engineered final experience along with 2 other programmers. Documented research notes and design insights findings and development process on project website.",
-    "role": "Producer, Programmer, UX Researcher",
+    "description": "Produced R&D project investigating haptic glove feedback for emotional storytelling in VR narrative game. Led playtesting strategy and facilitated cross-disciplinary collaboration. Developed prototyping artifacts for rapid user testing using Unity 6 and Meta all-in-one SDK. Engineered final experience along with 2 other programmers. Documented research notes and design insights findings and development process on project website.",
+    "role": "Experience Design, Producer, Programmer, UX Researcher",
     "category": "Creative Tech R&D",
     "image": "assets/TACIT.jpg",
     "link": "https://projects.etc.cmu.edu/tacit/",
@@ -38,7 +38,7 @@
   },
   {
     "title": "EiAi - UX Research on LLMs usage in UX Designers",
-    "description": "Explored how UX designers utilize LLM tools to understand hard-to-reach user populations through mixed methods research including contextual inquiry, usability testing, artifact assumptions, and speed dating.",
+    "description": "Explored how UX designers utilize LLM tools to understand hard-to-reach user populations through mixed methods research including contextual inquiry, usability testing, assumption artifacts, and speed dating.",
     "role": "UX Researcher",
     "category": "UX Research",
     "link": "assets/EiAi.png",
@@ -55,13 +55,13 @@
   },
   {
     "title": "Two to Foxtrot",
-    "description": "Created 2-player co-op platformer where players see different aspects of the world. Served as main programmer implementing player systems and puzzle mechanics.",
-    "role": "Main Programmer, Producer",
+    "description": "Designed 2-player co-op platformer where players see different aspects of the world. Designed the interactive puzzles including 2 phases of resource collection, as well as a final boss encounter for escape the forest. Served as main programmer implementing player systems and puzzle mechanics.",
+    "role": "Game Designer, Main Programmer, Producer",
     "category": "Games and Experiences",
     "image": "assets/two-to-foxtrot.png",
     "link": "https://youtu.be/q1OiPwjL8uk?feature=shared",
     "featured": true,
-    "tags": ["Unity", "Gameplay Programming", "Co-op Mechanics", "Perforce"],
+    "tags": ["Experience Design","Unity", "Gameplay Programming", "Co-op Mechanics", "Perforce"],
     "details": {
       "focus": "Gameplay programming",
       "tools": "Unity, C#, Perforce"
