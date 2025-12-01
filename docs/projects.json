@@ -1,5 +1,20 @@
 [
   {
+    "title": "Wicked themed UEFN Island",
+    "description": "(Ongoing) A UEFN Island inspired by Wicked the musical, mainly a prototype to experiment with UEFN tools and workflows, including environment design using Landscape Mode, Verse scripting for custom interactions, and basic Devices familiarity (experimented with Physics puzzle solving). Next step is adding character animation for NPC dance (like the musical) and more!",
+    "role": "Game Designer, UEFN Developer",
+    "category": "Games and Experiences",
+    "image": "assets/uefn.png",
+    "tags": ["UEFN", "Verse", "Experience Design"],
+    "moreLinks": {
+      "Design Doc": "https://docs.google.com/document/d/1UiqAaeTIi8k8-Vt7HonDQ5jO-jOjqqAQ5rwXTfmCY_k/edit?usp=sharing"
+    },
+    "details": {
+      "focus": "VR design, naive guest experience, playtesting, rapid development",
+      "tools": "Unity, C#, Meta all-in-one-SDKs"
+    }
+  },
+  {
     "title": "Prison Escape",
     "description": "Roomscale VR Escape room designed for naive guests. Fleshed out player experience and puzzles after concept inception. Worked as Unity programmer in 5 person team, rapidly creating experiences in 2 weeks, from concept inception to playtesting and iteration.",
     "role": "Game Designer, Unity Programmer",
