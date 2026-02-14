@@ -9,7 +9,7 @@
     "featured": true,
     "tags": ["Developer tool research", "Sample scene programming", "Surround sound design", "Unity 6", "GitHub", "Perforce"],
     "moreLinks": {
-      "Documentation": "https://docs.google.com/document/d/1QsmDlrw0ctSM0vhB-qM79fx0NRbXh79U3FtuWtl2vYs/edit?usp=sharing",
+      "Open-source Documentation": "https://docs.google.com/document/d/1QsmDlrw0ctSM0vhB-qM79fx0NRbXh79U3FtuWtl2vYs/edit?usp=sharing",
       "GitHub": "https://github.com/spelunx/UnityCavernSDK",
       "Project video": "https://youtu.be/n2HfecLku_k?si=FXkhfWgnbBdWShL0",
       "Extended Abstract": "https://drive.google.com/file/d/14OwoJNOLCKZrQ6xVwTslQ4LYttwvZau9/view?usp=sharing"
@@ -21,15 +21,15 @@
   },
   {
     "title": "TACIT - R&D for VR Haptics in Emotional Storytelling",
-    "description": "Produced R&D project investigating haptic glove feedback for emotional storytelling in VR narrative game. Led playtesting strategy and facilitated cross-disciplinary collaboration. Developed prototyping artifacts for rapid user testing using Unity 6 and Meta all-in-one SDK. Engineered final experience along with 2 other programmers. Documented research notes and design insights findings and development process on project website.",
-    "role": "Experience Design, Producer, Programmer, UX Researcher",
+    "description": "Produced R&D project investigating haptic glove feedback for emotional storytelling in VR narrative game. Led playtesting strategy and facilitated cross-disciplinary collaboration. Developed prototyping artifacts for rapid user testing using Unity 6 and Meta all-in-one SDK. Engineered final experience along with 2 other programmers. Documented research notes and design insights findings and development process as open-source documentation.",
+    "role": "Experience Design, Producer, Documentation Lead, UX Researcher, Programmer",
     "category": "Creative Tech R&D",
     "image": "assets/TACIT.jpg",
     "link": "https://projects.etc.cmu.edu/tacit/",
     "featured": true,
     "tags": ["VR", "Haptics", "R&D", "Agile Production", "Unity 6", "Meta SDK", "bHaptics TactGlove", "Trello"],
     "moreLinks": {
-      "Halves Presentation": "https://youtu.be/GAxx3sOczOU?si=TgsChj_zyjh2fIKP&t=3655"
+      "Open-source Documentation": "https://docs.google.com/document/d/1j0eI6Bvqdn3td5Cm4D78JcDIZmIEplzoLTbpuTMxhnI/edit?usp=sharing"
     },
     "details": {
       "focus": "Innovative haptic R&D, playtesting, prototype development,cross-disciplinary collaboration",
