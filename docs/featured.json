@@ -7,9 +7,9 @@
     "image": "assets/bps.png",
     "link": "https://projects.etc.cmu.edu/big-piucture-studio/",
     "featured": true,
-    "tags": ["Experience Design","Unity", "Gameplay Programming", "Co-op Mechanics", "Perforce"],
+    "tags": ["System Design","Networking", "Preproduction", "Design Documentation"],
     "moreLinks": {
-      "Demo videio": "https://youtu.be/jMTENnyhgAI"
+      "Demo video": "https://youtu.be/jMTENnyhgAI"
     },
     "details": {
       "focus": "System Design, Documentation, Cross-disciplinary Collaboration",
