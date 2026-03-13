@@ -1,22 +1,19 @@
 [
   {
-    "title": "spelunx - CAVERN Toolkit",
-    "description": "Developed beginner-friendly toolkit including Unity SDK, documentation and tutorials, and sample experiences to empower creators to focus on designing for this proprietary novel immersive platform. Worked as gameplay programmer for the sample scenes, user researcher for developer experience, documentation lead for tutorials and development process on project website, and audio designer for surround audio research.",
-    "role": "Gameplay Programmer, User Researcher, Documentation Lead, Audio Designer",
-    "category": "Creative Tech R&D",
-    "image": "assets/spelunx.jpg",
-    "link": "https://projects.etc.cmu.edu/spelunx/",
+    "title": "Big Picture Studio",
+    "description": "A narrative puzzle adventure using 4 phone cross-screen physical repositioning as main mechanic. A producer and system designer for the team.",
+    "role": "Game Designer (System Design, Player Advocate), Producer",
+    "category": "Games and Experiences",
+    "image": "assets/bps.png",
+    "link": "https://projects.etc.cmu.edu/big-piucture-studio/",
     "featured": true,
-    "tags": ["Developer tool research", "Sample scene programming", "Surround sound design", "Unity 6", "GitHub", "Perforce"],
+    "tags": ["Experience Design","Unity", "Gameplay Programming", "Co-op Mechanics", "Perforce"],
     "moreLinks": {
-      "Open-source Documentation": "https://docs.google.com/document/d/1QsmDlrw0ctSM0vhB-qM79fx0NRbXh79U3FtuWtl2vYs/edit?usp=sharing",
-      "GitHub": "https://github.com/spelunx/UnityCavernSDK",
-      "Project video": "https://youtu.be/n2HfecLku_k?si=FXkhfWgnbBdWShL0",
-      "Extended Abstract": "https://drive.google.com/file/d/14OwoJNOLCKZrQ6xVwTslQ4LYttwvZau9/view?usp=sharing"
+      "Demo videio": "https://youtu.be/jMTENnyhgAI"
     },
     "details": {
-      "focus": "Developer experience research, playtesting, surround sound design, sample scene development",
-      "tools": "Unity 6, GitHub, Perforce"
+      "focus": "System Design, Documentation, Cross-disciplinary Collaboration",
+      "tools": "Figma, Unity, C#, Perforce"
     }
   },
   {
@@ -37,6 +34,26 @@
     }
   },
   {
+    "title": "spelunx - CAVERN Toolkit",
+    "description": "Developed beginner-friendly toolkit including Unity SDK, documentation and tutorials, and sample experiences to empower creators to focus on designing for this proprietary novel immersive platform. Worked as gameplay programmer for the sample scenes, user researcher for developer experience, documentation lead for tutorials and development process on project website, and audio designer for surround audio research.",
+    "role": "Gameplay Programmer, User Researcher, Documentation Lead, Audio Designer",
+    "category": "Creative Tech R&D",
+    "image": "assets/spelunx.jpg",
+    "link": "https://projects.etc.cmu.edu/spelunx/",
+    "featured": true,
+    "tags": ["Developer tool research", "Sample scene programming", "Surround sound design", "Unity 6", "GitHub", "Perforce"],
+    "moreLinks": {
+      "Open-source Documentation": "https://docs.google.com/document/d/1QsmDlrw0ctSM0vhB-qM79fx0NRbXh79U3FtuWtl2vYs/edit?usp=sharing",
+      "GitHub": "https://github.com/spelunx/UnityCavernSDK",
+      "Project video": "https://youtu.be/n2HfecLku_k?si=FXkhfWgnbBdWShL0",
+      "Extended Abstract": "https://drive.google.com/file/d/14OwoJNOLCKZrQ6xVwTslQ4LYttwvZau9/view?usp=sharing"
+    },
+    "details": {
+      "focus": "Developer experience research, playtesting, surround sound design, sample scene development",
+      "tools": "Unity 6, GitHub, Perforce"
+    }
+  },
+  {
     "title": "EiAi - UX Research on LLMs usage in UX Designers",
     "description": "Explored how UX designers utilize LLM tools to understand hard-to-reach user populations through mixed methods research including contextual inquiry, usability testing, assumption artifacts, and speed dating.",
     "role": "UX Researcher",
@@ -51,20 +68,6 @@
     "details": {
       "focus": "AI-assisted research methodologies", 
       "tools": "Python, LLMs, Mixed Methods Research"
-    }
-  },
-  {
-    "title": "Two to Foxtrot",
-    "description": "Designed 2-player co-op platformer where players see different aspects of the world. Designed the interactive puzzles including 2 phases of resource collection, as well as a final boss encounter for escape the forest. Served as main programmer implementing player systems and puzzle mechanics.",
-    "role": "Game Designer, Main Programmer, Producer",
-    "category": "Games and Experiences",
-    "image": "assets/two-to-foxtrot.png",
-    "link": "https://youtu.be/q1OiPwjL8uk?feature=shared",
-    "featured": true,
-    "tags": ["Experience Design","Unity", "Gameplay Programming", "Co-op Mechanics", "Perforce"],
-    "details": {
-      "focus": "Gameplay programming",
-      "tools": "Unity, C#, Perforce"
     }
   }
 ]
