@@ -1,31 +1,33 @@
 [
   {
-    "title": "Big Picture Studio",
+    "title": "Big Picture Studio - Cooperative Puzzle-Narrative Game across 4 Mobile Screens",
     "description": "A 20-minute, cooperative puzzle-narrative played across 4 mobile screens. Our experience focuses on cross-device interactions, requiring players to physically connect and rearrange phones to progress. We aim to evoke wonder as the seams between separate devices vanish to reveal a unified world. We are innovating how to use an existing platform (the phones) as modular frames, where distinct approaches (comic book panels, puzzle gameplay, film narrative) inform how content can seamlessly integrate into what best showcases this new medium.",
-    "role": "Game Designer (System Design, Player Advocate), Producer",
+    "role": "Game Designer, Technical Producer",
     "category": "Games and Experiences",
     "image": "assets/bps2.jpg",
     "link": "https://projects.etc.cmu.edu/big-piucture-studio/",
     "featured": true,
-    "tags": ["System Design","Networking", "Preproduction", "Design Documentation"],
+    "tags": ["Player Experience Optimization","Experimental Tech", "Puzzle Design"],
     "moreLinks": {
+      "Project Website": "https://projects.etc.cmu.edu/big-piucture-studio/",
       "Demo video": "https://youtu.be/jMTENnyhgAI"
     },
     "details": {
-      "focus": "System Design, Documentation, Cross-disciplinary Collaboration",
+      "focus": "System Design, Documentation, Cross-disciplinary Collaboration, (System Design, Player Advocate)",
       "tools": "Figma, Unity, C#, Perforce"
     }
   },
   {
     "title": "TACIT - R&D for VR Haptics in Emotional Storytelling",
     "description": "Produced R&D project investigating haptic glove feedback for emotional storytelling in VR narrative game. Led playtesting strategy and facilitated cross-disciplinary collaboration. Developed prototyping artifacts for rapid user testing using Unity 6 and Meta all-in-one SDK. Engineered final experience along with 2 other programmers. Documented research notes and design insights findings and development process as open-source documentation.",
-    "role": "Experience Design, Producer, Documentation Lead, UX Researcher, Programmer",
+    "role": "Technical Experience Designer, Producer",
     "category": "Creative Tech R&D",
     "image": "assets/TACIT.jpg",
     "link": "https://projects.etc.cmu.edu/tacit/",
     "featured": true,
-    "tags": ["VR", "Haptics", "R&D", "Agile Production", "Unity 6", "Meta SDK", "bHaptics TactGlove", "Trello"],
+    "tags": ["Rapid Prototyping", "Agile Production", "Playtesting-Driven Design", "Documentation"],
     "moreLinks": {
+      "Project Website": "https://projects.etc.cmu.edu/tacit/",
       "Open-source Documentation": "https://docs.google.com/document/d/1j0eI6Bvqdn3td5Cm4D78JcDIZmIEplzoLTbpuTMxhnI/edit?usp=sharing"
     },
     "details": {
@@ -36,17 +38,16 @@
   {
     "title": "spelunx - CAVERN Toolkit",
     "description": "Developed beginner-friendly toolkit including Unity SDK, documentation and tutorials, and sample experiences to empower creators to focus on designing for this proprietary novel immersive platform. Worked as gameplay programmer for the sample scenes, user researcher for developer experience, documentation lead for tutorials and development process on project website, and audio designer for surround audio research.",
-    "role": "Gameplay Programmer, User Researcher, Documentation Lead, Audio Designer",
+    "role": "Technical Designer, Developer Evangelist",
     "category": "Creative Tech R&D",
     "image": "assets/spelunx.jpg",
     "link": "https://projects.etc.cmu.edu/spelunx/",
     "featured": true,
     "tags": ["Developer tool research", "Sample scene programming", "Surround sound design", "Unity 6", "GitHub", "Perforce"],
     "moreLinks": {
+      "Project Website": "https://projects.etc.cmu.edu/spelunx/",
       "Open-source Documentation": "https://docs.google.com/document/d/1QsmDlrw0ctSM0vhB-qM79fx0NRbXh79U3FtuWtl2vYs/edit?usp=sharing",
-      "GitHub": "https://github.com/spelunx/UnityCavernSDK",
-      "Project video": "https://youtu.be/n2HfecLku_k?si=FXkhfWgnbBdWShL0",
-      "Extended Abstract": "https://drive.google.com/file/d/14OwoJNOLCKZrQ6xVwTslQ4LYttwvZau9/view?usp=sharing"
+      "GitHub": "https://github.com/spelunx/UnityCavernSDK"
     },
     "details": {
       "focus": "Developer experience research, playtesting, surround sound design, sample scene development",
@@ -54,20 +55,20 @@
     }
   },
   {
-    "title": "EiAi - UX Research on LLMs usage in UX Designers",
-    "description": "Explored how UX designers utilize LLM tools to understand hard-to-reach user populations through mixed methods research including contextual inquiry, usability testing, assumption artifacts, and speed dating.",
-    "role": "UX Researcher",
-    "category": "UX Research",
-    "link": "assets/EiAi.png",
+    "title": "The Glad Game - Educational Game Design for Metacognition",
+    "description": "Independent study with game designer Jesse Schell. After iterations, I designed a branching narrative gameplay structure (inspired by Reigns) that facilitates learning about cognitive biases, and implemented the tutorial and 1st level prototype with Unity and ink.",
+    "role": "Game Designer",
+    "category": "Games and Experiences",
+    "image": "assets/metacognition.png",
+    "link": "",
     "featured": true,
-    "image": "assets/EiAi.png",
-    "tags": ["UX Research", "LLMs", "Mixed Methods Research"],
+    "tags": ["Narrative Design"],
     "moreLinks": {
-      "Project retrospective": "https://medium.com/@yt73/ux-research-methods-interdisciplinary-toolkit-1bda71d3de65"
+      "Game Design Document": "https://docs.google.com/document/d/172T3VkIr8hJqzes7D97WXCVlXB39hkYzfCs-lFpNS08/edit?tab=t.uol2vbvdfhgw"
     },
     "details": {
-      "focus": "AI-assisted research methodologies", 
-      "tools": "Python, LLMs, Mixed Methods Research"
+      "focus": "Developer experience research, playtesting, surround sound design, sample scene development",
+      "tools": "Unity 6, GitHub, Perforce"
     }
   }
 ]
