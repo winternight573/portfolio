@@ -13,3 +13,11 @@
       "tools": "Unity, C#, Meta all-in-one-SDKs"
     }
   },*/
+
+
+
+  A 20-minute, cooperative puzzle-narrative played across 4 mobile screens. Our experience focuses on cross-device interactions, requiring players to physically connect and rearrange phones to progress. We aim to evoke wonder as the seams between separate devices vanish to reveal a unified world. We are innovating how to use an existing platform (the phones) as modular frames, where distinct approaches (comic book panels, puzzle gameplay, film narrative) inform how content can seamlessly integrate into what best showcases this new medium.
+
+  Produced R&D project investigating haptic glove feedback for emotional storytelling in VR narrative game. Led playtesting strategy and facilitated cross-disciplinary collaboration. Developed prototyping artifacts for rapid user testing using Unity 6 and Meta all-in-one SDK. Engineered final experience along with 2 other programmers. Documented research notes and design insights findings and development process as open-source documentation.
+
+  Developed beginner-friendly toolkit including Unity SDK, documentation and tutorials, and sample experiences to empower creators to focus on designing for this proprietary novel immersive platform. Worked as gameplay programmer for the sample scenes, user researcher for developer experience, documentation lead for tutorials and development process on project website, and audio designer for surround audio research.

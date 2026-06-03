@@ -122,7 +122,9 @@
       mainLink.href = project.link;
       mainLink.textContent = "View Project";
       mainLink.classList.add("btn-primary");
-      mainLink.target = "_blank";
+      if (project.link.startsWith("http")) {
+        mainLink.target = "_blank";
+      }
       linksContainer.appendChild(mainLink);
     }
     
@@ -227,7 +229,10 @@
         card.setAttribute("data-category", project.category);
         
         const imageLink = gen("a");
-        imageLink.href = "javascript:void(0)";
+        imageLink.href = project.link || "javascript:void(0)";
+        if (project.link && project.link.startsWith("http")) {
+          imageLink.target = "_blank";
+        }
         imageLink.style.cursor = "pointer";
         
         const image = gen("img");
@@ -235,11 +240,8 @@
         image.alt = project.title;
         imageLink.appendChild(image);
         
-        // Click image to open modal
-        imageLink.addEventListener("click", (e) => {
-          e.preventDefault();
-          openModal(project);
-        });
+        // Image links directly to case study (or external project page).
+        // Modal is reserved for gallery cards below.
 
         const content = gen("div");
         content.classList.add("featured-card-content");

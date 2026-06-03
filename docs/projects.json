@@ -1,7 +1,7 @@
 [
   {
     "title": "Prison Escape",
-    "description": "Roomscale VR Escape room designed for naive guests. Fleshed out player experience and puzzles after concept inception. Worked as Unity programmer in 5 person team, rapidly creating experiences in 2 weeks, from concept inception to playtesting and iteration.",
+    "description": "Roomscale VR Escape room designed for naive guests. Fleshed out the player experience and puzzles after concept inception. Worked as Unity programmer in a 5-person team, rapidly creating the experience in 2 weeks, from concept inception to playtesting and iteration.",
     "role": "Game Designer, Gameplay Programmer",
     "category": "Games and Experiences",
     "image": "assets/prison-escape.png",
@@ -99,16 +99,16 @@
   },
   {
     "title": "spelunx - CAVERN Toolkit",
-    "description": "Developed beginner-friendly toolkit including Unity SDK, documentation and tutorials, and sample experiences to empower creators to focus on designing for this proprietary novel immersive platform. Worked as gameplay programmer for the sample scenes, user researcher for developer experience, documentation lead for tutorials and development process on project website, and audio designer for surround audio research.",
+    "description": "A Unity SDK aimed for novice to seasoned developers for the multiplayer roomscale VR platform CAVERN. The toolkit includes the Unity package, tutorial, sample scenes, and technical documentation.",
     "role": "Technical Designer, Developer Evangelist",
     "category": "Creative Tech R&D",
     "image": "assets/spelunx.jpg",
-    "link": "",
+    "link": "spelunx.html",
     "featured": true,
-    "tags": ["Developer tool research", "Sample scene programming", "Surround sound design", "Unity 6", "GitHub", "Perforce"],
+    "tags": ["Tools Programming", "Surround sound design", "Unity 6"],
     "moreLinks": {
       "Project Website": "https://projects.etc.cmu.edu/spelunx/",
-      "Open-source Documentation": "https://docs.google.com/document/d/1QsmDlrw0ctSM0vhB-qM79fx0NRbXh79U3FtuWtl2vYs/edit?usp=sharing",
+      "Documentation": "https://docs.google.com/document/d/1QsmDlrw0ctSM0vhB-qM79fx0NRbXh79U3FtuWtl2vYs/edit?usp=sharing",
       "GitHub": "https://github.com/spelunx/UnityCavernSDK"
     },
     "details": {
@@ -118,16 +118,16 @@
   },
   {
     "title": "TACIT - R&D for VR Haptics in Emotional Storytelling",
-    "description": "Produced R&D project investigating haptic glove feedback for emotional storytelling in VR narrative game. Led playtesting strategy and facilitated cross-disciplinary collaboration. Developed prototyping artifacts for rapid user testing using Unity 6 and Meta all-in-one SDK. Engineered final experience along with 2 other programmers. Documented research notes and design insights findings and development process as open-source documentation.",
+    "description": "An R&D project exploring proactive haptic cues in VR for emotional engagement, culminating to the award-winning experience about death called In The End.",
     "role": "Technical Experience Designer, Producer",
     "category": "Creative Tech R&D",
     "image": "assets/TACIT.jpg",
-    "link": "",
+    "link": "tacit.html",
     "featured": true,
     "tags": ["Rapid Prototyping", "Agile Production", "Playtesting-Driven Design", "Documentation"],
     "moreLinks": {
       "Project Website": "https://projects.etc.cmu.edu/tacit/",
-      "Open-source Documentation": "https://docs.google.com/document/d/1j0eI6Bvqdn3td5Cm4D78JcDIZmIEplzoLTbpuTMxhnI/edit?usp=sharing"
+      "Documentation": "https://docs.google.com/document/d/1j0eI6Bvqdn3td5Cm4D78JcDIZmIEplzoLTbpuTMxhnI/edit?usp=sharing"
     },
     "details": {
       "focus": "Innovative haptic R&D, playtesting, prototype development,cross-disciplinary collaboration",
@@ -169,15 +169,15 @@
   },
   {
     "title": "Big Picture Studio - Cooperative Puzzle-Narrative Game across 4 Mobile Screens",
-    "description": "A 20-minute, cooperative puzzle-narrative played across 4 mobile screens. Our experience focuses on cross-device interactions, requiring players to physically connect and rearrange phones to progress. We aim to evoke wonder as the seams between separate devices vanish to reveal a unified world. We are innovating how to use an existing platform (the phones) as modular frames, where distinct approaches (comic book panels, puzzle gameplay, film narrative) inform how content can seamlessly integrate into what best showcases this new medium.",
+    "description": "A semester-long investigation in discovering unique narrative puzzle game systems across 4 phone screens, where physical repositioning of the devices serve as the main mechanic.",
     "role": "Game Designer, Technical Producer",
     "category": "Games and Experiences",
     "image": "assets/bps2.jpg",
-    "link": "https://projects.etc.cmu.edu/big-piucture-studio/",
+    "link": "big-picture-studio.html",
     "featured": true,
     "tags": ["Player Experience Optimization","Experimental Tech", "Puzzle Design"],
     "moreLinks": {
-      "Project Website": "https://projects.etc.cmu.edu/big-piucture-studio/",
+      "Project Website": "https://projects.etc.cmu.edu/big-picture-studio/",
       "Demo video": "https://youtu.be/jMTENnyhgAI"
     },
     "details": {
@@ -203,11 +203,11 @@
   },
   {
     "title": "The Glad Game - Educational Game Design for Metacognition",
-    "description": "Independent study with game designer Jesse Schell. After iterations, I designed a branching narrative gameplay structure (inspired by Reigns) that facilitates learning about cognitive biases, and implemented the tutorial and 1st level prototype with Unity and ink.",
+    "description": "Independent study with game designer Jesse Schell. After iterations, I designed a branching narrative game that facilitates players to learn about cognitive biases in real life, and implemented the tutorial and 1st level prototype with Unity and ink.",
     "role": "Game Designer",
     "category": "Games and Experiences",
     "image": "assets/metacognition.png",
-    "link": "",
+    "link": "the-glad-game.html",
     "featured": true,
     "tags": ["Narrative Design"],
     "moreLinks": {

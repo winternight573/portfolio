@@ -152,7 +152,35 @@ nav {
   padding: 0 var(--spacing-md);
   display: flex;
   gap: var(--spacing-md);
-  justify-content: center;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-wordmark {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 1.5rem;
+  color: var(--text-primary);
+  text-decoration: none;
+  letter-spacing: -0.01em;
+  transition: var(--transition);
+  padding: var(--spacing-xs) 0;
+  /* Override generic anchor color so it doesn't inherit --accent */
+}
+
+.nav-wordmark:hover {
+  color: var(--accent);
+}
+
+/* The wordmark must not pick up the underline/active styling
+   that .nav a uses, even on its own home page. */
+.nav-wordmark::after {
+  display: none;
+}
+
+.nav-links {
+  display: flex;
+  gap: var(--spacing-md);
   align-items: center;
 }
 
@@ -349,6 +377,14 @@ footer h2 {
   nav a {
     font-size: 0.9375rem;
     padding: var(--spacing-xs);
+  }
+
+  .nav-wordmark {
+    font-size: 1.2rem;
+  }
+
+  .nav-links {
+    gap: var(--spacing-sm);
   }
   
   .footer-links {
