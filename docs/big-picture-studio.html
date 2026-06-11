@@ -11,57 +11,18 @@
 </head>
 
 <!--
-  HOW TO USE THIS TEMPLATE
-  ========================
-  1. Set <body data-category="..."> to one of:
-       "Creative Tech R&D"
-       "Games and Experiences"
-       "UX Research"
-       "Technical Foundations"
-     This drives the accent color across the page.
+  Structure: 8 sections, prose-driven.
+  Hero has no contributions block. Contributions information is woven
+  into Overview's third paragraph rather than living in a dedicated section.
 
-  2. Each <section class="case-section"> is INDEPENDENTLY OPTIONAL.
-     If "Reflection" doesn't apply because the project is ongoing,
-     just delete that <section>. The page still flows.
-
-  3. EMBED PATTERNS available (see case-study.css for full styling):
-
-     SINGLE IMAGE:
-       <figure class="case-figure">
-         <img src="assets/img.jpg" alt="...">
-         <figcaption>Optional caption.</figcaption>
-       </figure>
-
-     WIDE IMAGE (breaks out of body column on desktop):
-       <figure class="case-figure wide">...</figure>
-
-     2-UP OR 3-UP GRID:
-       <div class="case-grid two-up">
-         <img src="..."><img src="...">
-       </div>
-
-     YOUTUBE / VIMEO VIDEO:
-       <div class="case-video">
-         <iframe src="https://www.youtube.com/embed/VIDEO_ID"
-                 allowfullscreen></iframe>
-       </div>
-
-     PULL QUOTE:
-       <blockquote class="case-pullquote">
-         "The quote text here."
-         <cite>Source or attribution</cite>
-       </blockquote>
-
-     CALLOUT BOX (for key insights, technical notes):
-       <aside class="case-callout">
-         <span class="case-callout-label">Key Finding</span>
-         <p>The content of the callout.</p>
-       </aside>
-
-     LINK LIST (for resources at end of a section):
-       <ul class="case-link-list">
-         <li><a href="..."><i class="fas fa-..."></i> Label</a></li>
-       </ul>
+  Components used (see case-study.css):
+    .case-transform     — Single Phone → Four Phones diagram (new)
+    .case-flow          — Discovery → Alignment → Mastery (player learning stages)
+    .case-principles    — Insight cards, with .case-principle-role for stage labels
+    .case-convergence   — Lock-and-key puzzle structure
+    .case-findings      — Observation / Design Response playtest table
+    .case-grid three-up — image galleries
+    .case-video         — walkthrough video embed in Section 8
 -->
 
 <body data-category="Games and Experiences">
@@ -90,11 +51,11 @@
       <span class="case-category-tag">Games and Experiences</span>
       <h1>Big Picture Studio</h1>
       <p class="case-tagline">
-        A cooperative puzzle-narrative game played across four mobile screens,
-        where physically rearranging the devices is the primary mechanic.
+        A cooperative puzzle-narrative experience spread across four mobile
+        screens, where players physically rearrange devices to uncover a
+        shared world.
       </p>
 
-      <!-- Quick facts panel -->
       <div class="case-facts">
         <div>
           <span class="case-fact-label">Role</span>
@@ -102,25 +63,25 @@
         </div>
         <div>
           <span class="case-fact-label">Team</span>
-          <span class="case-fact-value">CMU ETC Spring 2026 Team Big Picture Studio</span>
+          <span class="case-fact-value">CMU ETC Big Picture Studio</span>
         </div>
         <div>
           <span class="case-fact-label">Tools</span>
-          <span class="case-fact-value">Figma, Google Suite, Paper Prototyping</span>
+          <span class="case-fact-value">Unity, Mobile Development, Figma, Playtesting</span>
         </div>
         <div>
           <span class="case-fact-label">Links</span>
           <span class="case-fact-value">
-            <a href="https://projects.etc.cmu.edu/big-picture-studio/" target="_blank">Project site</a> ·
+            <a href="https://projects.etc.cmu.edu/big-picture-studio/" target="_blank">Site</a> ·
             <a href="https://youtu.be/jMTENnyhgAI" target="_blank">Demo</a>
           </span>
         </div>
       </div>
     </div>
 
-    <!-- Hero media: swap for video if preferred -->
+    <!-- Hero media: the actual game. Four phones, people playing, beautiful art. -->
     <figure class="case-hero-media">
-      <img src="assets/bps2.jpg" alt="Big Picture Studio — four phones arranged on a table">
+      <img src="assets/bps2.jpg" alt="Four phones arranged together with players physically interacting — gameplay moment from Big Picture Studio">
     </figure>
   </section>
 
@@ -129,196 +90,309 @@
        ============================================ -->
   <main id="case-body">
 
-    <!-- OVERVIEW -->
+    <!-- ===== SECTION 1: Overview ===== -->
     <section class="case-section" id="overview">
       <h2><span class="section-number">01</span> Overview</h2>
-      <p class="section-lead">
-        Defining and designing for a novel medium of 4-phones-as-one-experience, balancing innovative mechanics with conventional phone interactions and narrative puzzle design. 
+      <p>
+        Big Picture Studio explored a unique interaction space: a game
+        played across four mobile phones that could be physically
+        rearranged throughout play.
       </p>
       <p>
-        Inspired by a technical research paper for cross-device interaction networking through pinching across two screens, the student pitch team Big Picture Studio set on to 
+        Unlike traditional mobile games, players were asked to think beyond
+        the boundaries of a single screen. Phones could connect, separate,
+        rotate, and move, transforming physical relationships between
+        devices into puzzle mechanics and narrative moments.
       </p>
       <p>
-        [Optional second paragraph: situate the project. What category of
-        experience is this (cooperative game? alt-controller game? narrative
-        toy?), and what existing work does it relate to or depart from?]
-      </p>
-
-      <!-- Example embed: hero gif or short loop showing the mechanic -->
-      <figure class="case-figure">
-        <img src="assets/bps2.jpg" alt="[Replace with gameplay loop or moment that shows the core mechanic]">
-        <figcaption>[Caption explaining what's happening in the image.]</figcaption>
-      </figure>
-    </section>
-
-    <!-- PROBLEM / DESIGN QUESTION -->
-    <section class="case-section" id="problem">
-      <h2><span class="section-number">02</span> Problem &amp; Design Question</h2>
-      <p class="section-lead">
-        [The investigation in one line. This is where your case study becomes
-        distinctive — be specific and a little provocative.]
-      </p>
-      <p>
-        [What were you actually trying to figure out? Frame it as a question,
-        not a feature list. Example: "Can players experience a single coherent
-        narrative when the story is fragmented across four physically separate
-        screens they have to choose how to arrange?"]
-      </p>
-      <p>
-        [Why does this question matter — for the medium, for players, or for the
-        team's growth? What assumption were you challenging?]
-      </p>
-
-      <blockquote class="case-pullquote">
-        "[A pithy version of the design question, or a quote from a team
-        conversation that captures the stakes.]"
-        <cite>[Source or context]</cite>
-      </blockquote>
-    </section>
-
-    <!-- CONSTRAINTS -->
-    <section class="case-section" id="constraints">
-      <h2><span class="section-number">03</span> Constraints</h2>
-      <p class="section-lead">
-        [What boundaries shaped the design space?]
-      </p>
-
-      <h3>Technical</h3>
-      <p>
-        [Hardware/software limits. e.g., "Four phones with no shared network
-        primitive beyond the cloud; touch as the only input; battery life for
-        playtest sessions."]
-      </p>
-
-      <h3>Experiential</h3>
-      <p>
-        [What had to be true for the experience to work? e.g., "Players had to
-        feel like co-authors of the arrangement, not followers of instructions."]
-      </p>
-
-      <h3>Production</h3>
-      <p>
-        [Time, team size, what you had to defer. e.g., "16 weeks; 5 disciplines;
-        we cut a planned 5th phone halfway through Sprint 3."]
+        As a game designer and technical producer, I focused on
+        understanding how players learned this unfamiliar interaction
+        language. Through onboarding design, puzzle structure exploration,
+        playtesting, and experience flow analysis, I helped investigate
+        how a completely new interaction space could become understandable,
+        intuitive, and emotionally engaging.
       </p>
     </section>
 
-    <!-- PROCESS -->
-    <section class="case-section" id="process">
-      <h2><span class="section-number">04</span> Process</h2>
-      <p class="section-lead">
-        [How did you approach it? One sentence on the shape of the work — was it
-        linear discovery, parallel prototyping, something else?]
-      </p>
+    <!-- ===== SECTION 2: Designing for an Unfamiliar Medium ===== -->
+    <section class="case-section" id="unfamiliar-medium">
+      <h2><span class="section-number">02</span> Designing for an Unfamiliar Medium</h2>
+
       <p>
-        [Walk through the phases. Be honest about what didn't work — that's where
-        readers learn about how you think.]
+        The central design challenge was balancing familiarity and novelty.
       </p>
 
-      <h3>Phase 1 — [Name]</h3>
       <p>
-        [What you did, what you found, what changed because of it.]
+        Players already have deeply ingrained expectations about how phones
+        work. At the same time, our experience asked them to treat four
+        phones as a single shared system. Much of our design work centered
+        on understanding which expectations to preserve and which
+        expectations to challenge.
       </p>
 
-      <!-- Wide breakout for a process diagram or workflow -->
-      <figure class="case-figure wide">
-        <img src="assets/bps2.jpg" alt="[Process diagram, workflow, or prototype iteration grid]">
-        <figcaption>[How to read this figure.]</figcaption>
-      </figure>
-
-      <h3>Phase 2 — [Name]</h3>
-      <p>
-        [Next phase. You can also use a 2-up grid to show before/after prototypes.]
-      </p>
-
-      <div class="case-grid two-up">
-        <img src="assets/bps2.jpg" alt="[Prototype v1]">
-        <img src="assets/bps2.jpg" alt="[Prototype v2]">
+      <!-- Transformation diagram: Single Phone → Four Phones -->
+      <div class="case-transform">
+        <div class="case-transform-state">
+          <p class="case-transform-title">Single Phone</p>
+          <p class="case-transform-attrs">Personal · Touchscreen · Contained</p>
+        </div>
+        <div class="case-transform-arrow">↓</div>
+        <div class="case-transform-state terminal">
+          <p class="case-transform-title">Four Phones</p>
+          <p class="case-transform-attrs">Shared · Physical · Reconfigurable</p>
+        </div>
       </div>
 
-      <h3>Phase 3 — [Name]</h3>
-      <p>
-        [And so on. Three phases tends to read cleanly; four or more starts to
-        feel like a recap.]
-      </p>
+      <!-- 4-phone setup photo -->
+      <figure class="case-figure">
+        <img src="assets/bps2.jpg" alt="Four-phone setup showing how devices were arranged during gameplay">
+        <figcaption>
+          [Caption describing the four-phone arrangement and what's
+          happening at this moment of play.]
+        </figcaption>
+      </figure>
     </section>
 
-    <!-- TESTING / RESEARCH -->
-    <section class="case-section" id="testing">
-      <h2><span class="section-number">05</span> Testing &amp; Research</h2>
-      <p class="section-lead">
-        [What you tested, with whom, and how it shaped the design.]
-      </p>
-      <p>
-        [Method: playtests? semi-structured interviews? naive-guest sessions?
-        How many sessions, what was the protocol in one or two sentences?]
-      </p>
-
-      <aside class="case-callout">
-        <span class="case-callout-label">Key Finding</span>
-        <p>
-          [The single most important thing you learned, stated as a concrete
-          observation about player behavior, not a generic insight.]
-        </p>
-      </aside>
+    <!-- ===== SECTION 3: Building an Interaction Language ===== -->
+    <section class="case-section" id="interaction-language">
+      <h2><span class="section-number">03</span> Building an Interaction Language</h2>
 
       <p>
-        [Other findings, and what each one changed. The pattern that works:
-        observation → interpretation → design response.]
+        Before players could solve puzzles, they first needed to understand
+        the rules of the medium itself.
       </p>
 
-      <!-- Example: short clip from a playtest -->
+      <p>
+        I spent much of the semester helping break down interaction states
+        and transitions into understandable components, identifying what
+        players could currently do, what information they needed next, and
+        how the experience should communicate new possibilities.
+      </p>
+
+      <!-- Learning stages flow -->
+      <h3>How Players Learn the Medium</h3>
+      <div class="case-flow">
+        <div class="case-flow-step">Discovery</div>
+        <div class="case-flow-arrow">→</div>
+        <div class="case-flow-step">Alignment</div>
+        <div class="case-flow-arrow">→</div>
+        <div class="case-flow-step accent">Mastery</div>
+      </div>
+
+      <!-- Artifacts grid: state diagrams, screenshots, onboarding breakdown -->
+      <div class="case-grid three-up">
+        <img src="assets/bps2.jpg" alt="[State diagram artifact]">
+        <img src="assets/bps2.jpg" alt="[State exploration screenshot]">
+        <img src="assets/bps2.jpg" alt="[Onboarding breakdown]">
+      </div>
+
+      <!-- Detailed insight cards -->
+      <h3>Design Insights</h3>
+      <div class="case-principles">
+        <div class="case-principle">
+          <span class="case-principle-number">STAGE 01</span>
+          <p class="case-principle-name">Discovery</p>
+          <p class="case-principle-body">
+            Players naturally viewed phones as separate devices.
+          </p>
+        </div>
+        <div class="case-principle">
+          <span class="case-principle-number">STAGE 02</span>
+          <p class="case-principle-name">Alignment</p>
+          <p class="case-principle-body">
+            Players needed visual cues before they understood physical
+            movement mattered.
+          </p>
+        </div>
+        <div class="case-principle">
+          <span class="case-principle-number">STAGE 03</span>
+          <p class="case-principle-name">Mastery</p>
+          <p class="case-principle-body">
+            Once players understood relationships between screens, they
+            began experimenting independently.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== SECTION 4: Designing Puzzle Progression ===== -->
+    <section class="case-section" id="puzzle-progression">
+      <h2><span class="section-number">04</span> Designing Puzzle Progression</h2>
+
+      <p>
+        Because the interaction space itself was unfamiliar, puzzle
+        progression needed to carefully manage complexity.
+      </p>
+
+      <p>
+        I explored lock-and-key relationships between mechanics, narrative
+        beats, and player understanding to identify structures that could
+        scale while remaining understandable.
+      </p>
+
+      <!-- Lock-and-key diagram: keys converge on a lock, lock unlocks narrative -->
+      <div class="case-convergence">
+        <div class="case-convergence-inputs">
+          <span class="case-convergence-input">Mechanic A</span>
+          <span class="case-convergence-input">Mechanic B</span>
+          <span class="case-convergence-input">Mechanic C</span>
+        </div>
+        <div class="case-convergence-arrow">↓</div>
+        <div class="case-convergence-output">Lock — Puzzle Combination</div>
+        <div class="case-convergence-arrow">↓</div>
+        <div class="case-convergence-output terminal">Unlocked — Narrative Beat</div>
+      </div>
+
+      <p>
+        [Optional: one paragraph naming a specific puzzle and walking
+        through how its mechanics, lock, and unlock worked. A concrete
+        example here is what makes the lock-and-key concept land.]
+      </p>
+
+      <!-- Example puzzle + final implementation -->
+      <div class="case-grid two-up">
+        <img src="assets/bps2.jpg" alt="[Example puzzle from the prototype]">
+        <img src="assets/bps2.jpg" alt="[Final puzzle implementation in the shipped game]">
+      </div>
+    </section>
+
+    <!-- ===== SECTION 5: Learning Through Playtesting ===== -->
+    <section class="case-section" id="playtesting">
+      <h2><span class="section-number">05</span> Learning Through Playtesting</h2>
+
+      <p>
+        Playtesting became our primary design tool.
+      </p>
+
+      <p>
+        Since there were few existing references for four-device
+        interaction design, many questions could only be answered by
+        observing real players and studying where expectations aligned —
+        or conflicted — with our intended experience.
+      </p>
+
+      <table class="case-findings">
+        <thead>
+          <tr>
+            <th>Observation</th>
+            <th>Design Response</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Players understood screen movement before understanding screen connection.</td>
+            <td>Adjusted onboarding sequence to isolate concepts.</td>
+          </tr>
+          <tr>
+            <td>Players often overlooked certain transitions.</td>
+            <td>Added stronger visual communication between devices.</td>
+          </tr>
+          <!-- Add additional <tr> rows here as more playtest observations
+               and design responses become available. -->
+        </tbody>
+      </table>
+
+      <!-- Playtesting photos and documents -->
+      <div class="case-grid three-up">
+        <img src="assets/bps2.jpg" alt="[Playtesting session photo]">
+        <img src="assets/bps2.jpg" alt="[Playtesting document or scorecard]">
+        <img src="assets/bps2.jpg" alt="[Iteration example — before/after of a single design change]">
+      </div>
+    </section>
+
+    <!-- ===== SECTION 6: Producing Within Ambiguity ===== -->
+    <section class="case-section" id="producing">
+      <h2><span class="section-number">06</span> Producing Within Ambiguity</h2>
+
+      <p>
+        Big Picture Studio was a highly autonomous pitch team composed of
+        designers, artists, programmers, and storytellers with strong
+        creative ownership.
+      </p>
+
+      <p>
+        Unlike many projects where responsibilities are clearly separated,
+        ideas frequently evolved through collective iteration and
+        discussion.
+      </p>
+
+      <p>
+        Working within this environment challenged many of my assumptions
+        about production and taught me valuable lessons about
+        collaboration, communication, and adapting design processes to fit
+        the needs of a team.
+      </p>
+
+      <!-- Small artifacts grid -->
+      <div class="case-grid three-up">
+        <img src="assets/bps2.jpg" alt="[Alignment document]">
+        <img src="assets/bps2.jpg" alt="[Timeline snippet]">
+        <img src="assets/bps2.jpg" alt="[Website screenshot showing team process]">
+      </div>
+    </section>
+
+    <!-- ===== SECTION 7: Communicating the Project ===== -->
+    <section class="case-section" id="communicating">
+      <h2><span class="section-number">07</span> Communicating the Project</h2>
+
+      <p>
+        I maintained the project website as the primary public-facing
+        record of the team's work. Weekly updates documented our evolving
+        design process and helped communicate the interaction space to
+        audiences who could not directly experience the game.
+      </p>
+
+      <!-- Website / devlogs / public communication -->
+      <div class="case-grid three-up">
+        <img src="assets/bps2.jpg" alt="[Project website screenshot]">
+        <img src="assets/bps2.jpg" alt="[Devlog post screenshot]">
+        <img src="assets/bps2.jpg" alt="[Public communication artifact]">
+      </div>
+    </section>
+
+    <!-- ===== SECTION 8: Final Experience ===== -->
+    <section class="case-section" id="final-experience">
+      <h2><span class="section-number">08</span> Final Experience</h2>
+
+      <p>
+        Through months of experimentation, iteration, and collaboration,
+        the project culminated in a complete cooperative puzzle-narrative
+        experience that invited players to see familiar devices in
+        entirely new ways.
+      </p>
+
+      <!-- Walkthrough video -->
       <div class="case-video">
         <iframe src="https://www.youtube.com/embed/jMTENnyhgAI"
-                title="Big Picture Studio demo"
+                title="Big Picture Studio — walkthrough video"
                 allowfullscreen></iframe>
       </div>
-    </section>
 
-    <!-- OUTCOMES -->
-    <section class="case-section" id="outcomes">
-      <h2><span class="section-number">06</span> Outcomes</h2>
-      <p class="section-lead">
-        [What changed because of this work? What did you learn?]
-      </p>
-      <p>
-        [What did the final experience look like — concretely? What did players
-        do, feel, or say? If there are quantifiable outcomes — completion rates,
-        award recognition, playtest scores — name them.]
-      </p>
-      <p>
-        [What did <em>you</em> learn that you'll carry forward? Be specific. "I
-        learned production" is vague; "I learned to scope cross-device sync
-        features against playtest feedback cycles, not against feature lists"
-        is concrete.]
-      </p>
-    </section>
+      <!-- Screenshot gallery -->
+      <div class="case-grid three-up">
+        <img src="assets/bps2.jpg" alt="[Final game screenshot — early moment]">
+        <img src="assets/bps2.jpg" alt="[Final game screenshot — puzzle in action]">
+        <img src="assets/bps2.jpg" alt="[Final game screenshot — climax or resolution]">
+      </div>
 
-    <!-- REFLECTION -->
-    <section class="case-section" id="reflection">
-      <h2><span class="section-number">07</span> Reflection</h2>
-      <p class="section-lead">
-        [What would you do differently? What's still open?]
-      </p>
+      <h3>Reflection</h3>
       <p>
-        [Two flavors work here: (1) honest critique of decisions, with the
-        reasoning of what you'd try instead; (2) open questions the project
-        surfaced that you'd want to investigate next. Avoid generic "I would
-        manage time better" — that reads as a bromide.]
-      </p>
-      <p>
-        [If the project is ongoing, this section can be "Where it goes next"
-        instead — and you can leave Reflection out entirely until the project
-        wraps.]
+        Big Picture Studio taught me that designing a new interaction space
+        is as much about understanding player expectations as it is about
+        inventing new mechanics. The project also challenged me to
+        reconsider how design ownership works within highly autonomous
+        teams. While my contributions often focused on frameworks,
+        playtesting, and experience structure rather than final content
+        creation, I came away with a much deeper appreciation for how
+        shared design conversations shape successful experiences.
       </p>
 
-      <!-- Resources to explore further -->
       <ul class="case-link-list">
         <li><a href="https://projects.etc.cmu.edu/big-picture-studio/" target="_blank">
           <i class="fas fa-external-link-alt"></i> Project Website
         </a></li>
         <li><a href="https://youtu.be/jMTENnyhgAI" target="_blank">
-          <i class="fab fa-youtube"></i> Demo Video
+          <i class="fab fa-youtube"></i> Walkthrough Video
         </a></li>
       </ul>
     </section>
@@ -345,9 +419,6 @@
     </a>
   </div>
 
-  <!-- ============================================
-       FOOTER (shared)
-       ============================================ -->
   <footer>
     <div class="footer-content">
       <h2>Let's Connect</h2>
@@ -373,4 +444,4 @@
     </div>
   </footer>
 </body>
-</html>
+</html>  

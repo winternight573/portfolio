@@ -576,3 +576,1077 @@ body:not([data-category]) {
     grid-template-columns: 1fr;
   }
 }
+
+/* ============================================
+   STRUCTURED COMPONENTS
+   Opt-in patterns for richer case studies.
+   Used by spelunx.html; reusable on others.
+   ============================================ */
+
+/* ----- Contributions block (Role / I Led / I Contributed) -----
+   Sits inside #case-hero, between .case-facts and .case-hero-media. */
+.case-contributions {
+  max-width: var(--max-width);
+  margin: var(--spacing-md) auto 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--spacing-md);
+  position: relative;
+  z-index: 1;
+}
+
+.case-contribution-col {
+  background: rgba(255, 255, 255, 0.75);
+  backdrop-filter: blur(10px);
+  padding: var(--spacing-md);
+  border-radius: var(--border-radius);
+  border-top: 3px solid var(--case-accent);
+  box-shadow: 0 4px 12px var(--shadow);
+}
+
+.case-contribution-col h3 {
+  font-family: var(--font-body);
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--case-accent);
+  margin-bottom: var(--spacing-sm);
+}
+
+.case-contribution-col ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.case-contribution-col li {
+  font-size: 0.98rem;
+  color: var(--text-primary);
+  padding: 0.45rem 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+  line-height: 1.4;
+}
+
+.case-contribution-col li::marker {
+  color: transparent;
+}
+
+.case-contribution-col li:last-child {
+  border-bottom: none;
+}
+
+@media (max-width: 640px) {
+  .case-contributions {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ----- Horizontal step flow (research activities, processes) ----- */
+.case-flow {
+  display: flex;
+  align-items: stretch;
+  gap: var(--spacing-xs);
+  margin: var(--spacing-md) 0;
+  flex-wrap: wrap;
+}
+
+.case-flow-step {
+  flex: 1 1 0;
+  min-width: 130px;
+  padding: var(--spacing-sm);
+  background: var(--background);
+  border: 1px solid var(--border);
+  border-radius: var(--border-radius);
+  text-align: center;
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: var(--text-primary);
+  border-top: 3px solid var(--case-accent);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.case-flow-arrow {
+  color: var(--case-accent);
+  font-size: 1.5rem;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+}
+
+@media (max-width: 640px) {
+  .case-flow {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .case-flow-arrow {
+    transform: rotate(90deg);
+    align-self: center;
+  }
+}
+
+/* ----- Findings table (Observation / Implication) ----- */
+.case-findings {
+  width: 100%;
+  border-collapse: collapse;
+  margin: var(--spacing-md) 0;
+}
+
+.case-findings thead {
+  border-bottom: 2px solid var(--case-accent);
+}
+
+.case-findings th {
+  text-align: left;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--case-accent);
+  padding: var(--spacing-xs) var(--spacing-sm);
+}
+
+.case-findings td {
+  padding: var(--spacing-sm);
+  font-size: 0.98rem;
+  line-height: 1.5;
+  color: var(--text-primary);
+  border-bottom: 1px solid var(--border);
+  vertical-align: top;
+}
+
+.case-findings td:first-child {
+  color: var(--text-secondary);
+  width: 58%;
+}
+
+.case-findings td:last-child {
+  font-weight: 600;
+  color: var(--case-accent);
+}
+
+@media (max-width: 540px) {
+  .case-findings,
+  .case-findings tbody,
+  .case-findings tr,
+  .case-findings td {
+    display: block;
+    width: 100%;
+  }
+  .case-findings thead { display: none; }
+  .case-findings tr {
+    margin-bottom: var(--spacing-sm);
+    padding: var(--spacing-sm);
+    background: var(--background);
+    border: 1px solid var(--border);
+    border-radius: var(--border-radius);
+  }
+  .case-findings td { border: none; padding: 0.25rem 0; }
+  .case-findings td:last-child::before {
+    content: '→ ';
+  }
+}
+
+/* ----- Before/After journey ----- */
+.case-journey {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--spacing-md);
+  margin: var(--spacing-lg) 0;
+}
+
+.case-journey-column {
+  padding: var(--spacing-md);
+  border-radius: var(--border-radius);
+}
+
+.case-journey-column.before {
+  background: rgba(180, 178, 169, 0.12);
+  border: 1px dashed var(--border-strong);
+}
+
+.case-journey-column.after {
+  background: var(--case-accent-soft);
+  border: 1px solid var(--case-accent);
+}
+
+.case-journey-label {
+  display: inline-block;
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  padding: 0.3rem 0.85rem;
+  border-radius: 20px;
+  margin-bottom: var(--spacing-sm);
+}
+
+.case-journey-column.before .case-journey-label {
+  background: var(--text-light);
+  color: white;
+}
+
+.case-journey-column.after .case-journey-label {
+  background: var(--case-accent);
+  color: white;
+}
+
+.case-journey-steps {
+  display: flex;
+  flex-direction: column;
+  gap: 1.4rem;
+  margin: 0;
+  list-style: none;
+  padding: 0;
+}
+
+.case-journey-step {
+  padding: 0.6rem 0.9rem;
+  background: var(--background);
+  border-radius: var(--border-radius);
+  font-size: 0.95rem;
+  font-weight: 500;
+  text-align: center;
+  color: var(--text-primary);
+  position: relative;
+}
+
+.case-journey-step:not(:last-child)::after {
+  content: '↓';
+  position: absolute;
+  bottom: -1.3rem;
+  left: 50%;
+  transform: translateX(-50%);
+  color: var(--text-light);
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.case-journey-column.after .case-journey-step:not(:last-child)::after {
+  color: var(--case-accent);
+}
+
+@media (max-width: 640px) {
+  .case-journey {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ----- Design principles grid ----- */
+.case-principles {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: var(--spacing-md);
+  margin: var(--spacing-md) 0 var(--spacing-lg);
+}
+
+.case-principle {
+  padding: var(--spacing-md);
+  background: var(--background);
+  border: 1px solid var(--border);
+  border-radius: var(--border-radius);
+  border-top: 4px solid var(--case-accent);
+  transition: var(--transition);
+}
+
+.case-principle:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 16px var(--shadow);
+}
+
+.case-principle-number {
+  display: block;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  color: var(--case-accent);
+  margin-bottom: 0.6rem;
+}
+
+.case-principle-name {
+  font-family: var(--font-heading);
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  line-height: 1.25;
+  margin: 0;
+}
+
+.case-principle-body {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: var(--text-secondary);
+  margin-top: 0.6rem;
+}
+
+/* ----- Audience map (user → resource) ----- */
+.case-audience {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-xs);
+  margin: var(--spacing-md) 0;
+}
+
+.case-audience-row {
+  display: grid;
+  grid-template-columns: 1fr auto 2fr;
+  gap: var(--spacing-md);
+  align-items: center;
+  padding: var(--spacing-sm) var(--spacing-md);
+  background: var(--background);
+  border: 1px solid var(--border);
+  border-radius: var(--border-radius);
+  border-left: 4px solid var(--case-accent);
+  transition: var(--transition);
+}
+
+.case-audience-row:hover {
+  transform: translateX(4px);
+  box-shadow: 0 4px 10px var(--shadow);
+}
+
+.case-audience-user {
+  font-weight: 700;
+  color: var(--text-primary);
+  font-size: 1.05rem;
+}
+
+.case-audience-arrow {
+  color: var(--case-accent);
+  font-weight: 700;
+  font-size: 1.3rem;
+}
+
+.case-audience-resource {
+  color: var(--text-secondary);
+  font-size: 1rem;
+}
+
+@media (max-width: 540px) {
+  .case-audience-row {
+    grid-template-columns: 1fr;
+    text-align: center;
+    gap: 0.4rem;
+  }
+  .case-audience-arrow { transform: rotate(90deg); }
+}
+
+/* ----- Learning path (4 pairs: state → teaches) ----- */
+.case-learning-path {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: var(--spacing-sm);
+  margin: var(--spacing-md) 0;
+}
+
+.case-learning-pair {
+  padding: var(--spacing-md) var(--spacing-sm);
+  background: var(--background);
+  border: 1px solid var(--border);
+  border-radius: var(--border-radius);
+  text-align: center;
+  transition: var(--transition);
+}
+
+.case-learning-pair:hover {
+  border-color: var(--case-accent);
+  transform: translateY(-3px);
+}
+
+.case-learning-state {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 1.2rem;
+  color: var(--text-primary);
+  margin-bottom: 0.4rem;
+  line-height: 1.2;
+}
+
+.case-learning-divider {
+  display: block;
+  color: var(--case-accent);
+  margin: 0.4rem 0;
+  font-size: 1.2rem;
+  line-height: 1;
+}
+
+.case-learning-teaches {
+  font-size: 0.82rem;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-weight: 600;
+}
+
+/* ----- Ecosystem (vertical convergent flow) ----- */
+.case-ecosystem {
+  max-width: 360px;
+  margin: var(--spacing-lg) auto;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 0;
+}
+
+.case-ecosystem-node {
+  padding: 0.85rem 1.5rem;
+  background: var(--background);
+  border: 1px solid var(--border);
+  border-radius: var(--border-radius);
+  border-left: 4px solid var(--case-accent);
+  font-weight: 600;
+  color: var(--text-primary);
+  text-align: center;
+  transition: var(--transition);
+}
+
+.case-ecosystem-node:hover {
+  transform: translateX(4px);
+}
+
+.case-ecosystem-node.terminal {
+  background: var(--case-accent);
+  color: white;
+  border-left-color: white;
+  border-radius: var(--border-radius);
+}
+
+.case-ecosystem-connector {
+  width: 2px;
+  height: 24px;
+  background: var(--case-accent);
+  align-self: center;
+  opacity: 0.5;
+}
+
+/* ----- Example insight (Observation / Change / Result triplet) ----- */
+.case-insight {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: var(--spacing-md);
+  margin: var(--spacing-md) 0;
+  padding: var(--spacing-md);
+  background: var(--case-accent-soft);
+  border-radius: var(--border-radius);
+  border-left: 4px solid var(--case-accent);
+}
+
+.case-insight-cell h4 {
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--case-accent);
+  margin-bottom: 0.5rem;
+}
+
+.case-insight-cell p {
+  font-size: 0.98rem;
+  line-height: 1.5;
+  color: var(--text-primary);
+  margin: 0;
+}
+
+/* ============================================
+   ADDITIONAL COMPONENTS (tacit)
+   ============================================ */
+
+/* Vertical orientation for case-flow */
+.case-flow.vertical {
+  flex-direction: column;
+  align-items: stretch;
+}
+
+.case-flow.vertical.centered {
+  max-width: 380px;
+  margin: var(--spacing-lg) auto;
+}
+
+.case-flow.vertical .case-flow-arrow {
+  transform: rotate(90deg);
+  align-self: center;
+}
+
+/* Highlighted final step (an "outcome" or destination) */
+.case-flow-step.accent {
+  background: var(--case-accent);
+  color: white;
+  border-color: var(--case-accent);
+  border-top-color: var(--case-accent);
+}
+
+/* Parallel mappings inside .case-journey-steps (no ↓ between items) */
+.case-journey-steps.parallel {
+  gap: 0.6rem;
+}
+
+.case-journey-steps.parallel .case-journey-step:not(:last-child)::after {
+  display: none;
+}
+
+/* Side-by-side parallel flows (same source → different contexts → different outcomes) */
+.case-parallel-flows {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+  gap: var(--spacing-md);
+  margin: var(--spacing-lg) 0;
+}
+
+/* Convergence diagram: many inputs → focused output → next */
+.case-convergence {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.7rem;
+  margin: var(--spacing-lg) 0;
+}
+
+.case-convergence-inputs {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.5rem;
+  max-width: 620px;
+}
+
+.case-convergence-input {
+  padding: 0.5rem 1.1rem;
+  background: var(--background);
+  border: 1px solid var(--border);
+  border-radius: 24px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.case-convergence-arrow {
+  color: var(--case-accent);
+  font-size: 1.5rem;
+  line-height: 1;
+}
+
+.case-convergence-output {
+  padding: 0.85rem 1.6rem;
+  background: var(--case-accent-soft);
+  border: 1px solid var(--case-accent);
+  border-radius: var(--border-radius);
+  font-weight: 700;
+  color: var(--text-primary);
+  text-align: center;
+  font-size: 1.05rem;
+  min-width: 200px;
+}
+
+.case-convergence-output.terminal {
+  background: var(--case-accent);
+  color: white;
+  border-color: var(--case-accent);
+}
+
+/* ============================================
+   ADDITIONAL COMPONENTS (big picture studio)
+   ============================================ */
+
+/* Team structure: 4 disciplines arranged around a central concept.
+   Used for showing collaborative ownership without hierarchy. */
+.case-team-structure {
+  display: grid;
+  grid-template-areas:
+    ".    top    .   "
+    "left center right"
+    ".    bottom .   ";
+  gap: var(--spacing-sm);
+  align-items: center;
+  justify-items: center;
+  max-width: 580px;
+  margin: var(--spacing-lg) auto;
+}
+
+.case-team-discipline {
+  padding: 0.75rem 1.4rem;
+  background: var(--background);
+  border: 1px solid var(--border);
+  border-radius: var(--border-radius);
+  border-top: 3px solid var(--case-accent);
+  font-weight: 700;
+  color: var(--text-primary);
+  text-align: center;
+  min-width: 110px;
+  font-size: 1rem;
+}
+
+.case-team-center {
+  padding: 1rem 1.6rem;
+  background: var(--case-accent);
+  color: white;
+  border-radius: var(--border-radius);
+  font-weight: 700;
+  font-size: 1.05rem;
+  text-align: center;
+  min-width: 150px;
+}
+
+/* Mobile: stack vertically with center kept central */
+@media (max-width: 640px) {
+  .case-team-structure {
+    grid-template-areas:
+      "top"
+      "left"
+      "center"
+      "right"
+      "bottom";
+    grid-template-columns: 1fr;
+    max-width: 280px;
+    gap: 0.6rem;
+  }
+}
+
+/* ============================================
+   ADDITIONAL COMPONENTS (the glad game)
+   ============================================ */
+
+/* Hero question chain — when the project's premise IS the hero artifact.
+   Sits inside .case-hero-inner, no .case-hero-media needed. */
+.case-hero-question {
+  max-width: 620px;
+  margin: var(--spacing-md) auto var(--spacing-lg);
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 0.5rem;
+  position: relative;
+  z-index: 1;
+}
+
+.case-hero-question-item {
+  padding: 1.1rem 1.6rem;
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(10px);
+  border: 1px solid var(--border);
+  border-radius: var(--border-radius);
+  font-family: var(--font-heading);
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  text-align: center;
+  line-height: 1.3;
+  box-shadow: 0 4px 12px var(--shadow);
+}
+
+.case-hero-question-item.terminal {
+  background: var(--case-accent);
+  color: white;
+  border-color: var(--case-accent);
+  font-size: 1.5rem;
+  box-shadow: 0 6px 20px var(--shadow-hover);
+}
+
+.case-hero-question-arrow {
+  color: var(--case-accent);
+  font-size: 2rem;
+  align-self: center;
+  font-weight: 700;
+  line-height: 1;
+}
+
+/* Transformation ladder: 4 steps + grouped evidence bands below.
+   The bands span columns to show "first three are evidenced, fourth isn't yet." */
+.case-transformation-ladder {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--spacing-xs);
+  margin: var(--spacing-lg) 0;
+}
+
+.case-transformation-step {
+  padding: var(--spacing-sm) 0.75rem;
+  background: var(--background);
+  border: 1px solid var(--border);
+  border-radius: var(--border-radius);
+  border-top: 3px solid var(--case-accent);
+  text-align: center;
+}
+
+.case-transformation-label {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 1.15rem;
+  color: var(--text-primary);
+  margin: 0 0 0.3rem;
+  line-height: 1.2;
+}
+
+.case-transformation-quote {
+  font-size: 0.85rem;
+  font-style: italic;
+  color: var(--text-secondary);
+  line-height: 1.35;
+  margin: 0;
+}
+
+.case-transformation-evidence {
+  padding: 0.7rem var(--spacing-sm);
+  text-align: center;
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  border-radius: var(--border-radius);
+  margin-top: 0.5rem;
+}
+
+.case-transformation-evidence.strong {
+  grid-column: 1 / 4;
+  background: var(--case-accent-soft);
+  color: var(--case-accent);
+  border: 1px solid var(--case-accent);
+}
+
+.case-transformation-evidence.future {
+  grid-column: 4 / 5;
+  background: var(--background-alt);
+  color: var(--text-light);
+  border: 1px dashed var(--border-strong);
+}
+
+@media (max-width: 640px) {
+  .case-transformation-ladder {
+    grid-template-columns: 1fr;
+  }
+  .case-transformation-evidence.strong,
+  .case-transformation-evidence.future {
+    grid-column: 1 / 2;
+  }
+}
+
+/* 4-card variant of .case-principles — forces 2x2 grid to avoid lopsided 3+1 layout */
+.case-principles.four-up {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+@media (max-width: 640px) {
+  .case-principles.four-up {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ============================================
+   ADDITIONAL COMPONENTS (tacit refactor)
+   Richer .case-principle: image, role label, finding callout
+   ============================================ */
+
+/* Image inside .case-principle cards (TACIT methodology phases) */
+.case-principle > img {
+  width: 100%;
+  border-radius: var(--border-radius);
+  margin-bottom: 0.75rem;
+  display: block;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+}
+
+/* Accent-colored uppercase role label inside .case-principle
+   (TACIT heart-moment cards: "PROACTIVE GAMEPLAY CUE" etc.) */
+.case-principle-role {
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--case-accent);
+  margin: 0.25rem 0 0.5rem;
+}
+
+/* "Finding:" callout at the bottom of a phase card */
+.case-principle-finding {
+  margin-top: var(--spacing-sm);
+  padding: 0.7rem 0.9rem;
+  background: var(--case-accent-soft);
+  border-left: 3px solid var(--case-accent);
+  border-radius: 0 var(--border-radius) var(--border-radius) 0;
+  font-size: 0.92rem;
+  line-height: 1.5;
+  color: var(--text-primary);
+}
+
+.case-principle-finding strong {
+  display: block;
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--case-accent);
+  margin-bottom: 0.25rem;
+}
+
+/* ============================================
+   ADDITIONAL COMPONENTS (bps refactor)
+   ============================================ */
+
+/* Vertical transformation diagram: one state becomes another.
+   Used in BPS Section 2 to show Single Phone → Four Phones with attribute lists. */
+.case-transform {
+  max-width: 480px;
+  margin: var(--spacing-lg) auto;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 0.5rem;
+}
+
+.case-transform-state {
+  padding: var(--spacing-md);
+  background: var(--background);
+  border: 1px solid var(--border);
+  border-radius: var(--border-radius);
+  text-align: center;
+}
+
+.case-transform-state.terminal {
+  background: var(--case-accent-soft);
+  border-color: var(--case-accent);
+  border-top: 3px solid var(--case-accent);
+}
+
+.case-transform-title {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 1.5rem;
+  color: var(--text-primary);
+  margin: 0 0 0.5rem;
+  letter-spacing: -0.01em;
+}
+
+.case-transform-state.terminal .case-transform-title {
+  color: var(--case-accent);
+}
+
+.case-transform-attrs {
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+  margin: 0;
+  letter-spacing: 0.02em;
+}
+
+.case-transform-arrow {
+  color: var(--case-accent);
+  font-size: 1.8rem;
+  align-self: center;
+  font-weight: 700;
+  line-height: 1;
+}
+
+/* ============================================
+   POLISH PASS (post-content additions)
+   ============================================ */
+
+/* Hero figcaption — small italic credit/note below hero image */
+.case-hero-media figcaption {
+  margin-top: 0.6rem;
+  padding: 0 var(--spacing-sm) var(--spacing-sm);
+  font-size: 0.82rem;
+  color: var(--text-secondary);
+  font-style: italic;
+  text-align: center;
+  line-height: 1.5;
+}
+
+/* Slightly more prominent section h2 — larger and a touch more margin */
+.case-section h2 {
+  font-size: clamp(2rem, 3.5vw, 2.65rem);
+  margin-bottom: var(--spacing-sm);
+}
+
+/* Tighter section spacing — reduce the "huge spaces" between sections.
+   Drops case-body padding xxl→xl and section margin-bottom xxl→xl (~33% less). */
+#case-body {
+  padding: var(--spacing-xl) var(--spacing-md);
+}
+.case-section {
+  margin-bottom: var(--spacing-xl);
+}
+
+/* Figure support inside .case-grid (so grid cells can have captions) */
+.case-grid figure {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+}
+.case-grid figure img {
+  /* inherits .case-grid img — kept here for clarity */
+  width: 100%;
+  height: auto;
+}
+.case-grid figcaption {
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+  line-height: 1.45;
+  font-style: italic;
+  padding: 0 0.2rem;
+}
+
+/* Linked images in grids — anchor wraps img, gets hover lift */
+.case-grid a {
+  display: block;
+  border-radius: var(--border-radius);
+  overflow: hidden;
+  transition: transform 0.18s, box-shadow 0.18s;
+  text-decoration: none;
+}
+.case-grid a:hover {
+  transform: translateY(-2px);
+}
+.case-grid a img {
+  display: block;
+}
+
+/* 4-up grid modifier (2×2 layout, collapses to 1 col on mobile) */
+.case-grid.four-up {
+  grid-template-columns: repeat(2, 1fr);
+}
+@media (max-width: 640px) {
+  .case-grid.four-up {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Video inside .case-figure — same treatment as img */
+.case-figure video {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: var(--border-radius);
+  box-shadow: 0 4px 12px var(--shadow);
+}
+
+/* ============================================
+   SIDE NAV / TABLE OF CONTENTS
+   Fixed left, vertically centered. Hidden when there isn't room
+   beside the centered 820px body.
+   ============================================ */
+
+.case-toc {
+  position: fixed;
+  left: 1.25rem;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 200px;
+  max-height: 72vh;
+  overflow-y: auto;
+  background: var(--background);
+  border: 1px solid var(--border);
+  border-radius: var(--border-radius);
+  padding: 0.9rem 0.9rem 0.9rem 0.5rem;
+  z-index: 40;
+  box-shadow: 0 4px 14px var(--shadow);
+  /* Hidden by default — JS adds .visible once the hero scrolls out of view */
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity 0.25s ease, visibility 0.25s ease;
+}
+
+.case-toc.visible {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+.case-toc-label {
+  font-size: 0.62rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: var(--text-secondary);
+  margin: 0 0 0.55rem 0.55rem;
+}
+
+.case-toc ol {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  counter-reset: toc;
+}
+
+.case-toc li {
+  counter-increment: toc;
+}
+
+.case-toc a {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5rem;
+  padding: 0.3rem 0.55rem;
+  color: var(--text-secondary);
+  text-decoration: none;
+  border-left: 2px solid transparent;
+  transition: color 0.15s, border-color 0.15s;
+  font-size: 0.8rem;
+  line-height: 1.35;
+}
+
+.case-toc a::before {
+  content: counter(toc, decimal-leading-zero);
+  font-weight: 700;
+  font-size: 0.68rem;
+  color: var(--case-accent);
+  letter-spacing: 0.06em;
+  flex-shrink: 0;
+  margin-top: 0.1rem;
+}
+
+.case-toc a:hover {
+  color: var(--case-accent);
+}
+
+.case-toc a.active {
+  color: var(--case-accent);
+  border-left-color: var(--case-accent);
+  font-weight: 600;
+}
+
+/* Hide on screens where there isn't room beside the centered body */
+@media (max-width: 1300px) {
+  .case-toc {
+    display: none;
+  }
+}
+
+/* ============================================
+   ADDITIONAL COMPONENTS (tacit refactor)
+   ============================================ */
+
+/* Large variant of .case-flow — bigger steps and arrows for showpiece diagrams.
+   Used on TACIT's Section 02 framework flow (vertical centered) and elsewhere
+   when a flow is meant to be a visual centerpiece, not an inline list. */
+.case-flow.large {
+  margin: var(--spacing-lg) 0;
+}
+
+.case-flow.large .case-flow-step {
+  padding: var(--spacing-md) var(--spacing-lg);
+  font-size: 1.1rem;
+  font-weight: 600;
+  min-width: 240px;
+  text-align: center;
+}
+
+.case-flow.large .case-flow-arrow {
+  font-size: 1.5rem;
+}
+
+.case-flow.vertical.centered.large {
+  max-width: 480px;
+}
+
+/* Italic centered note that sits beneath a diagram, e.g. "MVC supports recognition." */
+.case-diagram-note {
+  text-align: center;
+  font-size: 0.92rem;
+  color: var(--text-secondary);
+  font-style: italic;
+  margin: 0 0 var(--spacing-md);
+  letter-spacing: 0.01em;
+}

@@ -10,8 +10,6 @@
   <title>spelunx — CAVERN Toolkit — Winnie Tsai</title>
 </head>
 
-<!-- See big-picture-studio.html for the full embed-pattern cheat sheet. -->
-
 <body data-category="Creative Tech R&D">
   <header>
     <nav>
@@ -24,6 +22,25 @@
     </nav>
   </header>
 
+  <!-- ============================================
+       SIDE NAV — fixed left, hides on screens < 1300px
+       ============================================ -->
+  <aside class="case-toc" aria-label="Page sections">
+    <p class="case-toc-label">On this page</p>
+    <ol>
+      <li><a href="#overview">Overview</a></li>
+      <li><a href="#contributions">My Main Contributions</a></li>
+      <li><a href="#needs">Understanding Developer Needs</a></li>
+      <li><a href="#sample-scene">Designing the Sample Scene</a></li>
+      <li><a href="#documentation">Documentation as Developer Experience</a></li>
+      <li><a href="#validation">Testing Through Tours and Game Jams</a></li>
+      <li><a href="#impact">Long-Term Impact</a></li>
+    </ol>
+  </aside>
+
+  <!-- ============================================
+       HERO
+       ============================================ -->
   <section id="case-hero">
     <div class="case-hero-inner">
       <div class="case-breadcrumb">
@@ -35,9 +52,9 @@
       <span class="case-category-tag">Creative Tech R&amp;D</span>
       <h1>spelunx — CAVERN Toolkit</h1>
       <p class="case-tagline">
-        A Unity SDK that lets novice and seasoned developers build for CAVERN,
-        a multiplayer roomscale VR platform — shipped with tutorial, sample
-        scenes, and open documentation.
+        A Unity SDK, sample scene, and documentation ecosystem designed to
+        help developers build for CAVERN, a 270-degree stereoscopic
+        immersive platform.
       </p>
 
       <div class="case-facts">
@@ -47,16 +64,16 @@
         </div>
         <div>
           <span class="case-fact-label">Team</span>
-          <span class="case-fact-value">CMU ETC Spring 2025 Team Spelunx</span>
+          <span class="case-fact-value">CMU ETC Team Spelunx</span>
         </div>
         <div>
           <span class="case-fact-label">Tools</span>
-          <span class="case-fact-value">Unity 6, GitHub, Perforce</span>
+          <span class="case-fact-value">Unity 6, GitHub, Perforce, CAVERN, Vive Trackers, Orbbec Femto Bolt</span>
         </div>
         <div>
           <span class="case-fact-label">Links</span>
           <span class="case-fact-value">
-            <a href="https://projects.etc.cmu.edu/spelunx/" target="_blank">Project site</a> ·
+            <a href="https://projects.etc.cmu.edu/spelunx/" target="_blank">Site</a> ·
             <a href="https://github.com/spelunx/UnityCavernSDK" target="_blank">GitHub</a> ·
             <a href="https://docs.google.com/document/d/1QsmDlrw0ctSM0vhB-qM79fx0NRbXh79U3FtuWtl2vYs/edit?usp=sharing" target="_blank">Docs</a>
           </span>
@@ -65,134 +82,510 @@
     </div>
 
     <figure class="case-hero-media">
-      <img src="assets/spelunx.jpg" alt="spelunx — CAVERN Toolkit hero image">
+      <img src="assets/spelunx/flesh wall.jpg" alt="A huge wall of flesh with eyes following the wearer of the Vive Tracker in the CAVERN sample scene, representing the platform's immersive scale and surreal potential">
+      <figcaption>A scene created by VR researcher &amp; artist Alex Hall during the first CAVERN game jam, where a huge set of eyes follows the wearer of the Vive Tracker.</figcaption>
     </figure>
   </section>
 
+  <!-- ============================================
+       BODY
+       ============================================ -->
   <main id="case-body">
 
+    <!-- ===== SECTION 1: Overview ===== -->
     <section class="case-section" id="overview">
       <h2><span class="section-number">01</span> Overview</h2>
-      <p class="section-lead">
-        Strealining onboarding and empowering development for a novel platform through click-to-add Unity editor tools, comprehensive documentation, and a sample scene that demonstrates best practices for the platform's unique interaction design space.
+      <p>
+        CAVERN is a 270-degree stereoscopic immersive space that supports
+        shared room-scale experiences through surround sound, spatial
+        tracking, body tracking, and large-scale projection. <strong>The
+        platform is powerful and immediately exciting to experience, but
+        historically difficult to develop for</strong> because creators had
+        to understand unfamiliar hardware, rendering constraints, and
+        spatial interaction conventions before they could begin making
+        anything meaningful.
       </p>
+      <p>
+        <strong>Team Spelunx created a Unity toolkit to lower that
+        barrier.</strong> The toolkit streamlined core platform setup,
+        while our sample scene, documentation, website, tours, and
+        workshops helped developers understand not only how to use CAVERN,
+        but what kinds of experiences it could enable.
+      </p>
+
+      <!-- Research poster figure (moved inside Section 01 — was orphaned before) -->
       <figure class="case-figure">
-        <img src="assets/spelunx.jpg" alt="[CAVERN platform or SDK in use]">
-        <figcaption>The CAVERN is a 270-degree stereoscopic immersive space at the ETC and expanding to local Pittsburgh high schools. However, creating experiences for this space has historically been challenging: complex setups, limited documentation, and a steep learning curve. </figcaption>
+        <img src="assets/spelunx/A1-copy.png" alt="Research poster of Spelunx toolkit presented at XRTC Symposium 2025">
+        <figcaption>Research poster of the Spelunx toolkit presented at XRTC Symposium 2025.</figcaption>
+      </figure>
+    </section>
+
+    <!-- ===== SECTION 2: My Contributions ===== -->
+    <section class="case-section" id="contributions">
+      <h2><span class="section-number">02</span> My Main Contributions</h2>
+
+      <p>
+        As a technical designer and developer evangelist, my work focused
+        on bridging the technical capabilities of the platform and
+        developer understanding.
+      </p>
+
+      <div class="case-principles four-up">
+        <div class="case-principle">
+          <p class="case-principle-name">Developer Research</p>
+          <p class="case-principle-body">
+            <strong>Interviewed past and prospective developers</strong> of
+            the platform to understand pain points for different project
+            needs, identify onboarding barriers, and prioritize feature
+            needs.
+          </p>
+        </div>
+        <div class="case-principle">
+          <p class="case-principle-name">Interaction Design &amp; Implementation</p>
+          <p class="case-principle-body">
+            Designed and <strong>implemented interaction building blocks
+            in Unity 6</strong> as an optional feature for novice
+            developers. I also created the <strong>main demo scene that
+            introduces the affordances of the platform</strong> to any
+            CAVERN audiences.
+          </p>
+        </div>
+        <div class="case-principle">
+          <p class="case-principle-name">Documentation &amp; Communication</p>
+          <p class="case-principle-body">
+            Created <strong>user-facing documentation</strong> and
+            iterated on it after the hosted game jams, maintained the
+            project <strong>website for communication</strong> with more
+            stakeholders, and translated toolkit features into approachable
+            learning materials for various audiences — including high
+            school students in a game development workshop setting.
+          </p>
+        </div>
+        <div class="case-principle">
+          <p class="case-principle-name">Validation &amp; Outreach</p>
+          <p class="case-principle-body">
+            Led tours, workshops, and game jams to observe how developers
+            understood the platform and what they wanted to create with it.
+            <strong>Served as the spokesperson for the sample scene</strong>,
+            communicating its value to internal and external stakeholders
+            during these sessions, within and beyond the semester.
+          </p>
+        </div>
+      </div>
+
+      <p>
+        In addition, I contributed to Orbbec Femto Bolt and spatial audio
+        integration and design best practices (including sample scenes).
+      </p>
+
+      <!-- 4 contribution screenshots in 2×2 layout (was incorrectly .three-up before) -->
+      <div class="case-grid four-up">
+        <figure>
+          <img src="assets/spelunx/Cavern toolkit preview.png" alt="Official demo scene of the Spelunx toolkit">
+          <figcaption>Official demo scene shipped with the Spelunx toolkit.</figcaption>
+        </figure>
+        <figure>
+          <img src="assets/spelunx/orbbec sample.png" alt="Orbbec Femto Bolt sample scene presented during CAVERN game jam 2">
+          <figcaption>Orbbec Femto Bolt sample scene, presented during CAVERN Game Jam 2.</figcaption>
+        </figure>
+        <figure>
+          <img src="assets/spelunx/tutorial.png" alt="The CAVERN tutorial screenshot">
+          <figcaption>In-toolkit tutorial walking developers through setup.</figcaption>
+        </figure>
+        <figure>
+          <img src="assets/spelunx/interaction.png" alt="The interaction building blocks screenshot within the toolkit">
+          <figcaption>Interaction building blocks — an optional layer for novice developers.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- ===== SECTION 3: Understanding Developer Needs ===== -->
+    <section class="case-section" id="needs">
+      <h2><span class="section-number">03</span> Understanding Developer Needs</h2>
+
+      <p>
+        Before focusing on implementation, we needed to understand where
+        developers were struggling. As no one on the team had created with
+        this platform, we conducted interviews with past CAVERN developers
+        and prospective users, as well as understanding the uniqueness of
+        the platform through conversations with the builder Steve Audia.
+      </p>
+
+      <p>
+        What was special about CAVERN is that while it is not a new
+        hardware platform, it has never been built this cheaply (under
+        20k), which significantly increases the potential user base —
+        especially for local high schools. In our case, we began working
+        with South Fayette High School, a school district part of the
+        Digital Promise League of Innovative Schools, which had already
+        built a CAVERN at their school, to create curriculum and workshops
+        for their high school game development students.
+        <strong>This posed a design challenge of creating a toolkit that
+        is approachable for novice developers, but also robust enough to
+        support the needs of more experienced creators.</strong>
+      </p>
+
+      <p>
+        With past, more experienced developers, we identified two parallel
+        needs: first, <strong>developers needed technical setup to become
+        easier</strong> — that includes optimizing the rendering
+        capabilities (which often went below 20 FPS) and streamlining the
+        Vive Tracker integration (which had historically taken more than
+        1.5 months to finish). They also <strong>needed examples that made
+        the platform's interaction possibilities easier to imagine</strong>,
+        as current resources were scattered and often focused on technical
+        demonstration rather than interaction design.
+      </p>
+
+      <p>
+        This research informed our feature priorities. Some team members
+        focused on large technical improvements, such as rendering
+        performance and click-to-add tracker setup. My contribution
+        centered on the interaction and onboarding layer: helping
+        developers understand what the toolkit enabled once the technical
+        barriers were reduced.
+      </p>
+
+      <table class="case-findings">
+        <thead>
+          <tr>
+            <th>Research Insight</th>
+            <th>Design Response</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Developers struggled with setup complexity, rendering optimization, and input integration.</td>
+            <td>Unified setup process, new rendering techniques, click-to-add tracker setup.</td>
+          </tr>
+          <tr>
+            <td>Developers lacked examples of CAVERN interaction.</td>
+            <td>Sample scene demonstrating platform affordances.</td>
+          </tr>
+          <tr>
+            <td>The platform was exciting in tours but hard to imagine building for without experiencing it in person.</td>
+            <td>Website, documentation, workshops, and game jams.</td>
+          </tr>
+          <tr>
+            <td>Novice and experienced developers needed different levels of support.</td>
+            <td>Optional toolkit modules such as interaction building blocks for quick-add tracker interactions.</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- ===== SECTION 4: Designing the Sample Scene ===== -->
+    <section class="case-section" id="sample-scene">
+      <h2><span class="section-number">04</span> Designing the Sample Scene</h2>
+
+      <p>
+        The sample scene was designed as a playable introduction to
+        CAVERN's core affordances, intended as a first demo for anyone new
+        to the platform.
+      </p>
+      <p>
+        Instead of presenting features as isolated technical demos, the
+        "meditative and cozy experience" (as tour guests described it)
+        presented a cute little creature gradually teaching developers,
+        phase by phase, what the platform is fundamentally good at.
+      </p>
+      <p>
+        In essence, we're communicating that an experience as simple as
+        picking up and following a creature can be meaningful and
+        compelling in this space — and that our toolkit makes it easy to
+        build that kind of experience, even for novice developers.
+      </p>
+
+      <div class="case-learning-path">
+        <div class="case-learning-pair">
+          <p class="case-learning-state">Awakening</p>
+          <span class="case-learning-divider">↓</span>
+          <p class="case-learning-teaches">Experience the Space</p>
+        </div>
+        <div class="case-learning-pair">
+          <p class="case-learning-state">Pickup</p>
+          <span class="case-learning-divider">↓</span>
+          <p class="case-learning-teaches">Learn Position Tracking</p>
+        </div>
+        <div class="case-learning-pair">
+          <p class="case-learning-state">Follow</p>
+          <span class="case-learning-divider">↓</span>
+          <p class="case-learning-teaches">Control a Tracked Object</p>
+        </div>
+        <div class="case-learning-pair">
+          <p class="case-learning-state">Hugging</p>
+          <span class="case-learning-divider">↓</span>
+          <p class="case-learning-teaches">Trigger Reward Events</p>
+        </div>
+      </div>
+
+      <!--
+        Each state below uses <img> as a placeholder. To swap any of these
+        for a recorded clip, replace the <img> with:
+
+        <video controls playsinline preload="metadata" poster="assets/spelunx.jpg">
+          <source src="assets/spelunx/awakening.mp4" type="video/mp4">
+          Your browser doesn't support embedded video.
+        </video>
+
+        The .case-figure styles already cover <video> sizing and shadow.
+      -->
+
+      <!-- Awakening -->
+      <h3>Awakening</h3>
+      <figure class="case-figure">
+        <video controls playsinline preload="metadata" poster="assets/spelunx/awakening.png">
+          <source src="assets/spelunx/awakening.mp4" type="video/mp4">
+          Your browser doesn't support embedded video.
+        </video>
+        <figcaption>The creature roaming in the entire environment to guide the player attention across the entire CAVERN</figcaption>
       </figure>
       <p>
-        Team Spelunx created a Unity SDK that automates stereoscopic rendering, Vive Tracker (position tracking), Orbbec Femto Bolt (body tracking) integration, and spatial audio setup. Beyond the click-to-add editor tools, we also designed a sample scene showcasing best practices for the platform's unique interaction design space, and comprehensive documentation both to use the toolkit and to extend it. The toolkit is designed for both novice and seasoned developers.
+        <strong>Demonstrates:</strong> stereoscopic depth and quadraphonic
+        surround sound.
       </p>
       <p>
-        As the technical designer and developer evangelist on the team, I: 
-        <ul>
-          <li>Conducted <strong>user research</strong> with the platform's current and prospective developers to uncover pain points and needs for feature prioritization</li>
-          <li>Collaborated with the toolkit developers and art team to <strong>implement the sample scenes</strong></li>
-          <li>Led the tutorial and <strong>documentation strategy</strong> and creation</li>
-          <li>Validated the toolkit effectiveness through <strong>2 game jam playtests, and 20+ user tour sessions</strong> with developers of varying backgrounds and experience levels</li>
-          <li>Communicated the toolkit design rationale to the broader development community through weekly devlogs on the project's website.</li>
-        </ul>
+        The creature flies around the environment, inviting the player to
+        notice the scale, depth, and directionality of the space before
+        any active interaction begins.
       </p>
-      
-    </section>
 
-    <section class="case-section" id="problem">
-      <h2><span class="section-number">02</span> Problem &amp; Design Question</h2>
-      <p class="section-lead">
-        [The investigation in one line — likely a developer-experience question.]
+      <!-- Pickup -->
+      <h3>Pickup</h3>
+      <figure class="case-figure">
+        <video controls playsinline preload="metadata" poster="assets/spelunx/pick up.png">
+          <source src="assets/spelunx/pick up.mp4" type="video/mp4">
+          Your browser doesn't support embedded video.
+        </video>
+        <figcaption>The player approaches and picks up the crying creature using the Vive Tracker</figcaption>
+      </figure>
+      <p>
+        <strong>Demonstrates:</strong> Vive Tracker position tracking.
       </p>
       <p>
-        [What were you trying to figure out? E.g., "How do you onboard a Unity
-        developer to an unfamiliar immersive platform fast enough that they
-        finish a first build before they give up?"]
+        The player physically approaches the crying creature and picks it
+        up using the Vive Tracker, learning that interaction can happen in
+        the real physical play area rather than only through screen-based
+        input.
+      </p>
+
+      <!-- Follow -->
+      <h3>Follow</h3>
+      <figure class="case-figure">
+        <video controls playsinline preload="metadata" poster="assets/spelunx/follow.png">
+          <source src="assets/spelunx/follow.mp4" type="video/mp4">
+          Your browser doesn't support embedded video.
+        </video>
+        <figcaption>The creature follows the player's movements as they navigate the CAVERN</figcaption>
+      </figure>
+      <p>
+        <strong>Demonstrates:</strong> tracker-driven behavior.
       </p>
       <p>
-        [Why this matters — for CAVERN adoption, for the broader question of
-        SDK design for novel hardware.]
+        The creature responds to the Vive Tracker's position, showing how
+        in physical space the tracker can control movement and behavior
+        in the virtual scene.
       </p>
 
-      <blockquote class="case-pullquote">
-        "[A pithy framing or quote that captures the developer-experience stakes.]"
-        <cite>[Source]</cite>
-      </blockquote>
+      <!-- Hugging -->
+      <h3>Hugging</h3>
+      <figure class="case-figure">
+        <video controls playsinline preload="metadata" poster="assets/spelunx/hugging.png">
+          <source src="assets/spelunx/hugging.mp4" type="video/mp4">
+          Your browser doesn't support embedded video.
+        </video>
+        <figcaption>The animation of the little creature hugging the big creature plays.</figcaption>
+      </figure>
+      <p>
+        <strong>Demonstrates:</strong> spatial event triggering and
+        emotional feedback.
+      </p>
+      <p>
+        When the player brings the creature to a glowing destination, the
+        scene triggers a reunion animation with the mother creature as a
+        reward, and then the scene repeats from the start, allowing the
+        next set of guests to experience it.
+      </p>
     </section>
 
-    <section class="case-section" id="constraints">
-      <h2><span class="section-number">03</span> Constraints</h2>
-      <p class="section-lead">[What boundaries shaped the work?]</p>
+    <!-- ===== SECTION 5: Documentation as Developer Experience ===== -->
+    <section class="case-section" id="documentation">
+      <h2><span class="section-number">05</span> Documentation as Developer Experience</h2>
 
-      <h3>Technical</h3>
-      <p>[CAVERN's hardware specifics, Unity 6 version, surround sound system, multiplayer sync.]</p>
+      <p>
+        Documentation was a core component of our toolkit as a complete
+        product. The documentation serves to help developers build a
+        mental model of the platform's affordances, inspire them with
+        examples of what they could build, and guide them through the
+        technical setup and use of the toolkit.
+      </p>
 
-      <h3>Experiential (Developer Experience)</h3>
-      <p>[What had to be true for a new developer to succeed — install time, first-build time, error messages.]</p>
+      <p>
+        I led the design of the user documentation, structuring it for
+        first-time users as well as seasoned developers to quickly onboard
+        and immediately start designing.
+      </p>
+      <p>
+        I also maintained the project website as a communication channel
+        with more stakeholders, including faculty and the high school we
+        were working with, to communicate our development efforts and
+        progress, as well as serve as the main marketing channel for the
+        toolkit.
+      </p>
+      <p>
+        After the semester, I also created workshop materials for high
+        school game development students, adapting the same toolkit
+        concepts for a younger and more novice audience.
+      </p>
 
-      <h3>Production</h3>
-      <p>[Scope and timeline; how you balanced SDK code vs. docs vs. samples.]</p>
+      <!-- Linked figures — img wrapped in <a>, with figcaption -->
+      <div class="case-grid three-up">
+        <figure>
+          <a href="https://docs.google.com/document/d/1QsmDlrw0ctSM0vhB-qM79fx0NRbXh79U3FtuWtl2vYs/edit?usp=sharing" target="_blank" rel="noopener">
+            <img src="assets/spelunx/about page.png" alt="About page of the CAVERN tutorial documentation">
+          </a>
+          <figcaption>
+            <a href="https://docs.google.com/document/d/1QsmDlrw0ctSM0vhB-qM79fx0NRbXh79U3FtuWtl2vYs/edit?usp=sharing" target="_blank" rel="noopener">CAVERN tutorial documentation</a> — about page introducing the toolkit.
+          </figcaption>
+        </figure>
+        <figure>
+          <a href="https://projects.etc.cmu.edu/spelunx/" target="_blank" rel="noopener">
+            <img src="assets/spelunx/homepage.png" alt="Project website homepage contents">
+          </a>
+          <figcaption>
+            <a href="https://projects.etc.cmu.edu/spelunx/" target="_blank" rel="noopener">Project website</a> — the team's main public communication channel.
+          </figcaption>
+        </figure>
+        <figure>
+          <a href="https://docs.google.com/presentation/d/1r3Tp9sXBl7MN0uZgfvHdonLDHErX0XzCT-q7OcvoQ2o/edit?usp=sharing" target="_blank" rel="noopener">
+            <img src="assets/spelunx/nhsga slides.png" alt="High school workshop slide">
+          </a>
+          <figcaption>
+            <a href="https://docs.google.com/presentation/d/1r3Tp9sXBl7MN0uZgfvHdonLDHErX0XzCT-q7OcvoQ2o/edit?usp=sharing" target="_blank" rel="noopener">High school workshop slides</a> — toolkit concepts adapted for a novice audience.
+          </figcaption>
+        </figure>
+      </div>
     </section>
 
-    <section class="case-section" id="process">
-      <h2><span class="section-number">04</span> Process</h2>
-      <p class="section-lead">[Shape of the work.]</p>
+    <!-- ===== SECTION 6: Testing Through Tours and Game Jams ===== -->
+    <section class="case-section" id="validation">
+      <h2><span class="section-number">06</span> Testing Through Tours and Game Jams</h2>
 
-      <h3>Phase 1 — [Discovery / DX research]</h3>
-      <p>[What you did, found, changed.]</p>
+      <p>
+        We validated Spelunx through repeated exposure to real users:
+        tours, workshops, and <strong>two CAVERN game jams across 72 hour periods</strong>. The first game jam
+        was about Vive Tracker interaction so we could test whether both
+        the setup and interaction were intuitive and quick to learn,
+        while the second was themed reactive worlds -- we'd discovered
+        that was what CAVERN was best at through many other informal user studies, and wanted to encourage more
+        people to explore it.
+      </p>
 
-      <figure class="case-figure wide">
-        <img src="assets/spelunx.jpg" alt="[Workflow or SDK architecture diagram]">
-        <figcaption>[How to read this figure.]</figcaption>
+      <p>
+        Namely, <strong>I helped plan the playtesting procedure, collected and created
+        data visualizations, and used tours as informal research
+        opportunities to uncover what people immediately understood, what
+        confused them, and what kinds of experiences CAVERN inspired them
+        to imagine.</strong> For example, multiple times during tours, guests
+        described the sample scene as "meditative and cozy," while many
+        educators were inspired to recreate Ancient Rome or Space with
+        the platform.
+      </p>
+
+      <figure class="case-figure">
+        <img src="assets/spelunx/jam confidence graph.png" alt="Before-and-after confidence graph from game jam participants">
+        <figcaption>
+          Before-and-after confidence data from game jam participants
+          helped us understand whether the toolkit and documentation
+          improved developer confidence.
+        </figcaption>
       </figure>
 
-      <h3>Phase 2 — [Sample scenes &amp; tutorial]</h3>
-      <p>[How you decided which samples to build, and what they taught.]</p>
+      <table class="case-findings">
+        <thead>
+          <tr>
+            <th>Before our toolkit</th>
+            <th>After our toolkit</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Onboarding took at least half a month, and with input integrations it would take even longer.</td>
+            <td>All under 30 minutes.</td>
+          </tr>
+          <tr>
+            <td>Only the most technical users could effectively utilize the platform.</td>
+            <td>Even artists created projects during a 2-day game jam.</td>
+          </tr>
+          <tr>
+            <td>Audiences loved the experiences but had no idea how to create similar ones.</td>
+            <td>Now with the toolkit, that gap is closed.</td>
+          </tr>
+        </tbody>
+      </table>
 
-      <h3>Phase 3 — [Documentation &amp; release]</h3>
-      <p>[Documentation strategy, GitHub release flow.]</p>
+      <div class="case-grid three-up">
+        <figure>
+          <img src="assets/spelunx/Game Jam Dance.png" alt="A body-tracked dancing visualizer">
+          <figcaption>A body-tracked dancing visualizer built during the game jam.</figcaption>
+        </figure>
+        <figure>
+          <img src="assets/spelunx/horror game.png" alt="A horror game with a flashlight in a forest">
+          <figcaption>A horror experience using a flashlight in a forest.</figcaption>
+        </figure>
+        <figure>
+          <img src="assets/spelunx/ui exp.png" alt="An experiment in button-less drag-and-drop UI">
+          <figcaption>An experiment in button-less, drag-and-drop UI for CAVERN.</figcaption>
+        </figure>
+      </div>
     </section>
 
-    <section class="case-section" id="testing">
-      <h2><span class="section-number">05</span> Testing &amp; Research</h2>
-      <p class="section-lead">
-        [Developer experience testing — who, how many, what protocol.]
-      </p>
+    <!-- ===== SECTION 7: Long-Term Impact ===== -->
+    <section class="case-section" id="impact">
+      <h2><span class="section-number">07</span> Long-Term Impact</h2>
 
-      <aside class="case-callout">
-        <span class="case-callout-label">Key Finding</span>
-        <p>[The most important DX insight — specific, behavioral, not generic.]</p>
-      </aside>
-
-      <p>[Other findings → SDK / docs changes.]</p>
-    </section>
-
-    <section class="case-section" id="outcomes">
-      <h2><span class="section-number">06</span> Outcomes</h2>
-      <p class="section-lead">[What shipped, and what changed because of the work?]</p>
       <p>
-        [SDK released; samples published; documentation public on Google Docs
-        and GitHub. Any adoption data? Developer feedback? What carried forward.]
+        Spelunx continued to matter after the semester ended. The toolkit,
+        documentation, and sample scenes became resources for future teams
+        developing for CAVERN, and I continued to be looped into
+        conversations as a point of reference for documentation,
+        onboarding, interaction design, and platform use.
+        <a href="https://projects.etc.cmu.edu/270-degree-fun/" target="_blank" rel="noopener">270 Degrees Fun</a>,
+        a multiplayer racing game project in Fall 2025, and
+        <a href="https://projects.etc.cmu.edu/remnants/" target="_blank" rel="noopener">Remnants</a>,
+        a transformational experience about Alzheimer's in Spring 2026,
+        are two examples of <strong>large-scale projects that have used and even
+        extended the toolkit -- and many smaller projects have used it
+        too.</strong>
       </p>
-    </section>
 
-    <section class="case-section" id="reflection">
-      <h2><span class="section-number">07</span> Reflection</h2>
-      <p class="section-lead">[What would you do differently? What's still open?]</p>
-      <p>[Honest critique or open questions.]</p>
+      <p>
+        <strong>This project taught me about being the enabler for other creators.</strong>
+        Not only for being the developer advocate for our users, but also for the team.
+        While I was not the one driving the technical advancements, 
+        I learned to be a translator between the technical and non-technical team members, 
+        and to advocate for the user experience of both our developers and our internal stakeholders.
+        I'm very proud of being a member of the Spelunx team and I look forward to seeing more amazing creations built for CAVERN in the future!
+      </p>
+
+    </section>
 
       <ul class="case-link-list">
-        <li><a href="https://projects.etc.cmu.edu/spelunx/" target="_blank">
+        <li><a href="https://projects.etc.cmu.edu/spelunx/" target="_blank" rel="noopener">
           <i class="fas fa-external-link-alt"></i> Project Website
         </a></li>
-        <li><a href="https://github.com/spelunx/UnityCavernSDK" target="_blank">
+        <li><a href="https://github.com/spelunx/UnityCavernSDK" target="_blank" rel="noopener">
           <i class="fab fa-github"></i> GitHub Repository
         </a></li>
-        <li><a href="https://docs.google.com/document/d/1QsmDlrw0ctSM0vhB-qM79fx0NRbXh79U3FtuWtl2vYs/edit?usp=sharing" target="_blank">
+        <li><a href="https://docs.google.com/document/d/1QsmDlrw0ctSM0vhB-qM79fx0NRbXh79U3FtuWtl2vYs/edit?usp=sharing" target="_blank" rel="noopener">
           <i class="fas fa-file-alt"></i> Open Documentation
         </a></li>
       </ul>
-    </section>
-
   </main>
 
+  <!-- ============================================
+       NEXT / PREV
+       ============================================ -->
   <nav id="case-nav" aria-label="Other case studies">
     <a href="tacit.html" class="case-nav-link prev">
       <span class="case-nav-direction">← Previous</span>
@@ -234,5 +627,42 @@
       <p class="footer-copyright">&copy; 2026 Winnie Tsai</p>
     </div>
   </footer>
+
+  <!-- ============================================
+       SCROLL SPY — highlights current section in side nav
+       ============================================ -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const toc = document.querySelector('.case-toc');
+      const hero = document.querySelector('#case-hero');
+      const tocLinks = document.querySelectorAll('.case-toc a');
+      const sections = document.querySelectorAll('main#case-body section.case-section');
+ 
+      // 1. Visibility — show nav once hero scrolls out of view
+      if (toc && hero) {
+        const visibilityObserver = new IntersectionObserver((entries) => {
+          entries.forEach(entry => {
+            toc.classList.toggle('visible', !entry.isIntersecting);
+          });
+        }, { threshold: 0 });
+        visibilityObserver.observe(hero);
+      }
+ 
+      // 2. Scroll spy — mark the current section's link as active
+      if (tocLinks.length && sections.length) {
+        const spyObserver = new IntersectionObserver((entries) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              const id = entry.target.id;
+              tocLinks.forEach(link => {
+                link.classList.toggle('active', link.getAttribute('href') === '#' + id);
+              });
+            }
+          });
+        }, { rootMargin: '-20% 0px -65% 0px' });
+        sections.forEach(section => spyObserver.observe(section));
+      }
+    });
+  </script>
 </body>
 </html>

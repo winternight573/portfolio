@@ -15,9 +15,116 @@
   },*/
 
 
+    <section class="case-section" id="overview">
+      <h2><span class="section-number">01</span> Overview</h2>
+      <p class="section-lead">
+        Strealining onboarding and empowering development for a novel platform through click-to-add Unity editor tools, comprehensive documentation, and a sample scene that demonstrates best practices for the platform's unique interaction design space.
+      </p>
+      <figure class="case-figure">
+        <img src="assets/Cavern toolkit preview.png" alt="Cavern toolkit preview">
+        <figcaption>The CAVERN is a 270-degree stereoscopic immersive space at the ETC and expanding to local Pittsburgh high schools. However, creating experiences for this space has historically been challenging: complex setups, limited documentation, and a steep learning curve. </figcaption>
+      </figure>
+      <p>
+        Team Spelunx created a Unity SDK that automates stereoscopic rendering, Vive Tracker (position tracking), Orbbec Femto Bolt (body tracking) integration, and spatial audio setup. Beyond the click-to-add editor tools, we also designed a sample scene showcasing best practices for the platform's unique interaction design space, and comprehensive documentation both to use the toolkit and to extend it. The toolkit is designed for both novice and seasoned developers.
+      </p>
+      <p>
+        As the technical designer and developer evangelist on the team, I: 
+        <ul>
+          <li>Conducted <strong>user research</strong> with the platform's current and prospective developers to uncover pain points and needs for feature prioritization</li>
+          <li>Collaborated with the toolkit developers and art team to <strong>implement the sample scenes</strong></li>
+          <li>Led the tutorial and <strong>documentation strategy</strong> and creation</li>
+          <li>Validated the toolkit effectiveness through <strong>2 game jam playtests, and 20+ user tour sessions</strong> with developers of varying backgrounds and experience levels</li>
+          <li>Communicated the toolkit design rationale to the broader development community through weekly devlogs on the project's website.</li>
+        </ul>
+      </p>
+      
+    </section>
+
+<section class="case-section" id="overview">
+      <h2><span class="section-number">01</span> Overview</h2>
+      <p class="section-lead">
+        Developing a haptics-first design approach to a VR narrative experience through 7 Weeks of rapid prototyping and experimentation to find the best ways to use haptic gloves, followed by 7 weeks of building the final experience where the haptic moment meaningfully impacts the overall player emotion.
+      </p>
+      <p>
+        <strong>How can we minimize audio and visual elements in VR , and let haptic feedback carry the emotional weight of a narrative moment?</strong> This was the core question that drove the student pitch team TACIT throughout the semester. We first wanted to challenge the assumption of haptics as a reactive feedback mechanism, and then further push the boundaries of tactile storytelling by creating an experience where the haptic moment would serve as the narrative climax for our intended emotion.  
+      </p>
+      <p>
+        As the producer and technical experience designer, I combined the production timeline with a playtesting-driven design process to lead the team through rapid brainstorming, prototyping and iteration every week, so that the project underwent a sufficiently <strong>rigorous investigation of the design space and ultimately delivered a polished final experience within 14 weeks</strong>. I led the playtesting strategy and mapped the data analytics back to the project success metric. 
+      </p>
+      <p>
+        Throughout the process, beyond bridging the technical and art teams through project management and documentation methods, I also assisted with asset creation such as Unity prototypes and voiceover recordings, as well as the final documentation and external marketing materials that led to successful conference and art festival submissions such as Laval Virtual Student Competition, Augmented World Expo Art Festival, SIGGRAPH Immersive Pavilion, and Sona Immersive Arts Festival.
+      </p>
+
+      <figure class="case-figure">
+        <img src="assets/TACIT.jpg" alt="[Hero moment from the experience]">
+        <figcaption>[Caption — what is the player seeing/feeling here?]</figcaption>
+      </figure>
+    </section>
 
   A 20-minute, cooperative puzzle-narrative played across 4 mobile screens. Our experience focuses on cross-device interactions, requiring players to physically connect and rearrange phones to progress. We aim to evoke wonder as the seams between separate devices vanish to reveal a unified world. We are innovating how to use an existing platform (the phones) as modular frames, where distinct approaches (comic book panels, puzzle gameplay, film narrative) inform how content can seamlessly integrate into what best showcases this new medium.
 
   Produced R&D project investigating haptic glove feedback for emotional storytelling in VR narrative game. Led playtesting strategy and facilitated cross-disciplinary collaboration. Developed prototyping artifacts for rapid user testing using Unity 6 and Meta all-in-one SDK. Engineered final experience along with 2 other programmers. Documented research notes and design insights findings and development process as open-source documentation.
 
   Developed beginner-friendly toolkit including Unity SDK, documentation and tutorials, and sample experiences to empower creators to focus on designing for this proprietary novel immersive platform. Worked as gameplay programmer for the sample scenes, user researcher for developer experience, documentation lead for tutorials and development process on project website, and audio designer for surround audio research.
+
+
+  <div class="case-flow">
+        <div class="case-flow-step">Phase 1 — Pattern Exploration</div>
+        <div class="case-flow-arrow">→</div>
+        <div class="case-flow-step">Phase 2 — Contextual Prototyping</div>
+        <div class="case-flow-arrow">→</div>
+        <div class="case-flow-step accent">Phase 3 — Narrative Synthesis</div>
+      </div>
+
+      <!-- 3 phase cards with image + activities + finding -->
+      <div class="case-principles">
+        <div class="case-principle">
+          <img src="assets/TACIT.jpg" alt="[Phase 1 prototype screenshot]">
+          <span class="case-principle-number">PHASE 01</span>
+          <p class="case-principle-name">Haptic Pattern Exploration</p>
+          <p class="case-principle-body"><strong>Key activities</strong></p>
+          <ul>
+            <li>isolated haptic testing</li>
+            <li>parameter exploration</li>
+            <li>sense memory collection</li>
+          </ul>
+          <p class="case-principle-finding">
+            <strong>Finding</strong>
+            Certain vibration patterns consistently evoked specific physical
+            memories and associations.
+          </p>
+        </div>
+        <div class="case-principle">
+          <img src="assets/TACIT.jpg" alt="[Phase 2 A/B testing artifact]">
+          <span class="case-principle-number">PHASE 02</span>
+          <p class="case-principle-name">Contextual Prototyping</p>
+          <p class="case-principle-body"><strong>Key activities</strong></p>
+          <ul>
+            <li>same haptic, different contexts</li>
+            <li>A/B emotional response testing</li>
+            <li>narrative framing experiments</li>
+          </ul>
+          <p class="case-principle-finding">
+            <strong>Finding</strong>
+            Context dramatically altered emotional interpretation while
+            preserving underlying tactile perception.
+          </p>
+        </div>
+        <div class="case-principle">
+          <img src="assets/TACIT.jpg" alt="[Phase 3 heart moment breakdown]">
+          <span class="case-principle-number">PHASE 03</span>
+          <p class="case-principle-name">Narrative Synthesis</p>
+          <p class="case-principle-body"><strong>Key activities</strong></p>
+          <ul>
+            <li>selecting strongest patterns</li>
+            <li>designing the emotional arc</li>
+            <li>building the final experience</li>
+          </ul>
+          <p class="case-principle-finding">
+            <strong>Finding</strong>
+            Repetition and narrative consequence amplified the emotional
+            significance of haptic interactions.
+          </p>
+        </div>
+      </div>
+    </section>
