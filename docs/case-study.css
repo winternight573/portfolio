@@ -1841,17 +1841,22 @@ body:not([data-category]) {
 }
 
 .case-carousel-slide {
-  min-width: 100%;
-  flex-shrink: 0;
+  flex: 0 0 100%;
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+  overflow: hidden;
   margin: 0;
   display: flex;
   flex-direction: column;
   align-items: center;
   background: var(--background);
+  box-sizing: border-box;
 }
 
 .case-carousel-slide img {
   width: 100%;
+  max-width: 100%;
   max-height: 400px;
   height: auto;
   object-fit: contain;
@@ -1986,4 +1991,283 @@ body:not([data-category]) {
   .case-figure.compact {
     max-width: 100%;
   }
+}
+
+/* ------- Flat findings — content-width alternative to card layout ------- */
+.case-flat-findings {
+  margin: var(--spacing-md) 0 var(--spacing-lg);
+  border-left: 3px solid var(--case-accent);
+  padding-left: var(--spacing-md);
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-sm);
+}
+
+.case-flat-finding-head {
+  display: flex;
+  align-items: baseline;
+  gap: 0.65rem;
+  margin-bottom: 0.35rem;
+  flex-wrap: wrap;
+}
+
+.case-flat-finding-num {
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--case-accent);
+  flex-shrink: 0;
+}
+
+.case-flat-finding-title {
+  font-family: var(--font-heading);
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin: 0;
+  line-height: 1.3;
+}
+
+.case-flat-finding-body {
+  margin: 0;
+  color: var(--text-secondary);
+  line-height: 1.6;
+  font-size: 0.95rem;
+}
+
+/* ============================================
+   EXPANDABLE CARDS — collapsed = title + image only,
+   click to reveal activities/findings/body.
+   Uses <details>/<summary> for zero-JS, accessible-by-default behavior.
+   ============================================ */
+
+.case-principles.expandable {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-sm);
+  grid-template-columns: none;
+  margin: var(--spacing-md) 0 var(--spacing-lg);
+}
+
+/* Each card is a <details>. We reuse .case-principle for the shell. */
+.case-principles.expandable details.case-principle {
+  padding: 0;
+  overflow: hidden;
+  transition: box-shadow 0.15s;
+}
+
+.case-principles.expandable details.case-principle[open] {
+  box-shadow: 0 6px 20px var(--shadow);
+}
+
+/* The <summary> is the always-visible collapsed view: image + title + hint. */
+.case-principles.expandable summary {
+  list-style: none;
+  cursor: pointer;
+  display: grid;
+  grid-template-columns: 240px 1fr auto;
+  gap: var(--spacing-md);
+  align-items: center;
+  padding: 0;
+  position: relative;
+}
+
+.case-principles.expandable summary::-webkit-details-marker { display: none; }
+
+.case-principles.expandable summary > img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  margin: 0;
+  display: block;
+  align-self: stretch;
+}
+
+/* Cards without an image (findings, heart moments) get a colored bar instead */
+.case-principles.expandable summary.no-image {
+  grid-template-columns: 1fr auto;
+  padding: var(--spacing-md);
+}
+
+.case-principles.expandable summary .summary-text {
+  padding: var(--spacing-sm) 0;
+  min-width: 0;
+}
+
+.case-principles.expandable summary .case-principle-number {
+  display: block;
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--case-accent);
+  margin-bottom: 0.25rem;
+}
+
+.case-principles.expandable summary .case-principle-name {
+  margin: 0;
+  font-family: var(--font-heading);
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  line-height: 1.25;
+}
+
+.case-principles.expandable summary .case-principle-role {
+  margin: 0.25rem 0 0;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--case-accent);
+}
+
+/* Chevron toggle indicator on the right */
+.case-principles.expandable summary .summary-toggle {
+  align-self: center;
+  padding-right: var(--spacing-md);
+  color: var(--case-accent);
+  font-size: 1.4rem;
+  line-height: 1;
+  transition: transform 0.2s;
+  flex-shrink: 0;
+}
+
+.case-principles.expandable details[open] summary .summary-toggle {
+  transform: rotate(180deg);
+}
+
+/* The revealed body content — activities, findings, prose */
+.case-principles.expandable .expandable-body {
+  padding: 0 var(--spacing-md) var(--spacing-md);
+  border-top: 1px solid var(--border);
+  margin-top: 0;
+  padding-top: var(--spacing-md);
+}
+
+.case-principles.expandable summary + .expandable-body {
+  margin-top: 0;
+}
+
+/* Mobile: stack image on top, hide toggle inside column */
+@media (max-width: 720px) {
+  .case-principles.expandable summary {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+  .case-principles.expandable summary > img {
+    height: 180px;
+  }
+  .case-principles.expandable summary .summary-text {
+    padding: var(--spacing-sm) var(--spacing-md);
+  }
+  .case-principles.expandable summary .summary-toggle {
+    position: absolute;
+    top: var(--spacing-sm);
+    right: var(--spacing-md);
+    background: rgba(255,255,255,0.9);
+    border-radius: 50%;
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+/* ============================================
+   HERO BADGE ROW — 3 festival laurels/badges as linked cards
+   ============================================ */
+
+.case-badges {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--spacing-md);
+  margin: var(--spacing-lg) 0 0;
+  align-items: stretch;
+}
+
+.case-badges a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: var(--spacing-md);
+  background: var(--background);
+  border: 1px solid var(--border);
+  border-radius: var(--border-radius);
+  text-decoration: none;
+  color: var(--text-primary);
+  transition: transform 0.18s, box-shadow 0.18s, border-color 0.18s;
+  gap: 0.5rem;
+  height: 100%;
+}
+
+.case-badges a:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px var(--shadow);
+  border-color: var(--case-accent);
+}
+
+.case-badges img {
+  max-height: 120px;
+  max-width: 100%;
+  width: auto;
+  height: auto;
+  display: block;
+  object-fit: contain;
+}
+
+.case-badges .badge-title {
+  font-family: var(--font-heading);
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin: 0;
+  line-height: 1.3;
+}
+
+.case-badges .badge-sub {
+  font-size: 0.78rem;
+  color: var(--text-secondary);
+  margin: 0;
+  line-height: 1.4;
+}
+
+@media (max-width: 640px) {
+  .case-badges {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ============================================
+   RESPONSIVE YOUTUBE / VIDEO EMBED
+   ============================================ */
+
+.case-video-embed {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border-radius: var(--border-radius);
+  overflow: hidden;
+  box-shadow: 0 6px 20px var(--shadow);
+  margin: var(--spacing-md) 0 var(--spacing-lg);
+}
+
+.case-video-embed iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+.case-video-embed + .case-video-caption {
+  text-align: center;
+  font-size: 0.9rem;
+  color: var(--text-light);
+  font-style: italic;
+  margin-top: calc(-1 * var(--spacing-md) + 0.5rem);
+  margin-bottom: var(--spacing-lg);
 }

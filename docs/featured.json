@@ -1,23 +1,5 @@
 [
   {
-    "title": "Big Picture Studio - Cooperative Puzzle-Narrative Game across 4 Mobile Screens",
-    "description": "A semester-long investigation in discovering unique narrative puzzle game systems across 4 phone screens, where physical repositioning of the devices serve as the main mechanic.",
-    "role": "Game Designer, Technical Producer",
-    "category": "Games and Experiences",
-    "image": "assets/bps2.jpg",
-    "link": "big-picture-studio.html",
-    "featured": true,
-    "tags": ["Player Experience Optimization","Experimental Tech", "Puzzle Design"],
-    "moreLinks": {
-      "Project Website": "https://projects.etc.cmu.edu/big-picture-studio/",
-      "Demo video": "https://youtu.be/jMTENnyhgAI"
-    },
-    "details": {
-      "focus": "System Design, Documentation, Cross-disciplinary Collaboration, (System Design, Player Advocate)",
-      "tools": "Figma, Unity, C#, Perforce"
-    }
-  },
-  {
     "title": "TACIT - R&D for VR Haptics in Emotional Storytelling",
     "description": "An R&D project exploring proactive haptic cues in VR for emotional engagement, culminating to the award-winning experience about death called In The End.",
     "role": "Technical Experience Designer, Producer",
@@ -69,6 +51,24 @@
     "details": {
       "focus": "Developer experience research, playtesting, surround sound design, sample scene development",
       "tools": "Unity 6, GitHub, Perforce"
+    }
+  },
+  {
+    "title": "Big Picture Studio - Cooperative Puzzle-Narrative Game across 4 Mobile Screens",
+    "description": "A semester-long investigation in discovering unique narrative puzzle game systems across 4 phone screens, where physical repositioning of the devices serve as the main mechanic.",
+    "role": "Game Designer, Technical Producer",
+    "category": "Games and Experiences",
+    "image": "assets/bps2.jpg",
+    "link": "big-picture-studio.html",
+    "featured": true,
+    "tags": ["Player Experience Optimization","Experimental Tech", "Puzzle Design"],
+    "moreLinks": {
+      "Project Website": "https://projects.etc.cmu.edu/big-picture-studio/",
+      "Demo video": "https://youtu.be/jMTENnyhgAI"
+    },
+    "details": {
+      "focus": "System Design, Documentation, Cross-disciplinary Collaboration, (System Design, Player Advocate)",
+      "tools": "Figma, Unity, C#, Perforce"
     }
   }
 ]
