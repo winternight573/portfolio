@@ -282,11 +282,14 @@ body:not([data-category]) {
 
 .case-figure img,
 .case-figure video {
-  width: 100%;
+  max-width: 100%;
+  max-height: 520px;
+  width: auto;
   height: auto;
   border-radius: var(--border-radius);
   box-shadow: 0 6px 20px var(--shadow);
   display: block;
+  margin: 0 auto;
 }
 
 .case-figure figcaption {
@@ -1649,4 +1652,338 @@ body:not([data-category]) {
   font-style: italic;
   margin: 0 0 var(--spacing-md);
   letter-spacing: 0.01em;
+}
+
+/* ============================================
+   TACIT REFACTOR (v3) — vertical stack, carousel, heart cards, stage colors
+   ============================================ */
+
+/* ------- Vertical-stack principles: image on top, content below, arrow BETWEEN cards ------- */
+.case-principles.vertical-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  grid-template-columns: none;
+  margin: var(--spacing-md) 0 var(--spacing-lg);
+}
+
+.case-principles.vertical-stack .case-principle {
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  overflow: hidden;
+  gap: 0;
+  max-width: 100%;
+}
+
+.case-principles.vertical-stack .case-principle > img {
+  width: 100%;
+  height: 240px;
+  object-fit: cover;
+  margin: 0;
+  display: block;
+  border-radius: 0;
+  align-self: stretch;
+}
+
+.case-principle-content {
+  padding: var(--spacing-md);
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+/* Standalone arrow between vertical-stack cards */
+.case-vertical-arrow {
+  text-align: center;
+  color: var(--case-accent);
+  font-size: 1.8rem;
+  font-weight: 700;
+  line-height: 1;
+  margin: 0.9rem 0;
+}
+
+@media (max-width: 720px) {
+  .case-principles.vertical-stack .case-principle > img {
+    height: 180px;
+  }
+}
+
+/* ------- Activities block (neutral / procedural) ------- */
+.case-principle-activities {
+  margin-top: var(--spacing-xs);
+  padding: 0.6rem 0.9rem;
+  background: transparent;
+  border-left: 3px solid var(--border);
+  font-size: 0.92rem;
+  line-height: 1.5;
+  color: var(--text-primary);
+}
+
+.case-principle-activities-label {
+  display: block;
+  font-size: 0.68rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--text-secondary);
+  margin-bottom: 0.45rem;
+}
+
+.case-principle-activities ul {
+  margin: 0;
+  padding-left: 1.15rem;
+}
+
+.case-principle-activities li {
+  margin-bottom: 0.32rem;
+}
+
+/* ------- Findings block (accent / revealed) — extend existing rule ------- */
+.case-principle-finding-label {
+  display: block;
+  font-size: 0.68rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--case-accent);
+  margin-bottom: 0.45rem;
+}
+
+.case-principle-finding ul {
+  margin: 0;
+  padding-left: 1.15rem;
+}
+
+.case-principle-finding li {
+  margin-bottom: 0.32rem;
+}
+
+/* ------- Heart moment horizontal 3-card row ------- */
+.case-heart-cards {
+  display: flex;
+  align-items: stretch;
+  gap: 0.35rem;
+  margin: var(--spacing-md) 0 var(--spacing-lg);
+}
+
+.case-heart-cards > .case-principle {
+  flex: 1 1 0;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  padding: var(--spacing-md);
+  margin: 0;
+  border-top-color: var(--case-accent);
+}
+
+.case-heart-cards > .case-principle > img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  border-radius: var(--border-radius);
+  margin: 0.55rem 0 0.6rem;
+  display: block;
+  box-shadow: 0 2px 8px var(--shadow);
+}
+
+.case-heart-cards > .case-principle .case-principle-body {
+  margin: 0;
+  font-size: 0.92rem;
+  line-height: 1.5;
+}
+
+.case-heart-arrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--case-accent);
+  font-size: 1.7rem;
+  font-weight: 700;
+  flex-shrink: 0;
+  padding: 0 0.15rem;
+}
+
+@media (max-width: 720px) {
+  .case-heart-cards {
+    flex-direction: column;
+  }
+  .case-heart-arrow {
+    padding: 0.4rem 0;
+  }
+}
+
+/* ------- Carousel component ------- */
+.case-carousel {
+  margin: var(--spacing-md) 0 var(--spacing-lg);
+}
+
+.case-carousel-title {
+  font-family: var(--font-heading);
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin: 0 0 0.75rem;
+  color: var(--text-primary);
+}
+
+.case-carousel-viewport {
+  position: relative;
+  overflow: hidden;
+  border-radius: var(--border-radius);
+  background: var(--background-alt);
+  border: 1px solid var(--border);
+}
+
+.case-carousel-track {
+  display: flex;
+  transition: transform 0.35s ease;
+  will-change: transform;
+}
+
+.case-carousel-slide {
+  min-width: 100%;
+  flex-shrink: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: var(--background);
+}
+
+.case-carousel-slide img {
+  width: 100%;
+  max-height: 400px;
+  height: auto;
+  object-fit: contain;
+  display: block;
+}
+
+.case-carousel-slide figcaption {
+  padding: 0.65rem 0.9rem;
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  font-style: italic;
+  text-align: center;
+  width: 100%;
+  box-sizing: border-box;
+  background: var(--background);
+}
+
+.case-carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.92);
+  border: 1px solid var(--border);
+  cursor: pointer;
+  font-size: 1.5rem;
+  color: var(--text-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 8px var(--shadow);
+  transition: background 0.15s, color 0.15s, transform 0.15s;
+  z-index: 2;
+  padding: 0;
+  line-height: 1;
+}
+
+.case-carousel-btn:hover:not(:disabled) {
+  background: var(--case-accent);
+  color: white;
+  transform: translateY(-50%) scale(1.06);
+}
+
+.case-carousel-btn.prev { left: 0.75rem; }
+.case-carousel-btn.next { right: 0.75rem; }
+
+.case-carousel-btn:disabled {
+  opacity: 0.35;
+  cursor: not-allowed;
+}
+
+.case-carousel-controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.85rem;
+  margin-top: 0.85rem;
+  flex-wrap: wrap;
+}
+
+.case-carousel-dots {
+  display: flex;
+  justify-content: center;
+  gap: 0.45rem;
+  flex-wrap: wrap;
+}
+
+.case-carousel-dot {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  border: 1px solid var(--case-accent);
+  background: transparent;
+  cursor: pointer;
+  padding: 0;
+  transition: background 0.15s;
+}
+
+.case-carousel-dot.active {
+  background: var(--case-accent);
+}
+
+.case-carousel-counter {
+  font-size: 0.78rem;
+  color: var(--text-secondary);
+  font-variant-numeric: tabular-nums;
+  min-width: 3ch;
+  text-align: center;
+}
+
+/* ------- TACIT stage colors for the 5-scene progression flow ------- */
+.case-flow-step.tacit-stage-tutorial {
+  background: #E8F4F1;
+  color: #2D6E5F;
+  border-color: #7CD9C7;
+}
+
+.case-flow-step.tacit-stage-level-1 {
+  background: #EEF0FA;
+  color: #4A5680;
+  border-color: #A0AEEB;
+}
+
+.case-flow-step.tacit-stage-level-2 {
+  background: #7C8DD9;
+  color: #FFFFFF;
+  border-color: #5A6EC3;
+}
+
+.case-flow-step.tacit-stage-reveal {
+  background: #F5EAF0;
+  color: #7E3768;
+  border-color: #D97CBC;
+}
+
+.case-flow-step.tacit-stage-level-3 {
+  background: #3F4E96;
+  color: #FFFFFF;
+  border-color: #2E3B7A;
+}
+
+/* ------- Compact figure — for downplayed images like the demoted poster ------- */
+.case-figure.compact {
+  max-width: 55%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media (max-width: 720px) {
+  .case-figure.compact {
+    max-width: 100%;
+  }
 }

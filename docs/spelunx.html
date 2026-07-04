@@ -23,7 +23,7 @@
   </header>
 
   <!-- ============================================
-       SIDE NAV — fixed left, hides on screens < 1300px
+       SIDE NAV — hides until hero scrolls out; hides again at prev/next
        ============================================ -->
   <aside class="case-toc" aria-label="Page sections">
     <p class="case-toc-label">On this page</p>
@@ -113,7 +113,6 @@
         but what kinds of experiences it could enable.
       </p>
 
-      <!-- Research poster figure (moved inside Section 01 — was orphaned before) -->
       <figure class="case-figure">
         <img src="assets/spelunx/A1-copy.png" alt="Research poster of Spelunx toolkit presented at XRTC Symposium 2025">
         <figcaption>Research poster of the Spelunx toolkit presented at XRTC Symposium 2025.</figcaption>
@@ -178,7 +177,6 @@
         integration and design best practices (including sample scenes).
       </p>
 
-      <!-- 4 contribution screenshots in 2×2 layout (was incorrectly .three-up before) -->
       <div class="case-grid four-up">
         <figure>
           <img src="assets/spelunx/Cavern toolkit preview.png" alt="Official demo scene of the Spelunx toolkit">
@@ -319,18 +317,6 @@
         </div>
       </div>
 
-      <!--
-        Each state below uses <img> as a placeholder. To swap any of these
-        for a recorded clip, replace the <img> with:
-
-        <video controls playsinline preload="metadata" poster="assets/spelunx.jpg">
-          <source src="assets/spelunx/awakening.mp4" type="video/mp4">
-          Your browser doesn't support embedded video.
-        </video>
-
-        The .case-figure styles already cover <video> sizing and shadow.
-      -->
-
       <!-- Awakening -->
       <h3>Awakening</h3>
       <figure class="case-figure">
@@ -338,7 +324,7 @@
           <source src="assets/spelunx/awakening.mp4" type="video/mp4">
           Your browser doesn't support embedded video.
         </video>
-        <figcaption>The creature roaming in the entire environment to guide the player attention across the entire CAVERN</figcaption>
+        <figcaption>The creature roaming in the entire environment to guide the player attention across the entire CAVERN.</figcaption>
       </figure>
       <p>
         <strong>Demonstrates:</strong> stereoscopic depth and quadraphonic
@@ -357,7 +343,7 @@
           <source src="assets/spelunx/pick up.mp4" type="video/mp4">
           Your browser doesn't support embedded video.
         </video>
-        <figcaption>The player approaches and picks up the crying creature using the Vive Tracker</figcaption>
+        <figcaption>The player approaches and picks up the crying creature using the Vive Tracker.</figcaption>
       </figure>
       <p>
         <strong>Demonstrates:</strong> Vive Tracker position tracking.
@@ -376,7 +362,7 @@
           <source src="assets/spelunx/follow.mp4" type="video/mp4">
           Your browser doesn't support embedded video.
         </video>
-        <figcaption>The creature follows the player's movements as they navigate the CAVERN</figcaption>
+        <figcaption>The creature follows the player's movements as they navigate the CAVERN.</figcaption>
       </figure>
       <p>
         <strong>Demonstrates:</strong> tracker-driven behavior.
@@ -438,7 +424,6 @@
         concepts for a younger and more novice audience.
       </p>
 
-      <!-- Linked figures — img wrapped in <a>, with figcaption -->
       <div class="case-grid three-up">
         <figure>
           <a href="https://docs.google.com/document/d/1QsmDlrw0ctSM0vhB-qM79fx0NRbXh79U3FtuWtl2vYs/edit?usp=sharing" target="_blank" rel="noopener">
@@ -562,13 +547,11 @@
       <p>
         <strong>This project taught me about being the enabler for other creators.</strong>
         Not only for being the developer advocate for our users, but also for the team.
-        While I was not the one driving the technical advancements, 
-        I learned to be a translator between the technical and non-technical team members, 
+        While I was not the one driving the technical advancements,
+        I learned to be a translator between the technical and non-technical team members,
         and to advocate for the user experience of both our developers and our internal stakeholders.
         I'm very proud of being a member of the Spelunx team and I look forward to seeing more amazing creations built for CAVERN in the future!
       </p>
-
-    </section>
 
       <ul class="case-link-list">
         <li><a href="https://projects.etc.cmu.edu/spelunx/" target="_blank" rel="noopener">
@@ -581,6 +564,8 @@
           <i class="fas fa-file-alt"></i> Open Documentation
         </a></li>
       </ul>
+    </section>
+
   </main>
 
   <!-- ============================================
@@ -629,28 +614,48 @@
   </footer>
 
   <!-- ============================================
-       SCROLL SPY — highlights current section in side nav
+       SIDE NAV BEHAVIOR
+       1. Visibility: hide on hero AND on prev/next (state-based).
+       2. Scroll spy: highlight current section's link.
        ============================================ -->
   <script>
     document.addEventListener('DOMContentLoaded', () => {
       const toc = document.querySelector('.case-toc');
       const hero = document.querySelector('#case-hero');
+      const bottomBoundary = document.querySelector('#case-nav');
       const tocLinks = document.querySelectorAll('.case-toc a');
       const sections = document.querySelectorAll('main#case-body section.case-section');
- 
-      // 1. Visibility — show nav once hero scrolls out of view
-      if (toc && hero) {
-        const visibilityObserver = new IntersectionObserver((entries) => {
-          entries.forEach(entry => {
-            toc.classList.toggle('visible', !entry.isIntersecting);
-          });
-        }, { threshold: 0 });
-        visibilityObserver.observe(hero);
+
+      // 1. Visibility — state-based, hide when hero OR bottom nav are in view
+      let heroInView = true;
+      let bottomInView = false;
+
+      function updateTocVisibility() {
+        if (!toc) return;
+        toc.classList.toggle('visible', !heroInView && !bottomInView);
       }
- 
+
+      if (toc && hero) {
+        new IntersectionObserver((entries) => {
+          entries.forEach(entry => {
+            heroInView = entry.isIntersecting;
+            updateTocVisibility();
+          });
+        }, { threshold: 0 }).observe(hero);
+      }
+
+      if (toc && bottomBoundary) {
+        new IntersectionObserver((entries) => {
+          entries.forEach(entry => {
+            bottomInView = entry.isIntersecting;
+            updateTocVisibility();
+          });
+        }, { threshold: 0 }).observe(bottomBoundary);
+      }
+
       // 2. Scroll spy — mark the current section's link as active
       if (tocLinks.length && sections.length) {
-        const spyObserver = new IntersectionObserver((entries) => {
+        const spy = new IntersectionObserver((entries) => {
           entries.forEach(entry => {
             if (entry.isIntersecting) {
               const id = entry.target.id;
@@ -660,7 +665,7 @@
             }
           });
         }, { rootMargin: '-20% 0px -65% 0px' });
-        sections.forEach(section => spyObserver.observe(section));
+        sections.forEach(section => spy.observe(section));
       }
     });
   </script>
