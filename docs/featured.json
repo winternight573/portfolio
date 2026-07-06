@@ -1,10 +1,10 @@
 [
   {
-    "title": "TACIT - R&D for VR Haptics in Emotional Storytelling",
+    "title": "In The End - R&D for VR Haptics in Emotional Storytelling",
     "description": "An R&D project exploring proactive haptic cues in VR for emotional engagement, culminating to the award-winning experience about death called In The End.",
     "role": "Technical Experience Designer, Producer",
     "category": "Creative Tech R&D",
-    "image": "assets/TACIT.jpg",
+    "image": "assets/tacit/take heart out.png",
     "link": "tacit.html",
     "featured": true,
     "tags": ["Rapid Prototyping", "Agile Production", "Playtesting-Driven Design", "Documentation"],
@@ -18,7 +18,7 @@
     }
   },
   {
-    "title": "spelunx - CAVERN Toolkit",
+    "title": "Spelunx Toolkit - Multiplayer Roomscale VR UGC Ecosystem",
     "description": "A Unity SDK aimed for novice to seasoned developers for the multiplayer roomscale VR platform CAVERN. The toolkit includes the Unity package, tutorial, sample scenes, and technical documentation.",
     "role": "Technical Designer, Developer Evangelist",
     "category": "Creative Tech R&D",
@@ -54,11 +54,11 @@
     }
   },
   {
-    "title": "Big Picture Studio - Cooperative Puzzle-Narrative Game across 4 Mobile Screens",
+    "title": "Population One - Cooperative Puzzle-Narrative Game across 4 Mobile Screens",
     "description": "A semester-long investigation in discovering unique narrative puzzle game systems across 4 phone screens, where physical repositioning of the devices serve as the main mechanic.",
     "role": "Game Designer, Technical Producer",
     "category": "Games and Experiences",
-    "image": "assets/bps2.jpg",
+    "image": "assets/bps/scene 2.png",
     "link": "big-picture-studio.html",
     "featured": true,
     "tags": ["Player Experience Optimization","Experimental Tech", "Puzzle Design"],
