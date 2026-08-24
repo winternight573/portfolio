@@ -3,23 +3,29 @@
     "title": "Wicked themed UEFN Island",
     "description": "(Ongoing) A UEFN Island inspired by Wicked the musical, mainly a prototype to experiment with UEFN tools and workflows, including environment design using Landscape Mode, Verse scripting for custom interactions, and basic Devices familiarity (experimented with Physics puzzle solving). Next step is adding character animation for NPC dance (like the musical) and more!",
     "role": "Game Designer, UEFN Developer",
-    "category": "Games and Experiences",
+    "category": "Game & Content Design",
     "image": "assets/uefn.png",
-    "tags": ["UEFN", "Verse", "Experience Design"],
-    "moreLinks": {
-      "Design Doc": "https://docs.google.com/document/d/1UiqAaeTIi8k8-Vt7HonDQ5jO-jOjqqAQ5rwXTfmCY_k/edit?usp=sharing"
-    },
+    "tags": [
+      "UEFN",
+      "Verse",
+      "Experience Design"
+    ],
     "details": {
       "focus": "VR design, naive guest experience, playtesting, rapid development",
       "tools": "Unity, C#, Meta all-in-one-SDKs"
     }
-  },{
+  },
+  {
     "title": "Prison Escape",
     "description": "Roomscale VR Escape room designed for naive guests. Fleshed out the player experience and puzzles after concept inception. Worked as Unity programmer in a 5-person team, rapidly creating the experience in 2 weeks, from concept inception to playtesting and iteration.",
     "role": "Game Designer, Gameplay Programmer",
-    "category": "Games and Experiences",
+    "category": "Game & Content Design",
     "image": "assets/prison-escape.png",
-    "tags": ["Unity", "VR", "Naive Guest playtesting"],
+    "tags": [
+      "Unity",
+      "VR",
+      "Naive Guest playtesting"
+    ],
     "moreLinks": {
       "Gameplay video": "https://www.youtube.com/watch?v=FoZPNRG6GFE"
     },
@@ -32,9 +38,14 @@
     "title": "Little Match Girl MR Experience",
     "description": "Visual storytelling experience where players traverse between real and virtual worlds. Defined soundscapes for transitioning between physical/passthrough mode and VR virtual space, and integrated adaptive audio using FMOD.",
     "role": "Audio Designer, Audio Programmer, Producer",
-    "category": "Games and Experiences",
+    "category": "Experimental Interaction",
     "image": "assets/lmg-mr.png",
-    "tags": ["Adaptive Audio Design", "FMOD", "Unity", "Mixed Reality"],
+    "tags": [
+      "Adaptive Audio Design",
+      "FMOD",
+      "Unity",
+      "Mixed Reality"
+    ],
     "moreLinks": {
       "Trailer": "https://youtu.be/J50hsXcdTbA?feature=shared"
     },
@@ -48,9 +59,13 @@
     "title": "Breathe Deep",
     "description": "Global Game Jam Pittsburgh submission that won Jammer's Award. 2-player game where players posed as pirates dodging sea creatures and competing for bubbles for air underwater. Worked as programmer and technical sound designer, implementing bubble mechanics and FMOD integration.",
     "role": "Game Designer, Gameplay Programmer, Technical Sound Designer",
-    "category": "Games and Experiences",
+    "category": "Game & Content Design",
     "image": "assets/breathe-deep.jpeg",
-    "tags": ["Unity", "FMOD", "Game Jam"],
+    "tags": [
+      "Unity",
+      "FMOD",
+      "Game Jam"
+    ],
     "moreLinks": {
       "Game Jam Page": "https://yuqianleashi.itch.io/breathe-deep"
     },
@@ -64,9 +79,12 @@
     "title": "Husky Hangout",
     "description": "Mobile app designed to help international students at University of Washington find community through shared interests. In charge of user research and interview + survey design, as well as user testing for the Figma interactive prototype on usertesting.com.",
     "role": "UX Researcher, UX Designer",
-    "category": "UX Research",
+    "category": "Research & UX",
     "image": "assets/husky-hangout.png",
-    "tags": ["UserTesting.com", "High-fidelity Prototyping"],
+    "tags": [
+      "UserTesting.com",
+      "High-fidelity Prototyping"
+    ],
     "details": {
       "focus": "International student experience, community building",
       "tools": "Figma, User Research, Prototyping"
@@ -80,9 +98,12 @@
     "title": "MiniJava Compiler",
     "description": "Developed basic compiler for MiniJava (Java subset). Implemented scanning + parsing using jFlex CUP tools after defining programming language grammar according to specs. Created abstract syntax tree AST traversal using visitor pattern for type checking and code generation in Assembly language.",
     "role": "Software engineer",
-    "category": "Technical Foundations",
+    "category": "Technical Design & Tools",
     "image": "assets/minijava.png",
-    "tags": ["Java", "Compiler Construction"],
+    "tags": [
+      "Java",
+      "Compiler Construction"
+    ],
     "details": {
       "focus": "Compiler construction, code generation",
       "course": "Compiler Construction"
@@ -92,9 +113,13 @@
     "title": "MUPL Interpreter",
     "description": "Built Made-Up-Programming_Language(MUPL) interpreter in Racket, implementing functional programming language concepts such as first-class functions, lexical scoping, and macros.",
     "role": "Software engineer",
-    "category": "Technical Foundations",
+    "category": "Technical Design & Tools",
     "image": "assets/interpreter.png",
-    "tags": ["Racket", "Functional Programming", "Programming Languages Implementation"],
+    "tags": [
+      "Racket",
+      "Functional Programming",
+      "Programming Languages Implementation"
+    ],
     "details": {
       "focus": "functional programming",
       "course": "Programming Languages Implementation"
@@ -104,9 +129,12 @@
     "title": "Pacman AI Agent",
     "description": "Implemented pathfinding algorithms including BFS, DFS, and A*, as well as adversarial agent decision-making and pruning optimizationfor Pacman environment. Also experimented with Q-learning for reinforcement learning agent.",
     "role": "Software engineer",
-    "category": "Technical Foundations",
+    "category": "Technical Design & Tools",
     "image": "assets/pacman.png",
-    "tags": ["Python", "Intro to Artificial Intelligence"],
+    "tags": [
+      "Python",
+      "Intro to Artificial Intelligence"
+    ],
     "details": {
       "course": "Intro to Artificial Intelligence"
     }
@@ -115,11 +143,15 @@
     "title": "Spelunx Toolkit - Multiplayer Roomscale VR UGC Ecosystem",
     "description": "A Unity SDK aimed for novice to seasoned developers for the multiplayer roomscale VR platform CAVERN. The toolkit includes the Unity package, tutorial, sample scenes, and technical documentation.",
     "role": "Technical Designer, Developer Evangelist",
-    "category": "Creative Tech R&D",
+    "category": "Technical Design & Tools",
     "image": "assets/spelunx.jpg",
     "link": "spelunx.html",
     "featured": true,
-    "tags": ["Tools Programming", "Surround sound design", "Unity 6"],
+    "tags": [
+      "Tools Programming",
+      "Surround sound design",
+      "Unity 6"
+    ],
     "moreLinks": {
       "Project Website": "https://projects.etc.cmu.edu/spelunx/",
       "Documentation": "https://docs.google.com/document/d/1QsmDlrw0ctSM0vhB-qM79fx0NRbXh79U3FtuWtl2vYs/edit?usp=sharing",
@@ -134,11 +166,16 @@
     "title": "In The End - R&D for VR Haptics in Emotional Storytelling",
     "description": "An R&D project exploring proactive haptic cues in VR for emotional engagement, culminating to the award-winning experience about death called In The End.",
     "role": "Technical Experience Designer, Producer",
-    "category": "Creative Tech R&D",
+    "category": "Experimental Interaction",
     "image": "assets/tacit/take heart out.png",
     "link": "tacit.html",
     "featured": true,
-    "tags": ["Rapid Prototyping", "Agile Production", "Playtesting-Driven Design", "Documentation"],
+    "tags": [
+      "Rapid Prototyping",
+      "Agile Production",
+      "Playtesting-Driven Design",
+      "Documentation"
+    ],
     "moreLinks": {
       "Project Website": "https://projects.etc.cmu.edu/tacit/",
       "Documentation": "https://docs.google.com/document/d/1j0eI6Bvqdn3td5Cm4D78JcDIZmIEplzoLTbpuTMxhnI/edit?usp=sharing"
@@ -152,10 +189,13 @@
     "title": "Two to Foxtrot",
     "description": "Designed 2-player co-op platformer where players see different aspects of the world. Designed the interactive puzzles including 2 phases of resource collection, as well as a final boss encounter for escape the forest. Served as main programmer implementing player systems and puzzle mechanics.",
     "role": "Game Designer, Gameplay Programmer, Producer",
-    "category": "Games and Experiences",
+    "category": "Game & Content Design",
     "image": "assets/two-to-foxtrot.png",
     "featured": true,
-    "tags": ["Unity", "Co-op Puzzle Design"],
+    "tags": [
+      "Unity",
+      "Co-op Puzzle Design"
+    ],
     "moreLinks": {
       "Trailer": "https://youtu.be/q1OiPwjL8uk?feature=shared"
     },
@@ -168,16 +208,20 @@
     "title": "EiAi - UX Research on LLMs usage in UX Designers",
     "description": "Explored how UX designers utilize LLM tools to understand hard-to-reach user populations through mixed methods research including contextual inquiry, usability testing, assumption artifacts, and speed dating.",
     "role": "UX Researcher",
-    "category": "UX Research",
+    "category": "Research & UX",
     "featured": true,
     "image": "assets/EiAi.png",
-    "tags": ["LLMs", "Semi-structured Interviews", "Think-aloud Protocol"],
+    "tags": [
+      "LLMs",
+      "Semi-structured Interviews",
+      "Think-aloud Protocol"
+    ],
     "moreLinks": {
       "Poster": "assets/EiAi.png",
       "Retrospective": "https://medium.com/@yt73/ux-research-methods-interdisciplinary-toolkit-1bda71d3de65"
     },
     "details": {
-      "focus": "AI-assisted research methodologies", 
+      "focus": "AI-assisted research methodologies",
       "tools": "Python, LLMs, Mixed Methods Research"
     }
   },
@@ -185,11 +229,15 @@
     "title": "Population One - Cooperative Puzzle-Narrative Game across 4 Mobile Screens",
     "description": "A semester-long investigation in discovering unique narrative puzzle game systems across 4 phone screens, where physical repositioning of the devices serve as the main mechanic.",
     "role": "Game Designer, Technical Producer",
-    "category": "Games and Experiences",
+    "category": "Game & Content Design",
     "image": "assets/bps/scene 2.png",
     "link": "big-picture-studio.html",
     "featured": true,
-    "tags": ["Player Experience Optimization","Experimental Tech", "Puzzle Design"],
+    "tags": [
+      "Player Experience Optimization",
+      "Experimental Tech",
+      "Puzzle Design"
+    ],
     "moreLinks": {
       "Project Website": "https://projects.etc.cmu.edu/big-picture-studio/",
       "Demo video": "https://youtu.be/jMTENnyhgAI"
@@ -203,10 +251,14 @@
     "title": "Voice in the Void",
     "description": "Game jam submission for That Game Company X Coreblazer Jam. A relaxation building game where players connect with AI aliens' encrypted messages with a generous heart. Implemented resource collection and building mechanics.",
     "role": "Game Designer, Gameplay Programmer, Producer",
-    "category": "Games and Experiences",
+    "category": "Game & Content Design",
     "image": "assets/voice-in-the-void.png",
     "featured": true,
-    "tags": ["Unity", "Game jam", "LLMs"],
+    "tags": [
+      "Unity",
+      "Game jam",
+      "LLMs"
+    ],
     "moreLinks": {
       "Itch.io Page": "https://yenchun.itch.io/voice-in-the-void"
     },
@@ -219,11 +271,13 @@
     "title": "The Glad Game - Educational Game Design for Metacognition",
     "description": "Independent study with game designer Jesse Schell. After iterations, I designed a branching narrative game that facilitates players to learn about cognitive biases in real life, and implemented the tutorial and 1st level prototype with Unity and ink.",
     "role": "Game Designer",
-    "category": "Games and Experiences",
+    "category": "Game & Content Design",
     "image": "assets/metacognition.png",
     "link": "the-glad-game.html",
     "featured": true,
-    "tags": ["Narrative Design"],
+    "tags": [
+      "Narrative Design"
+    ],
     "moreLinks": {
       "Game Design Document": "https://docs.google.com/document/d/172T3VkIr8hJqzes7D97WXCVlXB39hkYzfCs-lFpNS08/edit?tab=t.uol2vbvdfhgw"
     },

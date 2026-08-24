@@ -8,6 +8,40 @@
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;700&family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
   <title>The Glad Game — Winnie Tsai</title>
+  <style>
+    .glad-hero-composite { display:grid; grid-template-columns:1fr 1fr; gap:12px; padding:12px; background:#f6f3ef; border-radius:18px; }
+    .glad-hero-composite img { width:100%; height:100%; min-height:260px; object-fit:cover; border-radius:12px; display:block; }
+    .glad-hero-thesis { margin-top:12px; font-size:.92rem; color:var(--text-light); }
+    .glad-system-map { margin:2rem 0; display:grid; grid-template-columns:1.1fr auto 1.1fr auto 1.1fr; align-items:center; gap:12px; }
+    .glad-system-node { border:1px solid rgba(0,0,0,.14); border-radius:14px; padding:18px; background:#fff; min-height:116px; }
+    .glad-system-node strong { display:block; margin-bottom:7px; }
+    .glad-system-arrow { font-size:1.55rem; text-align:center; opacity:.45; }
+    .glad-system-subrow { display:grid; grid-template-columns:repeat(4,1fr); gap:10px; margin:12px 0 0; }
+    .glad-system-chip { text-align:center; border-radius:999px; padding:8px 10px; background:#f5f1ff; font-size:.86rem; }
+    .glad-artifact { margin:2rem 0; padding:18px; background:#faf8f5; border-radius:18px; }
+    .glad-artifact img { width:100%; display:block; border-radius:10px; }
+    .glad-artifact-caption { margin:.8rem 0 0; color:var(--text-light); font-size:.9rem; }
+    .glad-swipe-wire { margin:2rem 0; display:grid; grid-template-columns:1fr auto 1fr; gap:18px; align-items:center; }
+    .glad-swipe-card { border:1px solid rgba(0,0,0,.16); border-radius:18px; padding:22px; min-height:180px; background:#fff; box-shadow:0 8px 24px rgba(0,0,0,.05); }
+    .glad-swipe-card small { display:block; text-transform:uppercase; letter-spacing:.08em; margin-bottom:12px; color:var(--text-light); }
+    .glad-swipe-arrow { font-size:1.8rem; opacity:.4; }
+    .glad-chapter-track { margin:2rem 0; display:grid; grid-template-columns:repeat(4,1fr); gap:12px; }
+    .glad-chapter { position:relative; padding:18px; border:1px solid rgba(0,0,0,.14); border-radius:14px; background:#fff; }
+    .glad-chapter .eyebrow { font-size:.75rem; text-transform:uppercase; letter-spacing:.08em; color:var(--text-light); }
+    .glad-chapter h4 { margin:.4rem 0 .6rem; }
+    .glad-chapter .difficulty { margin-top:12px; font-size:.82rem; font-weight:700; }
+    .glad-proof-grid { display:grid; grid-template-columns:1fr 1fr; gap:16px; margin:2rem 0; }
+    .glad-proof-card { padding:20px; border-radius:14px; background:#faf8f5; }
+    .glad-proof-card h4 { margin-top:0; }
+    @media (max-width:800px) {
+      .glad-hero-composite, .glad-proof-grid { grid-template-columns:1fr; }
+      .glad-system-map { grid-template-columns:1fr; }
+      .glad-system-arrow { transform:rotate(90deg); }
+      .glad-system-subrow, .glad-chapter-track { grid-template-columns:1fr 1fr; }
+      .glad-swipe-wire { grid-template-columns:1fr; }
+      .glad-swipe-arrow { transform:rotate(90deg); text-align:center; }
+    }
+  </style>
 </head>
 
 <body data-category="Games and Experiences">
@@ -26,13 +60,13 @@
     <p class="case-toc-label">On this page</p>
     <ol>
       <li><a href="#overview">Overview</a></li>
-      <li><a href="#contributions">My Contributions</a></li>
-      <li><a href="#design-problem">Defining the Design Problem</a></li>
-      <li><a href="#narrowing">Narrowing the Design Space</a></li>
-      <li><a href="#knowledge-gameplay">From Knowledge to Gameplay</a></li>
-      <li><a href="#iterating">Iterating the Experience</a></li>
-      <li><a href="#playtesting">Playtesting and Design Decisions</a></li>
-      <li><a href="#final-prototype">Final Prototype</a></li>
+      <li><a href="#transformation">Finding a Designable Transformation</a></li>
+      <li><a href="#life-coach">First Prototype: Life Coach Simulator</a></li>
+      <li><a href="#interaction">Reducing Reading Friction</a></li>
+      <li><a href="#recognition">Making Recognition the Gameplay</a></li>
+      <li><a href="#narrative">Giving the Mechanic an Emotional Arc</a></li>
+      <li><a href="#decisions">Major Design Decisions</a></li>
+      <li><a href="#final-prototype">Proof of Concept &amp; Reflection</a></li>
     </ol>
   </aside>
 
@@ -50,34 +84,37 @@
       <span class="case-category-tag">Games and Experiences</span>
       <h1>The Glad Game</h1>
       <p class="case-tagline">
-        Designing a Transformational Game for Metacognitive Reflection.
+        Designing a narrative game where players practice noticing distorted thinking in context.
       </p>
 
       <div class="case-facts">
         <div>
           <span class="case-fact-label">Role</span>
-          <span class="case-fact-value">Game Designer</span>
+          <span class="case-fact-value">Game Designer · Solo Developer</span>
         </div>
         <div>
-          <span class="case-fact-label">Team</span>
-          <span class="case-fact-value">Solo Project · Educational Game Design</span>
+          <span class="case-fact-label">Project</span>
+          <span class="case-fact-value">Educational Game Design · Advised by Jesse Schell</span>
         </div>
         <div>
           <span class="case-fact-label">Tools</span>
-          <span class="case-fact-value">Unity, Ink</span>
+          <span class="case-fact-value">Unity, Ink, Figma, Paper Prototyping, Playtesting</span>
         </div>
         <div>
           <span class="case-fact-label">Links</span>
           <span class="case-fact-value">
-            <a href="https://docs.google.com/document/d/172T3VkIr8hJqzes7D97WXCVlXB39hkYzfCs-lFpNS08/edit?tab=t.uol2vbvdfhgw" target="_blank" rel="noopener">Project Doc</a>
+            <a href="https://docs.google.com/document/d/172T3VkIr8hJqzes7D97WXCVlXB39hkYzfCs-lFpNS08/edit?tab=t.uol2vbvdfhgw" target="_blank" rel="noopener">Project Documentation</a>
           </span>
         </div>
       </div>
     </div>
 
     <figure class="case-hero-media">
-      <img src="assets/glad/hero.png" alt="The Glad Game — final prototype gameplay showing Pollyanna-inspired dialogue with sentence dissection minigame">
-      <figcaption>A narrative game prototype inspired by <em>Pollyanna</em> that teaches players to recognize distorted thinking patterns through interactive dialogue and story-driven practice. Developed as an exploration of transformational game design, the project investigates how games can move beyond delivering knowledge to cultivating reflective habits.</figcaption>
+      <div class="glad-hero-composite" aria-label="The Glad Game proof-of-concept interactions">
+        <img src="assets/glad/screenshot dialogue.png" alt="Swipe-based narrative dialogue in The Glad Game">
+        <img src="assets/glad/screenshot minigame.png" alt="Sentence dissection minigame in The Glad Game">
+      </div>
+      <figcaption>Proof of concept — the project pairs low-friction narrative reading with sentence-level recognition practice. The visual polish was intentionally secondary to validating the design.</figcaption>
     </figure>
   </section>
 
@@ -86,228 +123,284 @@
     <!-- ===== SECTION 1: Overview ===== -->
     <section class="case-section" id="overview">
       <h2><span class="section-number">01</span> Overview</h2>
-      <h3>Starting with a Transformation</h3>
+      <h3>What I Was Designing</h3>
 
-      <p>Unlike entertainment games that begin with mechanics or fantasy, this project began with <strong>a desired change in the player</strong>.</p>
+      <p><strong>The Glad Game is a solo transformational game prototype about noticing distorted thinking in everyday language.</strong> The project began with a broad interest in metacognition: helping people become more aware of how they think. The difficult part was turning that ambition into a player action I could design, test, and improve.</p>
 
-      <p>I wanted to design a game that helps people become more aware of their own thinking. Rather than simply teaching cognitive biases as facts, the goal was to encourage players to pause, examine their thoughts, and recognize when they might be influenced by distorted thinking patterns.</p>
+      <p>By the end of the semester, I had narrowed the goal to a specific practice: <strong>pause, inspect a thought, and identify the language that makes it distorted or disproportionately negative</strong>. The final prototype places that practice inside a narrative adaptation of <em>Pollyanna</em>. Players swipe through conversations, encounter moments that may contain distorted thinking, dissect selected sentences word by word, and build an encyclopedia of patterns they have encountered.</p>
 
-      <p>Throughout the semester, I explored how game mechanics could support this transformation. The project evolved through <strong>domain research, interviews with subject matter experts, paper prototyping, playtesting, and multiple design pivots</strong> before arriving at the final prototype.</p>
+      <p>The project changed substantially before reaching that form. I spent the semester moving through research, a systems-heavy life-coaching simulation, a card-swipe interaction prototype, several resource models, a bias-recognition test, and finally a narrative structure that could support both learning and emotional stakes.</p>
 
-      <!-- Transformation diagram — 4-step chain in elegant serif -->
-      <div class="case-hero-question">
-        <div class="case-hero-question-item">Unaware of thinking patterns</div>
-        <div class="case-hero-question-arrow">↓</div>
-        <div class="case-hero-question-item">Recognize distorted thinking</div>
-        <div class="case-hero-question-arrow">↓</div>
-        <div class="case-hero-question-item">Practice identifying biases</div>
-        <div class="case-hero-question-arrow">↓</div>
-        <div class="case-hero-question-item terminal">Become more reflective outside the game</div>
+      <div class="case-flow vertical centered">
+        <div class="case-flow-step">Broad Goal: Metacognitive Awareness</div>
+        <div class="case-flow-arrow">↓</div>
+        <div class="case-flow-step">Life Coach Systems Prototype</div>
+        <div class="case-flow-arrow">↓</div>
+        <div class="case-flow-step">Swipe-Based Reading Interaction</div>
+        <div class="case-flow-arrow">↓</div>
+        <div class="case-flow-step">Sentence-Level Recognition Mechanic</div>
+        <div class="case-flow-arrow">↓</div>
+        <div class="case-flow-step accent">Narrative Practice Through <em>Pollyanna</em></div>
       </div>
     </section>
 
-    <!-- ===== SECTION 2: My Contributions ===== -->
-    <section class="case-section" id="contributions">
-      <h2><span class="section-number">02</span> My Contributions</h2>
+    <!-- ===== SECTION 2: Finding a Designable Transformation ===== -->
+    <section class="case-section" id="transformation">
+      <h2><span class="section-number">02</span> Finding a Designable Transformation</h2>
 
-      <p>Being a solo project, I was responsible for <strong>the entire design process from research through implementation</strong>.</p>
+      <p>I started with a value I cared about, not a mechanic: <strong>I wanted to help people become more aware of their own thinking</strong>. That immediately opened a much larger problem space than I could responsibly design for in one semester.</p>
 
-      <div class="case-principles five-up">
+      <p>My early research moved through metacognition, reflective practice, cognitive psychology, CBT, growth mindset, cognitive biases, decision-making, and self-improvement frameworks. I also explored several possible project directions before committing to metacognitive awareness. The research was useful, but it also exposed my biggest early design problem: I did not yet have a precise transformation I could observe in play.</p>
+
+      <p>An interview about Positive Intelligence gave me a useful behavioral sequence: <strong>awareness → naming → choosing → shifting</strong>. The conversation reinforced that naming gives people language for thought patterns, but awareness has to come first. If a person never notices the thought, the rest of the sequence cannot happen.</p>
+
+      <p>I then used surveys and small recognition exercises to test what people already knew. The result refined my assumption. People were often <strong>intellectually familiar with cognitive biases and could understand the category names</strong>. The harder task was recognizing those patterns inside an actual thought, especially identifying which words or phrases made the thinking distorted.</p>
+
+      <blockquote class="case-pullquote">The design problem became: how can I get players to stop, inspect a thought, and notice the structure of the distortion?</blockquote>
+
+      <p>That gave me a concrete skill to design around. The intended long-term behavior was broader reflection outside the game, but the prototype itself could focus on a measurable first step: <strong>contextual recognition</strong>.</p>
+
+      <figure class="case-figure">
+        <img src="assets/glad/research map.png" alt="Research map covering metacognition, reflective practice, cognitive psychology, CBT, and distorted thinking">
+        <figcaption>Research synthesis — the project spent its first phase narrowing a broad metacognition goal into a designable recognition skill.</figcaption>
+      </figure>
+    </section>
+
+    <!-- ===== SECTION 3: Life Coach Simulator ===== -->
+    <section class="case-section" id="life-coach">
+      <h2><span class="section-number">03</span> First Prototype: Life Coach Simulator</h2>
+      <h3>A Thoughtful System With the Wrong Player Experience</h3>
+
+      <p>My first substantial game concept cast the player as a <strong>life-design coach</strong>. Clients arrived with dilemmas, hidden priorities, different interaction styles, and thought patterns that could cloud what they actually wanted. The player's job was to explore the client's situation, identify distorted thinking, infer their priorities, and recommend a direction.</p>
+
+      <p>I spent a lot of effort deciding what the game should track because I wanted the system to reflect whether the player had actually understood the client. The prototype included several interacting variables:</p>
+
+      <div class="case-principles four-up">
         <div class="case-principle">
-          <p class="case-principle-name">Transformational Design</p>
-          <p class="case-principle-body">Defined player transformation goals, researched cognitive psychology, and translated educational objectives into gameplay mechanics.</p>
+          <p class="case-principle-name">Reflection Tokens</p>
+          <p class="case-principle-body">A limited resource for prompting clients to examine a possible bias, intended to prevent brute-force questioning.</p>
         </div>
         <div class="case-principle">
-          <p class="case-principle-name">Game Design</p>
-          <p class="case-principle-body">Designed progression, interaction systems, dialogue structure, and educational feedback loops.</p>
+          <p class="case-principle-name">Client Trust</p>
+          <p class="case-principle-body">A changing 0–10 state that affected how much a client was willing to reveal during the session.</p>
         </div>
         <div class="case-principle">
-          <p class="case-principle-name">Research</p>
-          <p class="case-principle-body">Interviewed subject matter experts, conducted surveys, reviewed educational psychology literature, and synthesized findings into design decisions.</p>
+          <p class="case-principle-name">Implicit Priorities</p>
+          <p class="case-principle-body">Rest, connection, adventure, and achievement — values the player had to infer and reorder in a notebook.</p>
         </div>
         <div class="case-principle">
-          <p class="case-principle-name">Prototyping</p>
-          <p class="case-principle-body">Built paper prototypes, implemented the playable prototype in Unity using Ink, and iterated mechanics through playtesting.</p>
-        </div>
-        <div class="case-principle">
-          <p class="case-principle-name">Narrative &amp; UI</p>
-          <p class="case-principle-body">Adapted <em>Pollyanna</em> into an interactive dialogue experience and designed a card-based interface inspired by <em>Reigns</em> and <em>Lapse</em>.</p>
+          <p class="case-principle-name">Rating &amp; Profile Match</p>
+          <p class="case-principle-body">The end result combined trust with how closely the player's conclusion matched the client's underlying priorities.</p>
         </div>
       </div>
-    </section>
 
-    <!-- ===== SECTION 3: Defining the Design Problem ===== -->
-    <section class="case-section" id="design-problem">
-      <h2><span class="section-number">03</span> Defining the Design Problem</h2>
+      <div class="glad-system-map" aria-label="Life Coach Simulator system diagram">
+        <div class="glad-system-node"><strong>Client Profile</strong>Dilemma, interaction style, hidden priorities, starting trust</div>
+        <div class="glad-system-arrow">→</div>
+        <div class="glad-system-node"><strong>Player Exploration</strong>Choose topics, spend reflection tokens, identify possible distortions, update notebook</div>
+        <div class="glad-system-arrow">→</div>
+        <div class="glad-system-node"><strong>Outcome</strong>Infer priority order, recommend a direction, receive a rating shaped by trust and profile match</div>
+      </div>
+      <div class="glad-system-subrow" aria-label="Hidden client priorities">
+        <div class="glad-system-chip">Rest</div><div class="glad-system-chip">Connection</div><div class="glad-system-chip">Adventure</div><div class="glad-system-chip">Achievement</div>
+      </div>
 
-      <p>The project began by identifying <strong>a specific transformational goal rather than a game mechanic</strong>.</p>
+      <p>I also considered client interaction styles, different life topics, recurring sessions, encyclopedia unlocks, and the order in which questions could reveal new information. On paper, the structure gave me many ways to measure whether the player understood the client.</p>
 
-      <p>Many people are generally aware that cognitive biases exist, yet rarely recognize them while they are actively thinking. Existing resources such as books and self-help materials explain these concepts well, but often rely on passive reading rather than repeated practice.</p>
-
-      <p>The design question therefore became:</p>
-
-      <blockquote class="case-pullquote">How might a game help players actively recognize distorted thinking patterns instead of simply learning their names?</blockquote>
-
-      <p>To better understand this problem space, I explored literature on <strong>metacognition, cognitive psychology, reflective practice, Positive Intelligence, CBT, and educational game design</strong>. I also interviewed a mental coach, whose description of <em>awareness, naming, choosing, and shifting</em> became an important framework for the project.</p>
-
-      <figure class="case-figure">
-        <img src="assets/glad/research map.png" alt="Research map showing literature synthesis and interview notes across metacognition, CBT, and educational game design">
-        <figcaption>Research map — literature synthesis and interview notes across metacognition, CBT, and educational game design.</figcaption>
-      </figure>
-    </section>
-
-    <!-- ===== SECTION 4: Narrowing the Design Space ===== -->
-    <section class="case-section" id="narrowing">
-      <h2><span class="section-number">04</span> Narrowing the Design Space</h2>
-
-      <p>One of the biggest challenges was <strong>determining what transformation was realistic within the scope of a prototype</strong>.</p>
-
-      <p>Early concepts explored broad themes including lifelong learning, assertiveness, systems thinking, and metacognition. While interesting individually, these ideas proved difficult to measure or translate into concrete gameplay.</p>
-
-      <p>Through surveys, conversations, and early concept testing, I gradually narrowed the focus to a much smaller behavioral objective:</p>
-
-      <blockquote class="case-pullquote">Help players practice recognizing distorted thinking.</blockquote>
-
-      <p>This shift dramatically simplified both assessment and gameplay design. Rather than attempting to change beliefs or habits directly, the game focused on <strong>a single observable skill that could be repeatedly practiced</strong>.</p>
-
-      <figure class="case-figure">
-        <img src="assets/glad/concept evolution.png" alt="Concept evolution timeline showing the narrowing of scope from broad themes to a single behavioral objective">
-        <figcaption>Concept evolution timeline — from broad transformation themes to a single, observable skill.</figcaption>
-      </figure>
-    </section>
-
-    <!-- ===== SECTION 5: From Knowledge to Gameplay ===== -->
-    <section class="case-section" id="knowledge-gameplay">
-      <h2><span class="section-number">05</span> From Knowledge to Gameplay</h2>
-
-      <p>The next challenge was <strong>translating psychology into mechanics</strong>.</p>
-
-      <p>Several prototypes emphasized reading, reflection, or dialogue analysis. Although these communicated information effectively, they often felt more like quizzes than games.</p>
-
-      <p>Through successive iterations, I explored mechanics that required players to <strong>actively inspect language</strong> instead of selecting predefined answers. This eventually led to the <strong>sentence dissection mechanic</strong>, where players identify the specific words contributing to a distorted thought before receiving immediate feedback and explanation.</p>
-
-      <p><strong>The educational content became something players performed rather than consumed.</strong></p>
-
-      <figure class="case-figure">
-        <img src="assets/glad/mechanic evolution.png" alt="Paper prototypes and mechanic evolution diagrams from quiz-like formats to the sentence dissection mechanic">
-        <figcaption>Paper prototypes and mechanic evolution — from quiz-like formats to sentence dissection.</figcaption>
-      </figure>
-    </section>
-
-    <!-- ===== SECTION 6: Iterating the Experience ===== -->
-    <section class="case-section" id="iterating">
-      <h2><span class="section-number">06</span> Iterating the Experience</h2>
-
-      <p>The project changed substantially over the semester.</p>
-
-      <p>One early prototype cast the player as a <strong>life coach helping clients identify biases through dialogue</strong>. While playtests showed that players engaged with the psychological analysis, they struggled to emotionally connect with the characters, and the amount of narrative content required made the design difficult to sustain.</p>
-
-      <p>Searching for a stronger emotional foundation, I shifted to <strong>adapting <em>Pollyanna</em></strong>. The novel's central idea of intentionally reframing negative situations aligned naturally with the transformational goal while providing an existing cast of emotionally grounded characters. This allowed development effort to focus on gameplay rather than inventing an entirely new narrative world.</p>
-
-      <p>At the same time, I redesigned the interface around <strong>swipe-based dialogue inspired by <em>Reigns</em> and <em>Lapse</em></strong>, making long-form reading feel more interactive while maintaining a lightweight implementation.</p>
-
-      <figure class="case-figure">
-        <img src="assets/glad/prototype comparisons.png" alt="Prototype comparisons showing the life coach prototype next to the Pollyanna swipe-based dialogue prototype">
-        <figcaption>Prototype comparisons — life coach concept vs. <em>Pollyanna</em> adaptation.</figcaption>
-      </figure>
-
-      <figure class="case-figure">
-        <img src="assets/glad/ui evolution.png" alt="UI evolution showing the shift to swipe-based dialogue inspired by Reigns and Lapse">
-        <figcaption>UI evolution — swipe-based dialogue inspired by <em>Reigns</em> and <em>Lapse</em>.</figcaption>
-      </figure>
-    </section>
-
-    <!-- ===== SECTION 7: Playtesting and Design Decisions ===== -->
-    <section class="case-section" id="playtesting">
-      <h2><span class="section-number">07</span> Playtesting and Design Decisions</h2>
-
-      <p>Each prototype investigated <strong>a different design question</strong> rather than simply measuring whether players liked the game.</p>
+      <p>The playtest revealed the deeper issue. Players were thinking carefully, but they had limited agency. They were reading, analyzing, and deciding when to use a prompt, yet the experience still felt like <strong>a quiz wrapped in dialogue</strong>. The character writing also had to carry an enormous amount of the experience, which made the content scope difficult for a solo project.</p>
 
       <table class="case-findings">
         <thead>
           <tr>
-            <th>Design Question</th>
-            <th>Observation</th>
-            <th>Design Decision</th>
+            <th>What I Designed For</th>
+            <th>What Happened in Play</th>
+            <th>What It Told Me</th>
           </tr>
         </thead>
         <tbody>
           <tr>
-            <td>Can players recognize distorted thinking?</td>
-            <td>Players often understood the concept but struggled to identify specific wording.</td>
-            <td>Highlight individual words rather than entire sentences.</td>
+            <td>Multiple values to model whether the player understood the client</td>
+            <td>Players spent a lot of time analyzing the system</td>
+            <td>The experience measured thinking, but the system itself became the focus</td>
           </tr>
           <tr>
-            <td>Does dialogue alone maintain engagement?</td>
-            <td>Players analyzed carefully but found conversations static.</td>
-            <td>Introduced swipe-based dialogue.</td>
+            <td>Limited prompts to create strategic choice</td>
+            <td>There still were not many meaningful actions available</td>
+            <td>Scarcity alone did not create enough agency</td>
           </tr>
           <tr>
-            <td>Do players remember bias terminology?</td>
-            <td>Players recognized examples more easily than names.</td>
-            <td>Delay explicit terminology until after practice.</td>
+            <td>Client stories to create emotional investment</td>
+            <td>Players did not care enough about the characters yet</td>
+            <td>The writing burden was structural, not a polish problem</td>
           </tr>
           <tr>
-            <td>What makes players care about learning?</td>
-            <td>Stronger emotional investment increased engagement.</td>
-            <td>Adapted the <em>Pollyanna</em> narrative.</td>
+            <td>Recognition through trial and error</td>
+            <td>Players could learn from the process, but described it as boring</td>
+            <td>The learning action was promising; the surrounding game needed to change</td>
           </tr>
         </tbody>
       </table>
 
-      <div class="case-grid three-up">
-        <figure>
-          <img src="assets/glad/playtest notes.jpg" alt="Playtest observation notes">
-          <figcaption>Playtest observation notes.</figcaption>
-        </figure>
-        <figure>
-          <img src="assets/glad/playtest screenshot.png" alt="Screenshot from a playtest session showing player identifying biased words">
-          <figcaption>Playtest session — player identifying biased words.</figcaption>
-        </figure>
-        <figure>
-          <img src="assets/glad/iteration example.png" alt="Before-and-after example of a design iteration">
-          <figcaption>Iteration example — before and after a design change.</figcaption>
-        </figure>
+      <p><strong>I stopped polishing the counseling simulation.</strong> The problem was not presentation. The player experience was built around the wrong structure, so I kept the learning goal and rebuilt the game around a simpler interaction.</p>
+    </section>
+
+    <!-- ===== SECTION 4: Reducing Reading Friction ===== -->
+    <section class="case-section" id="interaction">
+      <h2><span class="section-number">04</span> Reducing Reading Friction</h2>
+
+      <p>The project still depended on reading short pieces of dialogue and judging what they meant. My next design goal was straightforward: <strong>make reading feel lighter and make each decision happen with as little interface friction as possible</strong>.</p>
+
+      <p>I tested a card-swipe interaction inspired by <em>Reigns</em> and <em>Lapse</em>. I first used a lightweight prototype to answer one narrow question: could swiping support the rhythm of reading and responding that this game needed? The answer was yes. The interaction was fast, readable, and simple enough to keep.</p>
+
+      <p>The resource model was much harder. I explored versions with trust, emotionality, negativity, and multiple resources attached to dialogue choices. A four-resource structure made sense in games where players are constantly balancing competing pressures. My content did not naturally produce that relationship. The system kept becoming complicated without strengthening the transformational action.</p>
+
+      <p>I eventually reduced the final prototype to a <strong>single negativity meter</strong>. Identifying distorted language correctly prevents or reduces accumulated negativity. The meter gives the player immediate stakes without asking them to manage a second game layered on top of the learning mechanic.</p>
+
+      <div class="glad-swipe-wire" aria-label="Swipe interaction prototype">
+        <div class="glad-swipe-card"><small>Read</small><strong>Short character dialogue</strong><p>Keep the player's attention on the sentence instead of menus or navigation.</p></div>
+        <div class="glad-swipe-arrow">→</div>
+        <div class="glad-swipe-card"><small>Respond</small><strong>Swipe left or right</strong><p>One gesture advances dialogue and records the player's response, keeping the rhythm lightweight.</p></div>
       </div>
+      <p class="glad-artifact-caption">The interaction prototype answered one narrow question: could swiping make a text-heavy experience easier to read and move through? It could, so I kept it and continued iterating the game around it.</p>
+    </section>
+
+    <!-- ===== SECTION 5: Recognition Gameplay ===== -->
+    <section class="case-section" id="recognition">
+      <h2><span class="section-number">05</span> Making Recognition the Gameplay</h2>
+
+      <p>I still needed to answer the most important learning question: <strong>what does it mean to practice recognizing a distortion instead of reading an explanation of one?</strong></p>
+
+      <p>I created a small test where players matched distorted-thinking examples to category names and highlighted the words that informed their judgment. The test clarified the problem. The category names themselves were not the main barrier. Applying the concepts to real sentences was harder, and the language inside a sentence mattered.</p>
+
+      <p>That finding led to the sentence-dissection mechanic. During selected dialogue moments, the game pulls out a sentence and separates it into selectable words. Players identify the wording they believe contributes to the distorted thought. The action forces a pause: they cannot move forward by recognizing the general mood alone; they have to inspect how the thought is constructed.</p>
+
+      <div class="case-flow vertical centered">
+        <div class="case-flow-step">Read the Character's Thought</div>
+        <div class="case-flow-arrow">↓</div>
+        <div class="case-flow-step">Pause When Something May Be Distorted</div>
+        <div class="case-flow-arrow">↓</div>
+        <div class="case-flow-step">Dissect the Sentence</div>
+        <div class="case-flow-arrow">↓</div>
+        <div class="case-flow-step">Identify the Wording That Signals the Pattern</div>
+        <div class="case-flow-arrow">↓</div>
+        <div class="case-flow-step accent">Connect the Example to a Named Pattern</div>
+      </div>
+
+      <h3>Authoring for Ambiguity</h3>
+
+      <p>This made writing part of the game system. A useful line could not simply sound negative. Different distortions depend on different evidence: absolutes such as <em>always</em> and <em>never</em>, prescriptive language such as <em>should</em>, unsupported predictions, labels, minimization, personalization, or conclusions that are disproportionate to reality.</p>
+
+      <p>I therefore had to choose sentences carefully. Some dialogue could be ordinary or emotionally negative without containing a distortion. Other lines could contain one pattern or overlapping patterns. That distinction mattered because the game should not train players to assume that every uncomfortable statement is automatically biased.</p>
+
+      <p>I initially hoped the learning could stay almost entirely inside the narrative. That became too implicit, so I added an <strong>encyclopedia</strong>. When players encounter a new pattern, they collect it as a reference. A recurring Father character introduces the pattern the first time it appears and can provide a reminder later. This lets the dialogue remain character-focused while still giving players explicit language for what they practiced.</p>
+
+      <figure class="glad-artifact">
+        <img src="assets/glad/bias-identification-playtest.png" alt="Bias identification playtest asking players to match distorted-thinking sentences to categories and highlight the evidence in each sentence">
+        <figcaption class="glad-artifact-caption">Bias-identification playtest artifact. Players matched example sentences to categories and highlighted the wording that supported each judgment. This test pushed the design away from terminology recall and toward sentence-level evidence.</figcaption>
+      </figure>
+    </section>
+
+    <!-- ===== SECTION 6: Narrative Arc ===== -->
+    <section class="case-section" id="narrative">
+      <h2><span class="section-number">06</span> Giving the Mechanic an Emotional Arc</h2>
+
+      <p>By this point, I had a clearer learning mechanic, but the game still lacked emotional stakes. The player could identify distorted thinking without caring very much about the person who was saying it.</p>
+
+      <p>I adapted <em>Pollyanna</em> because the story already revolves around how people interpret difficult circumstances. That gave the mechanic a narrative home and gave me an existing cast whose relationships could carry emotional context. It also let me focus my limited development time on <strong>content progression and gameplay</strong> instead of building a new world from scratch.</p>
+
+      <p>I structured the full version as a progression from helping other people toward applying the same awareness to Pollyanna herself:</p>
+
+      <div class="glad-chapter-track" aria-label="Planned chapter and learning progression">
+        <div class="glad-chapter"><div class="eyebrow">Tutorial</div><h4>Father</h4><p>Teach the Glad Game, swipe interaction, and first sentence-dissection moments.</p><div class="difficulty">Guided recognition</div></div>
+        <div class="glad-chapter"><div class="eyebrow">Chapter 1</div><h4>Nancy · Old Tom · Aunt Polly</h4><p>Practice clearer patterns such as all-or-nothing thinking and should statements while helping townspeople.</p><div class="difficulty">Clearer evidence</div></div>
+        <div class="glad-chapter"><div class="eyebrow">Chapter 2</div><h4>Mr. Pendleton · Dr. Chilton · Jimmy Bean</h4><p>Introduce personalization, fortune-telling, and mind-reading through more ambiguous emotional situations.</p><div class="difficulty">Harder judgments</div></div>
+        <div class="glad-chapter"><div class="eyebrow">Chapter 3</div><h4>Pollyanna</h4><p>After the accident, turn the skill inward. Reuse earlier patterns and add denial/minimization; identify the category with less guidance.</p><div class="difficulty">Independent application</div></div>
+      </div>
+
+      <p>The final chapter was also intended to increase the player's responsibility. Earlier encounters use Father as a teaching layer. By the ending, the player would need to identify the <strong>bias category itself</strong>, using the encyclopedia as support if needed.</p>
+
+      <p><strong>Scope boundary:</strong> I designed the full chapter progression, but the semester ended before I could implement and validate the complete arc. The proof-of-concept demonstrates the core interaction and a subset of the planned story progression.</p>
+    </section>
+
+    <!-- ===== SECTION 7: Major Design Decisions ===== -->
+    <section class="case-section" id="decisions">
+      <h2><span class="section-number">07</span> Major Design Decisions</h2>
+
+      <p>The project became clearer each time I separated the <strong>design problem</strong> from the solution I happened to be using at the time.</p>
+
+      <table class="case-findings">
+        <thead>
+          <tr>
+            <th>Design Problem</th>
+            <th>What I Learned</th>
+            <th>Decision</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>“Metacognition” was too broad to design or assess directly</td>
+            <td>Awareness had to become a concrete player action</td>
+            <td>Focused the prototype on recognizing distorted thinking in context</td>
+          </tr>
+          <tr>
+            <td>The life-coach simulation was measurable but quiz-like</td>
+            <td>More tracked variables did not create a better player experience</td>
+            <td>Removed the counseling structure instead of polishing it</td>
+          </tr>
+          <tr>
+            <td>Text-heavy interaction created friction</td>
+            <td>Swiping supported the reading rhythm with minimal navigation</td>
+            <td>Kept the Reigns/Lapse-style card interaction</td>
+          </tr>
+          <tr>
+            <td>Resource systems kept growing without serving the learning goal</td>
+            <td>The game did not need a complex balancing economy</td>
+            <td>Simplified the final feedback to a single negativity meter</td>
+          </tr>
+          <tr>
+            <td>Players already understood many bias names</td>
+            <td>Recognizing the pattern inside a real sentence was harder</td>
+            <td>Made sentence dissection the central practice mechanic</td>
+          </tr>
+          <tr>
+            <td>Recognition alone was not emotionally engaging</td>
+            <td>Players needed context and characters worth paying attention to</td>
+            <td>Adapted <em>Pollyanna</em> and designed a chapter-based learning arc</td>
+          </tr>
+          <tr>
+            <td>Narrative-only learning was too implicit</td>
+            <td>Players also needed an explicit reference for terminology and examples</td>
+            <td>Added Father and the encyclopedia as a teaching layer</td>
+          </tr>
+        </tbody>
+      </table>
     </section>
 
     <!-- ===== SECTION 8: Final Prototype ===== -->
     <section class="case-section" id="final-prototype">
-      <h2><span class="section-number">08</span> Final Prototype</h2>
+      <h2><span class="section-number">08</span> Proof of Concept &amp; Reflection</h2>
 
-      <p>The final prototype combines <strong>narrative dialogue with repeated opportunities to identify distorted thinking</strong>.</p>
+      <p>The semester ended with a <strong>proof of concept</strong>, not a production-polished game. I used it to put the core loop in one playable build: swipe-based narrative dialogue, sentence-level recognition, immediate feedback, and explicit pattern references.</p>
 
-      <p>Players experience the story of <em>Pollyanna</em> through swipe-based conversations. During key moments, dialogue transitions into a <strong>sentence analysis minigame</strong> where players identify the words contributing to biased thinking. Successfully recognizing those patterns reduces a shared negativity meter while introducing cognitive bias terminology through a recurring mentor character.</p>
-
-      <p>Rather than presenting psychology as a lesson, the prototype embeds <strong>repeated recognition practice directly into the game's progression</strong>.</p>
+      <p>Players move through <em>Pollyanna</em>-inspired conversations by swiping between responses. Selected dialogue moments trigger the sentence-analysis minigame. Correct recognition reduces the accumulated negativity; missed evidence leaves part of it behind. New distorted-thinking patterns are added to the encyclopedia, and Father provides explanations when the player first encounters them.</p>
 
       <figure class="case-figure">
-        <img src="assets/glad/gameplay.gif" alt="Gameplay GIF showing the sentence analysis minigame and the negativity meter">
-        <figcaption>Gameplay — sentence analysis minigame with the shared negativity meter.</figcaption>
+        <img src="assets/glad/gameplay.gif" alt="Gameplay GIF showing swipe dialogue, sentence dissection, and the negativity meter">
+        <figcaption>Final proof of concept — narrative dialogue leads into sentence-level recognition and feedback.</figcaption>
       </figure>
 
-      <div class="case-grid three-up">
-        <figure>
-          <img src="assets/glad/screenshot dialogue.png" alt="Screenshot of swipe-based Pollyanna dialogue">
-          <figcaption>Swipe-based <em>Pollyanna</em> dialogue.</figcaption>
-        </figure>
-        <figure>
-          <img src="assets/glad/screenshot minigame.png" alt="Screenshot of sentence dissection minigame">
-          <figcaption>Sentence dissection minigame.</figcaption>
-        </figure>
-        <figure>
-          <img src="assets/glad/screenshot feedback.png" alt="Screenshot of feedback screen introducing cognitive bias terminology">
-          <figcaption>Feedback screen — terminology introduced after practice.</figcaption>
-        </figure>
+      <div class="glad-proof-grid">
+        <div class="glad-proof-card"><h4>What this build validates</h4><p>The complete interaction loop can exist in one playable flow: read dialogue, identify a potentially distorted thought, inspect the sentence, receive immediate feedback, and connect the example to a reusable pattern name.</p></div>
+        <div class="glad-proof-card"><h4>What remained untested</h4><p>The full emotional arc, long-term transfer into players' own thinking, the complete three-chapter progression, and the final difficulty curve were not validated within the semester.</p></div>
       </div>
 
       <h3>Reflection</h3>
 
-      <p>This project fundamentally changed how I think about educational games.</p>
+      <p>This project changed the way I work as a designer. I spent the first half of the semester repeatedly falling into research because every answer opened another branch of psychology. The turning point was learning to ask a more practical question: <strong>what is the player change I am designing for, what action could produce it, and what is the riskiest assumption I can test next?</strong></p>
 
-      <p>Initially, I approached transformational design as a problem of <em>delivering</em> knowledge. Through research and repeated iteration, I came to see transformation as something players must <strong>actively practice rather than passively receive</strong>. That realization shifted my focus from explaining concepts toward designing interactions that repeatedly exercise the desired skill.</p>
+      <p>I also recognized a habit from my educational background: when I wanted someone to learn something, my first instinct was to build a quiz. The Life Coach Simulator made that tendency obvious. Throwing it away forced me to separate <strong>learning rigor from quiz structure</strong> and look for interactions, stakes, and narrative contexts that could make the practice meaningful on its own.</p>
 
-      <p>More broadly, the project taught me how to move from <strong>an ambitious research question to a focused design problem</strong>. By narrowing the intended transformation, validating assumptions through playtesting, and treating prototypes as experiments, I developed a design process that begins with the player change I hope to create and works backward toward mechanics that make that change possible.</p>
+      <p>The Glad Game is the project where I most clearly learned what kind of designer I want to be: <strong>someone willing to work on difficult, high-impact questions, then keep narrowing and testing them until they become concrete enough to play.</strong></p>
 
       <ul class="case-link-list">
         <li><a href="https://docs.google.com/document/d/172T3VkIr8hJqzes7D97WXCVlXB39hkYzfCs-lFpNS08/edit?tab=t.uol2vbvdfhgw" target="_blank" rel="noopener">
