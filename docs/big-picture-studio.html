@@ -7,22 +7,94 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;700&family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-  <title>Big Picture Studio — Winnie Tsai</title>
+  <title>Population One — Designing a Collaborative Puzzle-Narrative Across Four Mobile Screens — Winnie Tsai</title>
   <style>
     .bps-mechanics figure img {
       aspect-ratio: 1 / 1;
       object-fit: contain;
       box-sizing: border-box;
-      padding: 1rem;
+      padding: .55rem;
       background: #fff;
+    }
+    .bps-mechanics.case-grid.four-up {
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      max-width: 760px;
+      margin-left: auto;
+      margin-right: auto;
+      gap: 12px;
+    }
+    .bps-mechanics figcaption {
+      font-size: .74rem;
+      line-height: 1.35;
     }
     .bps-mechanic-label {
       font-weight: 700;
     }
+    .bps-analysis {
+      max-width: 900px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .bps-state-map { max-width: 680px; }
+    .bps-findings th:first-child,
+    .bps-findings td:first-child { width: 22%; }
+    .bps-findings th:nth-child(2),
+    .bps-findings td:nth-child(2) { width: 38%; }
+    .bps-findings th:nth-child(3),
+    .bps-findings td:nth-child(3) { width: 40%; }
+    .bps-analysis img {
+      width: 100%;
+      max-height: none;
+      height: auto;
+    }
+    .bps-puzzle-grid,
+    .bps-world-grid,
+    .bps-impact-grid {
+      display: grid;
+      gap: 16px;
+      margin: 2rem 0;
+    }
+    .bps-puzzle-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .bps-world-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .bps-impact-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .bps-puzzle-grid figure,
+    .bps-world-grid figure,
+    .bps-impact-grid figure { margin: 0; }
+    .bps-puzzle-grid img,
+    .bps-world-grid img,
+    .bps-impact-grid img {
+      width: 100%;
+      height: auto;
+      aspect-ratio: 4 / 3;
+      object-fit: contain;
+      background: #f6f3ef;
+      border-radius: var(--border-radius);
+      box-shadow: 0 6px 20px var(--shadow);
+    }
+    .bps-world-grid figure:first-child { grid-column: 1 / -1; }
+    .bps-puzzle-grid figcaption,
+    .bps-world-grid figcaption,
+    .bps-impact-grid figcaption {
+      margin-top: .6rem;
+      color: var(--text-light);
+      font-size: .9rem;
+      text-align: center;
+    }
+    @media (max-width: 720px) {
+      .bps-mechanics.case-grid.four-up { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .bps-puzzle-grid,
+      .bps-world-grid,
+      .bps-impact-grid { grid-template-columns: 1fr; }
+      .bps-world-grid figure:first-child { grid-column: auto; }
+      .bps-puzzle-grid img,
+      .bps-world-grid img,
+      .bps-world-grid figure:first-child img,
+      .bps-impact-grid img { height: auto; max-height: 520px; object-fit: contain; }
+    }
   </style>
 </head>
 
-<body data-category="Games and Experiences">
+<body data-category="Games and Content Design">
   <header>
     <nav>
       <a href="index.html" class="nav-wordmark">Winnie Tsai</a>
@@ -37,15 +109,15 @@
   <aside class="case-toc" aria-label="Page sections">
     <p class="case-toc-label">On this page</p>
     <ol>
-      <li><a href="#overview">Overview</a></li>
-      <li><a href="#contributions">My Design Focus</a></li>
-      <li><a href="#prototype-medium">Prototyping the Medium</a></li>
-      <li><a href="#interaction-language">Defining the Interaction Language</a></li>
-      <li><a href="#players-learn">Building the Learning Progression</a></li>
-      <li><a href="#gameplay-narrative">Gameplay and Narrative</a></li>
+      <li><a href="#overview">Exploring a Four-Phone Medium</a></li>
+      <li><a href="#contributions">Defining My Design Focus</a></li>
+      <li><a href="#prototype-medium">Mapping the Interaction Space</a></li>
+      <li><a href="#interaction-language">Building a Mechanics Language</a></li>
+      <li><a href="#players-learn">Teaching Through Play</a></li>
+      <li><a href="#gameplay-narrative">Integrating Narrative</a></li>
       <li><a href="#puzzle-progression">Structuring Puzzle Progression</a></li>
-      <li><a href="#playtesting">Design Decisions Through Playtesting</a></li>
-      <li><a href="#final-experience">Final Experience</a></li>
+      <li><a href="#playtesting">Turning Playtests Into Decisions</a></li>
+      <li><a href="#final-experience">Delivering the Experience</a></li>
     </ol>
   </aside>
 
@@ -57,11 +129,11 @@
       <div class="case-breadcrumb">
         <a href="index.html#featured">Work</a>
         <span class="separator">/</span>
-        <span>Big Picture Studio</span>
+        <span>Population One</span>
       </div>
 
-      <span class="case-category-tag">Games and Experiences</span>
-      <h1>Big Picture Studio</h1>
+      <span class="case-category-tag">Games and Content Design</span>
+      <h1>Population One</h1>
       <p class="case-tagline">
         Designing the interaction, puzzle progression, and narrative flow of a shared four-phone experience.
       </p>
@@ -90,8 +162,8 @@
     </div>
 
     <figure class="case-hero-media">
-      <img src="assets/bps/hero.png" alt="Players solving a puzzle by arranging four mobile phones together on a table">
-      <figcaption>A 20-minute cooperative puzzle-narrative where four phones form one shared play space.</figcaption>
+      <img src="assets/bps/scene 2.png" alt="Players solving a puzzle by arranging four mobile phones together on a table">
+      <figcaption>A 20-minute collaborative puzzle-narrative where four phones form one shared play space.</figcaption>
     </figure>
   </section>
 
@@ -99,10 +171,10 @@
 
     <!-- ===== SECTION 1: Overview ===== -->
     <section class="case-section" id="overview">
-      <h2><span class="section-number">01</span> Overview</h2>
+      <h2><span class="section-number">01</span> Exploring a Four-Phone Medium</h2>
       <h3>Building a Game Around an Unfamiliar Medium</h3>
 
-      <p>Big Picture Studio started with an open design problem: <strong>what becomes possible when four phones are treated as one physical, reconfigurable game space?</strong></p>
+      <p><em>Population One</em> started with an open design problem: <strong>what becomes possible when four phones are treated as one physical, reconfigurable game space?</strong></p>
 
       <p>We did not begin with a fixed puzzle set. We first needed to understand the medium itself. The team built many focused technical prototypes to test how phones could relate to one another through position, orientation, connection, separation, and movement. Those experiments gave us the raw material for the game.</p>
 
@@ -111,14 +183,14 @@
       <p>My design work focused on turning those early experiments into a learnable game: <strong>evaluating interaction ideas, sequencing mechanics, mapping puzzle dependencies, testing player understanding, and shaping where narrative information entered the flow.</strong></p>
 
       <figure class="case-figure">
-        <img src="assets/bps/shared-world.png" alt="Four phones aligned into one continuous game world">
-        <figcaption>The final experience uses separate devices as pieces of one shared world.</figcaption>
+        <img src="assets/bps/moon.gif" alt="Four phones aligned into one continuous game world">
+        <figcaption><span class="case-caption-title">Shared World</span>The final experience uses separate devices as pieces of one connected environment.</figcaption>
       </figure>
     </section>
 
     <!-- ===== SECTION 2: Contributions ===== -->
     <section class="case-section" id="contributions">
-      <h2><span class="section-number">02</span> My Design Focus</h2>
+      <h2><span class="section-number">02</span> Defining My Design Focus</h2>
 
       <p>The team collaboratively defined the experience. My main contribution was <strong>player-facing game structure</strong>: how an unfamiliar interaction system became understandable, how individual mechanics became puzzles, and how those puzzles supported a coherent narrative arc.</p>
 
@@ -144,7 +216,7 @@
 
     <!-- ===== SECTION 3: Prototyping the Medium ===== -->
     <section class="case-section" id="prototype-medium">
-      <h2><span class="section-number">03</span> Prototyping the Medium</h2>
+      <h2><span class="section-number">03</span> Mapping the Interaction Space</h2>
       <h3>Push the Convention First</h3>
 
       <p>Early in development, our priority was exploration. <strong>We intentionally moved away from conventional touchscreen play</strong> so we could learn what was unique about physically manipulating multiple phones.</p>
@@ -154,8 +226,15 @@
       <p>The team built many small technical prototypes before committing to a full game structure. Each prototype isolated a relationship between devices and gave us something concrete to test. Some ideas were visually striking but difficult to read. Others immediately prompted players to move the phones in useful ways. We used those observations to narrow the design space.</p>
 
       <figure class="case-figure">
-        <img src="assets/bps/prototype-montage.png" alt="Montage of early four-phone interaction prototypes showing multiple phone arrangements and experimental shared scenes">
-        <figcaption>Early prototypes tested the medium before we committed to a final puzzle structure.</figcaption>
+        <img src="assets/bps/prototypes.gif" alt="Montage of early four-phone interaction prototypes showing multiple phone arrangements and experimental shared scenes">
+        <figcaption><span class="case-caption-title">Interaction Prototypes</span>Early experiments tested the medium before the final puzzle structure was defined.</figcaption>
+      </figure>
+
+      <p>I mapped phone arrangements as discrete states and traced the possible transitions between them. This analysis made the source of interaction complexity visible. Players could infer the next arrangement when each transition required a small physical change. That observation became a foundation for puzzle design: establish a readable state, ask players to imagine the next state, and make the transformation itself the solution.</p>
+
+      <figure class="case-figure bps-analysis bps-state-map">
+        <img src="assets/bps/phone formations.png" alt="State diagram mapping four-phone formations and the possible transitions between arrangement families labeled A through F">
+        <figcaption><span class="case-caption-title">Discrete Phone-State Map</span>Arrangement families and their transitions defined the physical puzzle space.</figcaption>
       </figure>
 
       <p>This phase established a core design value for the project: <strong>the physical relationship between phones should carry meaningful gameplay information.</strong> That principle guided which mechanics survived into the final experience.</p>
@@ -163,28 +242,35 @@
 
     <!-- ===== SECTION 4: Interaction Language ===== -->
     <section class="case-section" id="interaction-language">
-      <h2><span class="section-number">04</span> Defining the Interaction Language</h2>
+      <h2><span class="section-number">04</span> Building a Reusable Mechanics Language</h2>
 
       <p>From the prototype space, the team converged on four physical mechanics that stayed in the final design: <strong>Match, Plug, Pivot, and Remove.</strong> Each mechanic described a distinct relationship between phones, which meant later puzzles could ask players to recognize and manipulate those relationships instead of learning a new control scheme every time.</p>
 
       <div class="case-grid four-up bps-mechanics">
         <figure>
-          <img src="assets/bps/interaction-match.png" alt="Diagram for the Match mechanic showing two phone edges brought together">
+          <img src="assets/bps/match.png" alt="Diagram for the Match mechanic showing two phone edges brought together">
           <figcaption><span class="bps-mechanic-label">Match</span> — bring corresponding phone edges together.</figcaption>
         </figure>
         <figure>
-          <img src="assets/bps/interaction-plug.png" alt="Diagram for the Plug mechanic showing one phone connecting into another phone edge">
+          <img src="assets/bps/plug.png" alt="Diagram for the Plug mechanic showing one phone connecting into another phone edge">
           <figcaption><span class="bps-mechanic-label">Plug</span> — connect one phone into another screen relationship.</figcaption>
         </figure>
         <figure>
-          <img src="assets/bps/interaction-pivot.png" alt="Diagram for the Pivot mechanic showing a phone rotating around a shared connection point">
+          <img src="assets/bps/pivot.png" alt="Diagram for the Pivot mechanic showing a phone rotating around a shared connection point">
           <figcaption><span class="bps-mechanic-label">Pivot</span> — rotate a connected phone around a shared point.</figcaption>
         </figure>
         <figure>
-          <img src="assets/bps/interaction-remove.png" alt="Diagram for the Remove mechanic showing a phone taken out from between two others">
+          <img src="assets/bps/remove.png" alt="Diagram for the Remove mechanic showing a phone taken out from between two others">
           <figcaption><span class="bps-mechanic-label">Remove</span> — change the configuration by taking a phone out.</figcaption>
         </figure>
       </div>
+
+      <p>I organized the prototype mechanics into a hierarchy based on connection, pivot, disconnection, alignment, timing, and the number of phones involved. The hierarchy gave the team a shared vocabulary for evaluating new ideas and locating repeated interactions within the larger mechanic space.</p>
+
+      <figure class="case-figure bps-analysis">
+        <img src="assets/bps/hierarchy.png" alt="Mechanic hierarchy organizing connected-phone interactions into connect, pivot, disconnect, alignment-based, timing-based, and formation categories">
+        <figcaption><span class="case-caption-title">Mechanic Hierarchy</span>The taxonomy connected individual prototypes to reusable interaction families.</figcaption>
+      </figure>
 
       <p>I focused on how players interpreted these mechanics in context: what visual state suggested the intended motion, how much demonstration was needed, and whether players could recognize the same relationship when it returned in a different puzzle.</p>
 
@@ -195,25 +281,18 @@
 
       <p>We reintroduced <strong>tap as a supporting input</strong>. It did not replace Match, Plug, Pivot, or Remove. The four physical mechanics remained the defining interaction vocabulary, while tap handled moments where a conventional action made the larger experience clearer.</p>
 
-      <figure class="case-figure">
-        <img src="assets/bps/physical-play.gif" alt="Players physically rearranging phones during a puzzle">
-        <figcaption>The final interaction model kept physical phone manipulation at the center of play.</figcaption>
-      </figure>
     </section>
 
     <!-- ===== SECTION 5: Learning Progression ===== -->
     <section class="case-section" id="players-learn">
-      <h2><span class="section-number">05</span> Building the Learning Progression</h2>
+      <h2><span class="section-number">05</span> Teaching Physical Mechanics Through Play</h2>
 
-      <div class="case-flow vertical centered">
-        <div class="case-flow-step">Encounter a Physical Relationship</div>
-        <div class="case-flow-arrow">↓</div>
-        <div class="case-flow-step">Perform the Mechanic</div>
-        <div class="case-flow-arrow">↓</div>
-        <div class="case-flow-step">Recognize It in a New Context</div>
-        <div class="case-flow-arrow">↓</div>
-        <div class="case-flow-step accent">Combine It With Other Mechanics</div>
-      </div>
+      <ol class="case-step-list" aria-label="Mechanic learning progression">
+        <li>Encounter a physical relationship between phones</li>
+        <li>Perform the mechanic in a guided context</li>
+        <li>Recognize the relationship in a new puzzle</li>
+        <li>Combine the mechanic with previously learned interactions</li>
+      </ol>
 
       <p>Once the interaction vocabulary stabilized, the design question became <strong>how to teach it without turning the experience into a long tutorial</strong>.</p>
 
@@ -222,13 +301,24 @@
       <p>Those observations shaped the mechanic sequence. Early content gave one physical relationship a clear purpose. Later puzzles reused familiar relationships under new conditions. The progression then combined mechanics so that difficulty came from <strong>reading the game state and choosing the right relationship</strong>, not from introducing a new control for every challenge.</p>
 
       <p>This was also where the project shifted from interaction experiments into content design. The mechanics no longer existed as demonstrations. They became a vocabulary that could carry puzzle logic across the full experience.</p>
+
+      <div class="case-grid two-up bps-puzzle-grid" aria-label="Examples of final puzzles">
+        <figure>
+          <img src="assets/bps/clock.gif" alt="Clock puzzle unfolding across multiple connected phones">
+          <figcaption><span class="case-caption-title">Clock Puzzle</span>The shared interaction vocabulary supports a coordinated multi-phone sequence.</figcaption>
+        </figure>
+        <figure>
+          <img src="assets/bps/compass.png" alt="Four players arranging phones around a compass during the compass puzzle">
+          <figcaption><span class="case-caption-title">Compass Puzzle</span>Players interpret orientation and reposition all four devices.</figcaption>
+        </figure>
+      </div>
     </section>
 
     <!-- ===== SECTION 6: Gameplay & Narrative ===== -->
     <section class="case-section" id="gameplay-narrative">
-      <h2><span class="section-number">06</span> Designing Gameplay and Narrative Together</h2>
+      <h2><span class="section-number">06</span> Integrating Narrative With Collaborative Play</h2>
 
-      <p>Big Picture Studio was a <strong>shared narrative experience</strong>. Four people had to coordinate unfamiliar physical puzzles and still leave each sequence with a common understanding of Naiad's journey.</p>
+      <p><em>Population One</em> was a <strong>shared narrative experience</strong>. Four people had to coordinate unfamiliar physical puzzles and still leave each sequence with a common understanding of Naiad's journey.</p>
 
       <p>That made player attention a design constraint. During playtests, the broad premise came through, but players often missed story details while discussing phone placement and solving the immediate puzzle. One player summarized an early version as:</p>
 
@@ -249,22 +339,45 @@
       </div>
 
       <figure class="case-figure">
-        <img src="assets/bps/narrative.png" alt="Comic-style narrative moment spread across four phones">
-        <figcaption>Post-puzzle comic sequences gave all four players the same narrative beat before the next challenge.</figcaption>
+        <img src="assets/bps/narrative driven gameplay.png" alt="Comic-style narrative moment spread across four phones">
+        <figcaption><span class="case-caption-title">Post-Puzzle Story Beat</span>Comic sequences gave all four players the same narrative information before the next challenge.</figcaption>
       </figure>
+
+      <div class="case-grid two-up bps-world-grid" aria-label="Connected world scenes across four phones">
+        <figure>
+          <img src="assets/bps/hub.png" alt="Naiad standing in a glowing landscape connected across four phones in an offset arrangement">
+          <figcaption><span class="case-caption-title">Exploration Hub</span>The full phone arrangement forms one explorable landscape.</figcaption>
+        </figure>
+        <figure>
+          <img src="assets/bps/scene 3.png" alt="Players forming an irregular phone arrangement to connect a starry landscape around Naiad">
+          <figcaption><span class="case-caption-title">Reconfigurable World</span>The scene changes as players move the screens into a new spatial relationship.</figcaption>
+        </figure>
+        <figure>
+          <img src="assets/bps/scene 4.png" alt="A pink ruined city and Naiad spanning four vertically aligned phones">
+          <figcaption><span class="case-caption-title">Ruined City</span>The environment forms one continuous view across four aligned screens.</figcaption>
+        </figure>
+        <figure>
+          <img src="assets/bps/mural.gif" alt="Animated mural sequence extending across connected phones">
+          <figcaption><span class="case-caption-title">Historical Mural</span>The connected display becomes a narrative canvas.</figcaption>
+        </figure>
+        <figure>
+          <img src="assets/bps/computer.png" alt="A system log and interactive computer terminal extending vertically across four phones">
+          <figcaption><span class="case-caption-title">Computer Terminal</span>Connected screens display different parts of one interface.</figcaption>
+        </figure>
+      </div>
     </section>
 
     <!-- ===== SECTION 7: Puzzle Progression ===== -->
     <section class="case-section" id="puzzle-progression">
-      <h2><span class="section-number">07</span> Structuring Puzzle Progression</h2>
+      <h2><span class="section-number">07</span> Structuring Puzzle and Level Progression</h2>
 
       <p>As individual puzzles became more developed, I needed to see the experience as one connected system: <strong>what could players access, what did each state require, what had already been learned, and where did each path return?</strong></p>
 
       <p>I created the progression diagram below to map hubs, puzzle states, gates, key objects, branching paths, and narrative progression. It let me reason about the order of content without treating every puzzle as an isolated challenge.</p>
 
       <figure class="case-figure">
-        <img src="assets/bps/progression-diagram.png" alt="Progression dependency diagram showing intro, hubs, puzzle states, key objects, gates, cutscene, ruins, and ending">
-        <figcaption>My progression map made prerequisites, branches, return paths, and key-lock relationships visible while the structure was still changing.</figcaption>
+        <img src="assets/bps/information flow.png" alt="Progression dependency diagram showing intro, hubs, puzzle states, key objects, gates, cutscene, ruins, and ending">
+        <figcaption><span class="case-caption-title">Progression Map</span>The diagram made prerequisites, branches, return paths, and key-lock relationships visible during iteration.</figcaption>
       </figure>
 
       <p>The watch, camera, compass, and key in this diagram were <strong>design concepts for progression and gating</strong>. They did not become a player-facing inventory system in the final game. I was using them to test key-lock relationships: which discovery or completed state should make another piece of content available.</p>
@@ -276,18 +389,18 @@
 
     <!-- ===== SECTION 8: Playtesting ===== -->
     <section class="case-section" id="playtesting">
-      <h2><span class="section-number">08</span> Design Decisions Through Playtesting</h2>
+      <h2><span class="section-number">08</span> Turning Playtests Into Design Decisions</h2>
 
       <p>Because the interaction model had few established conventions, playtesting was our way to separate an interaction that looked interesting from one that players could actually use as part of a game.</p>
 
       <p>I planned sessions around specific design questions and documented what players did before we explained anything. The most useful findings were often moments where player behavior contradicted our assumptions. Those moments gave us a clear next design decision.</p>
 
       <figure class="case-figure">
-        <img src="assets/bps/playtest.jpg" alt="Three players gathered around phones during a Big Picture Studio playtest">
-        <figcaption>Playtests focused on how groups interpreted the physical setup, coordinated, and transferred previous knowledge.</figcaption>
+        <img src="assets/bps/playtest day.jpg" alt="Three players gathered around phones during a Big Picture Studio playtest">
+        <figcaption><span class="case-caption-title">Group Playtesting</span>Sessions examined how players interpreted the physical setup, coordinated, and transferred previous knowledge.</figcaption>
       </figure>
 
-      <table class="case-findings">
+      <table class="case-findings bps-findings">
         <thead>
           <tr>
             <th>Design Question</th>
@@ -322,7 +435,7 @@
 
     <!-- ===== SECTION 9: Final Experience ===== -->
     <section class="case-section" id="final-experience">
-      <h2><span class="section-number">09</span> Final Experience</h2>
+      <h2><span class="section-number">09</span> Delivering the Final Experience</h2>
 
       <p>The final game was the result of two different phases of design work: <strong>first expanding the interaction space through technical prototypes, then constraining those discoveries into a coherent 20-minute experience.</strong></p>
 
@@ -330,15 +443,37 @@
 
       <div class="case-video-embed">
         <iframe
-          src="https://www.youtube.com/embed/jMTENnyhgAI"
-          title="Big Picture Studio — walkthrough video"
+          src="https://www.youtube.com/embed/V17a3Su5KDc"
+          title="Population One — walkthrough video"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
           allowfullscreen
           referrerpolicy="strict-origin-when-cross-origin"></iframe>
       </div>
 
+      <h3>Public Showcase</h3>
+      <p>The project extended beyond the playable build through its website, GDC outreach, live demonstrations, and conversations with professional designers. We presented Big Picture Studio at the GDC Festival of Gaming and observed new groups coordinating around the four-phone interaction system.</p>
+
+      <div class="case-grid two-up bps-impact-grid" aria-label="Population One public showcase and outreach">
+        <figure>
+          <img src="assets/bps/website.png" alt="Big Picture Studio project website with a tiled four-phone background and project overview">
+          <figcaption><span class="case-caption-title">Project Website</span>The site documented the project, process, and media.</figcaption>
+        </figure>
+        <figure>
+          <img src="assets/bps/gdc promo.png" alt="Promotional page inviting GDC attendees to the Big Picture Studio demonstration at the CMU Entertainment Technology Center booth">
+          <figcaption><span class="case-caption-title">GDC Promotion</span>Outreach directed attendees to the live demonstration.</figcaption>
+        </figure>
+        <figure>
+          <img src="assets/bps/gdc showcase.jpg" alt="The Big Picture Studio team demonstrating the four-phone game at the Carnegie Mellon University GDC booth">
+          <figcaption><span class="case-caption-title">GDC Festival of Gaming</span>We demonstrated the experience at the Carnegie Mellon University booth.</figcaption>
+        </figure>
+        <figure>
+          <img src="assets/bps/stone.jpg" alt="Big Picture Studio team members discussing the phone experience with game designer Stone Librande at GDC">
+          <figcaption><span class="case-caption-title">Professional Feedback</span>The team shared the project with game designer Stone Librande at GDC.</figcaption>
+        </figure>
+      </div>
+
       <h3>Reflection</h3>
-      <p>Big Picture Studio changed how I think about game design for an unfamiliar medium. The first job was not to invent a large number of puzzles. It was to <strong>find the smallest set of interactions with enough depth to support a full experience.</strong></p>
+      <p><em>Population One</em> changed how I think about game design for an unfamiliar medium. The first job was not to invent a large number of puzzles. It was to <strong>find the smallest set of interactions with enough depth to support a full experience.</strong></p>
 
       <p>I also learned that protecting a design value does not mean protecting every early assumption. We intentionally pushed away from touchscreen convention because that constraint helped us discover the project's strongest physical mechanics. Later, when the full experience needed a small amount of direct touch, we brought tap back for a clear reason without giving up the interaction language we had built.</p>
 
@@ -348,7 +483,7 @@
         <li><a href="https://projects.etc.cmu.edu/big-picture-studio/" target="_blank" rel="noopener">
           <i class="fas fa-external-link-alt"></i> Project Website
         </a></li>
-        <li><a href="https://youtu.be/jMTENnyhgAI" target="_blank" rel="noopener">
+        <li><a href="https://www.youtube.com/embed/V17a3Su5KDc" target="_blank" rel="noopener">
           <i class="fab fa-youtube"></i> Walkthrough Video
         </a></li>
       </ul>

@@ -31,6 +31,23 @@ body[data-category="Technical Foundations"] {
   --case-accent-soft: rgba(123, 165, 114, 0.15);
 }
 
+body[data-category="Experimental Interaction"] {
+  color: #7C8DD9;
+}
+
+body[data-category="Games and Content Design"] {
+  --case-accent: #E24E8A;
+  --case-accent-soft: rgba(226, 78, 138, 0.10);
+}
+
+body[data-category="Research & UX"] {
+  -color: #B8C3CC;
+}
+
+body[data-category="Technical Design & Tools"] {
+  color: #BEEA74;
+}
+
 /* Fallback */
 body:not([data-category]) {
   --case-accent: var(--accent);
@@ -677,6 +694,37 @@ body:not([data-category]) {
   flex-shrink: 0;
   display: flex;
   align-items: center;
+}
+
+/* Numbered process — use when step labels need more room than a compact arrow flow */
+.case-step-list {
+  list-style: none;
+  counter-reset: case-step;
+  margin: var(--spacing-md) 0;
+  padding: 0;
+  display: grid;
+  gap: var(--spacing-xs);
+}
+
+.case-step-list li {
+  counter-increment: case-step;
+  display: grid;
+  grid-template-columns: 2.25rem 1fr;
+  gap: var(--spacing-sm);
+  align-items: center;
+  padding: var(--spacing-sm);
+  border: 1px solid var(--border);
+  border-radius: var(--border-radius);
+  background: var(--background);
+  font-weight: 600;
+}
+
+.case-step-list li::before {
+  content: counter(case-step, decimal-leading-zero);
+  color: var(--case-accent);
+  font-size: .8rem;
+  font-weight: 700;
+  letter-spacing: .06em;
 }
 
 @media (max-width: 640px) {
@@ -1488,6 +1536,14 @@ body:not([data-category]) {
   line-height: 1.45;
   font-style: italic;
   padding: 0 0.2rem;
+}
+
+.case-caption-title {
+  display: block;
+  margin-bottom: 0.15rem;
+  color: var(--text-primary);
+  font-style: normal;
+  font-weight: 700;
 }
 
 /* Linked images in grids — anchor wraps img, gets hover lift */
